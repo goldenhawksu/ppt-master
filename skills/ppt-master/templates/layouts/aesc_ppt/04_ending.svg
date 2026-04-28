@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1280" height="720" viewBox="0 0 1280 720">
+
+  <!-- Ending background image (dark + AESC watermark) -->
+  <image href="end.jpg" x="0" y="0" width="1280" height="720" preserveAspectRatio="xMidYMid slice"/>
+
+  <!-- "Thanks" text -->
+  <text x="640" y="252" text-anchor="middle" fill="#DEDEDE" font-family="Arial, Helvetica Neue, sans-serif" font-size="36" font-weight="300" letter-spacing="6">{{THANK_YOU}}</text>
+
+  <!-- Brand label at bottom -->
+  <text x="640" y="648" text-anchor="middle" fill="#FFFFFF" font-family="Arial, Helvetica Neue, Microsoft YaHei, sans-serif" font-size="20" font-weight="700">{{BRAND_LABEL}}</text>
+
+  <!-- Optional contact info -->
+  <text x="640" y="682" text-anchor="middle" fill="#888888" font-family="Arial, sans-serif" font-size="14">{{CONTACT_INFO}}</text>
+
+</svg>

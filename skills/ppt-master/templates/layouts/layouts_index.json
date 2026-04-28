@@ -1,16 +1,16 @@
 {
   "meta": {
-    "total": 21,
+    "total": 22,
     "defaultViewBox": "0 0 1280 720",
     "formats": ["ppt169"],
     "standardFiles": ["design_spec.md", "01_cover.svg", "02_toc.svg", "02_chapter.svg", "03_content.svg", "04_ending.svg"],
     "standardPageTypes": ["cover", "toc", "chapter", "content", "ending"],
-    "updated": "2026-04-18"
+    "updated": "2026-04-27"
   },
   "categories": {
     "brand": {
       "label": "Brand Style Templates",
-      "layouts": ["google_style", "mckinsey", "anthropic", "china_telecom_template", "中汽研_常规", "中汽研_商务", "中汽研_现代", "中国电建_常规", "中国电建_现代", "招商银行"]
+      "layouts": ["google_style", "mckinsey", "anthropic", "china_telecom_template", "中汽研_常规", "中汽研_商务", "中汽研_现代", "中国电建_常规", "中国电建_现代", "招商银行", "aesc_ppt"]
     },
     "general": {
       "label": "General Style Templates",
@@ -32,15 +32,15 @@
   "quickLookup": {
     "strategy": ["exhibit", "mckinsey"],
     "board": ["exhibit", "mckinsey", "招商银行"],
-    "general_business": ["科技蓝商务", "smart_red", "exhibit", "china_telecom_template"],
-    "technology": ["anthropic", "google_style", "smart_red", "ai_ops", "china_telecom_template"],
+    "general_business": ["科技蓝商务", "smart_red", "exhibit", "china_telecom_template", "aesc_ppt"],
+    "technology": ["anthropic", "google_style", "smart_red", "ai_ops", "china_telecom_template", "aesc_ppt"],
     "government": ["government_red", "government_blue", "ai_ops"],
     "academic": ["academic_defense", "重庆大学"],
     "medical": ["medical_university"],
     "psychology": ["psychology_attachment"],
     "finance": ["招商银行", "exhibit", "mckinsey"],
     "certification": ["中汽研_常规", "中汽研_商务", "中汽研_现代"],
-    "energy": ["中国电建_常规", "中国电建_现代"],
+    "energy": ["中国电建_常规", "中国电建_现代", "aesc_ppt"],
     "creative": ["pixel_retro", "smart_red"]
   },
   "layouts": {
@@ -199,6 +199,14 @@
       "themeMode": "Academic blue primary + mountain-city layered imagery",
       "assets": ["重庆大学logo.png", "重庆大学logo2.png"],
       "keywords": ["Chongqing University", "Academic", "Defense", "University"]
+    },
+    "aesc_ppt": {
+      "label": "AESC-PPT (远景动力)",
+      "summary": "AESC/远景动力企业品牌模板，适用于CTS业务汇报、海外项目分析、质量报告等高密度数据场景",
+      "tone": "Clean, data-dense, professional, dual-language (default English)",
+      "themeMode": "Hybrid (white content pages + photo cover + dark photo ending page)",
+      "assets": ["cover.jpg", "end.jpg"],
+      "keywords": ["AESC", "远景动力", "Energy Storage", "储能", "Clean Tech", "客户技术服务", "CTS", "Business Report"]
     }
   }
 }
