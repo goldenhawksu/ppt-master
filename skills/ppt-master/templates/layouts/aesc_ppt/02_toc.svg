@@ -6,7 +6,7 @@
 
   <!-- Standard 4-zone header -->
   <rect x="0" y="0" width="1280" height="38" fill="#FFFFFF"/>
-  <text x="24" y="24" fill="#1A1818" font-family="Arial, Helvetica Neue, sans-serif" font-size="16" font-weight="700">{{BRAND_LABEL}}</text>
+  <text x="24" y="24" fill="#1A1818" font-family="Arial, Helvetica Neue, Microsoft YaHei, PingFang SC, sans-serif" font-size="16" font-weight="700" letter-spacing="2">{{BRAND_LABEL}}</text>
   <line x1="320" y1="10" x2="320" y2="28" stroke="#DDDDDD" stroke-width="1"/>
   <text x="480" y="24" text-anchor="middle" fill="#9B9B9B" font-family="Arial, sans-serif" font-size="13">aesc-group.com</text>
   <line x1="640" y1="10" x2="640" y2="28" stroke="#DDDDDD" stroke-width="1"/>

@@ -10,7 +10,7 @@
 | **Use Cases** | CTS 业务汇报、海外项目分析、质量表现报告、售后物流方案、战略规划 |
 | **Design Tone** | Clean, data-dense, professional, dual-language (default English) |
 | **Theme Mode** | Hybrid (white content pages + photo cover + dark photo ending) |
-| **Default Language** | English (brand label: `AESC`)；中文演示时替换为 `远景动力` |
+| **Default Language** | English (brand label: `ΛESC`)；中文演示时替换为 `远景动力` |
 
 ## II. Canvas Specification
 
@@ -60,15 +60,15 @@ All content pages share a unified 4-zone header bar:
 ```
 Height: 38px │ Background: #FFFFFF │ Bottom border: stroke #DDDDDD 1px
 
-Zones (separated by vertical dividers at x = 320, 640, 960):
-┌──────────────┬──────────────┬──────────────────────┬─────────┐
-│ {{BRAND_     │ aesc-group   │ document level :     │ {{PAGE  │
-│  LABEL}}     │ .com         │ confidential         │  _NUM}} │
-│ 16px Bold    │ 13px Regular │ 13px Regular         │ 13px R  │
-│  #1A1818     │  #9B9B9B     │  #9B9B9B             │ #9B9B9B │
-│  x=24        │  x=480       │  x=800               │ x=1120  │
-│  y=24        │  y=24        │  y=24                │ y=24    │
-└──────────────┴──────────────┴──────────────────────┴─────────┘
+Zones (separated by vertical dividers at x = 320, 640, 1120):
+┌──────────────┬──────────────┬──────────────────────────────┬─────────┐
+│ {{BRAND_     │ aesc-group   │ document level :            │ {{PAGE  │
+│  LABEL}}     │ .com         │ confidential                │  _NUM}} │
+│ 16px Bold    │ 13px Regular │ 13px Regular                │ 13px R  │
+│  #1A1818     │  #9B9B9B     │  #9B9B9B                    │ #9B9B9B │
+│  x=24        │  x=480       │  x=880                      │ x=1200  │
+│  y=24        │  y=24        │  y=24                       │ y=24    │
+└──────────────┴──────────────┴──────────────────────────────┴─────────┘
 Vertical dividers: y1=10 → y2=28, stroke #DDDDDD, 1px
 ```
 
@@ -91,7 +91,6 @@ Vertical dividers: y1=10 → y2=28, stroke #DDDDDD, 1px
 - Standard 4-zone header
 - White background, no pattern
 - Left blue accent bar (5px wide)
-- Large translucent AESC "A" arch watermark (background)
 - Chapter number + title + description
 
 ### 4. Content Page (`03_content.svg`)
@@ -140,7 +139,7 @@ Vertical dividers: y1=10 → y2=28, stroke #DDDDDD, 1px
 
 | Placeholder | Pages | Description |
 | --- | --- | --- |
-| `{{BRAND_LABEL}}` | All | Brand name (default: `AESC`；中文: `远景动力`) |
+| `{{BRAND_LABEL}}` | All | Brand name (default: `ΛESC`；中文: `远景动力`) |
 | `{{TITLE}}` | Cover | Cover main title |
 | `{{SUBTITLE}}` | Cover | Cover subtitle |
 | `{{DATE}}` | Cover, Ending | Date |
