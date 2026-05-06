@@ -27,9 +27,9 @@
 | Role | Color | Usage |
 | --- | --- | --- |
 | **Volt Blue** | `#2563EB` | Title underlines, accent bars, section markers |
-| **Navy Title** | `#0D1F6E` | Cover titles, large headings |
+| **Navy Title** | `#0D1F6E` | Cover titles, large headings (over light backgrounds) |
 | **Eco-Green** | `#00C87A` | Positive indicators, growth markers |
-| **Deep Charcoal** | `#374151` | Subtitles, secondary text |
+| **Deep Charcoal** | `#374151` | Subtitles, key message line, secondary text |
 | **Main Text** | `#1A1818` | Primary headings, body text |
 | **Body Text** | `#3A3838` | Body copy, descriptions |
 | **Header Gray** | `#9B9B9B` | Header auxiliary text (domain, classification) |
@@ -37,21 +37,28 @@
 | **Light Divider** | `#EEEEEE` | Content dividers |
 | **Pure White** | `#FFFFFF` | Content/chapter/TOC page background |
 | **Ending Black** | `#1C1C1C` | Ending page background (from end.jpg) |
+| **Ending Text** | `#DEDEDE` | Ending page "Thanks" text |
+| **Ending Subdued** | `#888888` | Ending page contact info, date |
 
 ## IV. Typography System
 
 | Level | Usage | Size | Weight | Color |
 | --- | --- | --- | --- | --- |
-| **Display** | Cover title | 56px | Bold | `#0D1F6E` |
-| **H1** | Content title | 40px | Bold | `#1A1818` |
-| **H2** | Chapter / subtitle | 32px | Bold | `#1A1818` |
-| **H3** | Section head | 24px | Bold | `#1A1818` |
-| **Body** | Paragraph | 20px | Regular | `#3A3838` |
-| **Caption** | Metadata | 14–16px | Regular | `#3A3838` |
-| **Header** | Header text | 16px | Bold/Regular | `#1A1818` / `#9B9B9B` |
+| **Display** | Cover title | 56px | Bold | `#FFFFFF` (over image) / `#0D1F6E` (over light bg) |
+| **Cover Subtitle** | Cover subtitle | 24px | Regular | `#FFFFFF` |
+| **H1** | Content title | 32px | Bold | `#1A1818` |
+| **H2** | Chapter title / TOC "Contents" | 28–40px | Bold | `#1A1818` |
+| **H3** | Section head / TOC item title | 22–24px | Bold | `#1A1818` |
+| **Key Message** | Content key message line | 20px | Regular | `#374151` |
+| **Body** | Paragraph / TOC description | 16–20px | Regular | `#3A3838` |
+| **Caption** | Metadata / source / footer | 12–14px | Regular | `#3A3838` / `#9B9B9B` |
+| **Header** | Header text | 13–16px | Bold/Regular | `#1A1818` / `#9B9B9B` |
 
 **Font Stack (EN)**: `Arial, "Helvetica Neue", "Segoe UI", sans-serif`
 **Font Stack (CN)**: `"方正兰亭黑_GBK", "Microsoft YaHei", "PingFang SC", Arial, sans-serif`
+**Font Stack (Bilingual — Template Default)**: `Arial, "Helvetica Neue", "Microsoft YaHei", "PingFang SC", sans-serif`
+
+> All template SVG files use the Bilingual font stack to ensure correct rendering for both English and Chinese content. Executor may override with the language-specific stack based on actual content language.
 
 ## V. Header Specification
 
@@ -96,10 +103,10 @@ Vertical dividers: y1=10 → y2=28, stroke #DDDDDD, 1px
 ### 4. Content Page (`03_content.svg`)
 - Standard 4-zone header
 - Pure white background, no pattern or decoration
-- Blue left accent bar + title + underline
-- Key message line
+- Blue left accent bar (5px wide) + title + underline
+- Key message line (20px, Deep Charcoal)
 - Open content area (1168 × 502 px)
-- Footer with source + page number
+- Footer with source (left) + page number (right)
 
 ### 5. Ending Page (`04_ending.svg`)
 - Full-bleed dark background (`end.jpg`)
@@ -130,10 +137,11 @@ Vertical dividers: y1=10 → y2=28, stroke #DDDDDD, 1px
 ## IX. SVG Technical Constraints
 
 1. `viewBox` = `0 0 1280 720` — no exceptions
-2. Banned: `clipPath`, `mask`, `<style>`, `class`, `foreignObject`, `textPath`, animation tags, `rgba()`, `<g opacity>`, `<symbol>`+`<use>`
-3. Use plain hex colors with `fill-opacity` / `stroke-opacity`
-4. Image references use relative paths (e.g. `cover.jpg`, `end.jpg`)
-5. No inline CSS — all styling via SVG attributes
+2. Banned: `mask`, `<style>`, `class`, `foreignObject`, `textPath`, animation tags, `rgba()`, `<g opacity>`, `<symbol>`+`<use>`
+3. `clipPath` is **conditionally allowed** on `<image>` elements only (for circular/rounded image crops); the referenced `<clipPath>` must live in `<defs>` and contain a single shape child
+4. Use plain hex colors with `fill-opacity` / `stroke-opacity`
+5. Image references use relative paths (e.g. `cover.jpg`, `end.jpg`)
+6. No inline CSS — all styling via SVG attributes
 
 ## X. Placeholder Specification
 
@@ -142,7 +150,7 @@ Vertical dividers: y1=10 → y2=28, stroke #DDDDDD, 1px
 | `{{BRAND_LABEL}}` | All | Brand name (default: `ΛESC`；中文: `远景动力`) |
 | `{{TITLE}}` | Cover | Cover main title |
 | `{{SUBTITLE}}` | Cover | Cover subtitle |
-| `{{DATE}}` | Cover, Ending | Date |
+| `{{DATE}}` | Cover, Ending | Date (cover: bottom left; ending: bottom center) |
 | `{{AUTHOR}}` | Cover | Presenter / organization |
 | `{{CHAPTER_NUM}}` | Chapter | Chapter number |
 | `{{CHAPTER_TITLE}}` | Chapter | Chapter title |
