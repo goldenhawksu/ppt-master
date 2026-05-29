@@ -182,6 +182,8 @@ Vertical dividers: y1=10 → y2=28, stroke #DDDDDD, 1px
 
 Both assets are required. Place them in the template directory alongside the SVG files.
 
+> **Image lock**: `cover.jpg` and `end.jpg` are **fixed template assets**. Cover pages MUST always reference `cover.jpg`; ending pages MUST always reference `end.jpg`. The pipeline must NOT replace or override them with AI-generated images, web-sourced images, or other generated content. If a deck needs a custom cover or ending image, the user must supply the replacement file themselves — the pipeline never auto-generates a substitute for these two assets.
+
 ## XII. AESC "A" Arch Logo
 
 The AESC logo is a geometric arch (letter "A" without crossbar). SVG path template (100×98 base, scale as needed):
