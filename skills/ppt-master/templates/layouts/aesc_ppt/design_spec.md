@@ -193,3 +193,108 @@ M-54 98 L0 0 L54 98 L40 98 L0 20 L-40 98 Z
 ```
 
 Usage: Apply `transform="translate(cx,cy) scale(s)"` for positioning and sizing. Use `fill-opacity` for watermark effects.
+
+## XIII. Business Reporting Story Framework
+
+> This section is **mandatory** for business reporting decks (CTS 业务汇报、海外项目分析、质量表现报告、售后物流方案). It governs how the Strategist constructs the Content Outline (Section IX of the design_spec output) and how the Executor designs each page's visual hierarchy.
+
+### A. Narrative Arc（汇报故事线）
+
+The deck must follow a six-chapter arc. This is not "show what we did" — it is "help management understand: why the business needs improvement, where the problems are, what foundation already exists, what to do next, and what support is needed."
+
+| Chapter | Story Stage | Management Reader Expects |
+| --- | --- | --- |
+| **Ch 1** | 业务背景 / 管理现状 — Scope & Baseline | 这个业务管什么？我们目前有哪些管理能力和基础？ |
+| **Ch 2** | 执行痛点 — Execution Pain Points | 哪里有问题？严重程度如何？数据说明什么？ |
+| **Ch 3** | 问题分析 — Root Cause Analysis | 为什么会这样？根因是什么？管理抓手在哪里？ |
+| **Ch 4** | 解决方案 — Solution Design | 怎么解决？方案是否可行？多个方案如何取舍？ |
+| **Ch 5** | 行动计划 — Action Plan | 谁来做？做什么？什么时候完成？当前进展如何？ |
+| **Ch 6** | 资源诉求 — Resource Request | 需要哪些跨部门支持或资源投入？预期回报是什么？ |
+
+**Recommended TOC structure** (Strategist should default to this for aesc_ppt decks):
+
+```
+1. 管理范围与基础能力
+2. 执行侧痛点与现状差距
+3. 问题根因分析
+4. 改进方案设计
+5. 行动计划
+6. 资源诉求与预期收益
+```
+
+### B. Visualization Guide per Chapter（各章节图表选型）
+
+The aesc_ppt template is **data-first**. Every conclusion page in Ch 2 / Ch 3 / Ch 4 must carry a chart or structured visual. Pure bullet-point pages are not permitted in these chapters.
+
+| Chapter | Preferred Chart Types | Notes |
+| --- | --- | --- |
+| **Ch 1** 管理现状 | KPI Dashboard cards (3–4), overview table, regional coverage map | Establish scope and capability baseline |
+| **Ch 2** 执行痛点 | Stacked / grouped bar chart, horizontal bar (ranking), heatmap table | Quantify gaps across regions / process steps |
+| **Ch 3** 问题分析 | SWOT matrix (2×2), cost waterfall chart, event retrospective frame | Waterfall chart: shows cost deltas by factor; use for cost gap attribution |
+| **Ch 4** 解决方案 | Two-column comparison table (option A vs B), process flowchart, cost-benefit scatter plot | If scatter plot is unclear, replace with a two-column table (投入 vs 产出) |
+| **Ch 5** 行动计划 | Gantt-style timeline, swimlane flowchart (cross-department), SMART action table | Swimlane for processes involving ≥ 2 departments |
+| **Ch 6** 资源诉求 | Budget breakdown table, ROI comparison bar chart | Keep this chapter separate from Ch 5 — do not merge |
+
+**Chart selection decision rules:**
+
+- 各区域对比 → grouped / stacked bar chart
+- 各环节成本构成 / 成本增减因素 → waterfall chart
+- 跨部门流程 → swimlane / flowchart
+- 典型问题复盘 → event retrospective (事件性复盘框架)
+- 方案投入产出比较 → scatter plot; if data is sparse or two dimensions are insufficient to tell the story, use a two-column table instead
+- 管理抓手识别 → annotated chart with callout boxes (not plain bullets)
+
+### C. Content Quality Gates（内容质量原则）
+
+The Strategist **must** enforce these rules when drafting the Content Outline, and the Executor must enforce them when writing page titles and key message lines.
+
+1. **Assertion page titles** — every page title must be a conclusive statement, not a label.
+   - ❌ `海外仓成本分析` → ✅ `亚太区仓储成本超标 18%，是三区域中差距最大的`
+   - ❌ `行动计划` → ✅ `三项优先行动将在 Q3 落地，责任人已确定`
+
+2. **Data-backed conclusions** — every management conclusion requires three elements: the value itself + a comparison benchmark + the implication.
+   - Pattern: `[数值] 相比 [基准], 说明 [管理含义]`
+
+3. **SMART action items** — every row in the action plan table must satisfy:
+   - **S**pecific — 具体说明做什么
+   - **M**easurable — 有可量化的完成标准
+   - **A**ssignable — 明确负责人（姓名或职能）
+   - **R**ealistic — 当前资源条件下可执行
+   - **T**ime-bound — 有明确截止时间
+
+4. **Action Plan ≠ Resource Request** — Ch 5 and Ch 6 must be separate chapters. Do not merge resource asks into the action plan page.
+
+5. **图文结合 (visual + text integration)** — Ch 2 / Ch 3 / Ch 4 pages: each data conclusion page must have at least one chart, diagram, or structured visual. Plain text bullet lists are not acceptable as the sole content element on these pages.
+
+### D. Example Narrative: Overseas Warehouse Logistics Reporting
+
+This is the reference narrative for a 海外仓储物流汇报 deck. Use it to validate outline structure and logic flow.
+
+```
+Ch 1 — 管理范围与基础能力
+  • 当前海外仓管理区域与仓点数量（KPI dashboard）
+  • 已建立的制度、流程、系统（结构化表格）
+  • 当前具备的管理能力概览
+
+Ch 2 — 执行侧痛点与现状差距
+  • 各区域执行难度对比（堆积柱状图）
+  • 效率低的关键环节及量化数据（横向条形图）
+  • 反复发生的问题类型统计（分类汇总表）
+
+Ch 3 — 问题根因分析
+  • SWOT 分析：管理体系的优势、劣势、机会、威胁
+  • 成本瀑布图：识别各区域成本差异的驱动因素
+  • 事件性复盘：1–2 个典型案例的经验教训
+
+Ch 4 — 改进方案设计
+  • 方案对比：两列表格（方案A vs 方案B）
+  • 改进后流程图（泳道图 or flowchart）
+
+Ch 5 — 行动计划
+  • 甘特式时间线（按季度展示关键里程碑）
+  • SMART 行动表（责任人 / 完成标准 / 截止时间）
+
+Ch 6 — 资源诉求与预期收益
+  • 所需资源拆解（预算 + 人力 + 跨部门协同）
+  • ROI 预期：投入 vs 预计收益对比
+```
