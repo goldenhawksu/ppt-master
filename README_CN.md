@@ -204,6 +204,20 @@ cd ppt-master
 pip install -r requirements.txt
 ```
 
+如果你在 Windows 上做 PPT 生成，推荐先执行一次：
+
+```powershell
+uv venv
+uv pip install -r requirements.txt
+activate_env.bat
+```
+
+如果只想跑单条命令，优先用：
+
+```powershell
+run_ppt_python.bat skills\ppt-master\scripts\project_manager.py validate projects\demo_ppt169_20260601
+```
+
 日常更新（方式 A / B）：`python3 skills/ppt-master/scripts/update_repo.py`
 
 > **方式 C — Skill marketplace**：仓库已添加 `.claude-plugin/marketplace.json` 元数据，可通过 [Claude Code plugin marketplace](https://code.claude.com/docs/en/plugin-marketplaces) 生态一行安装：

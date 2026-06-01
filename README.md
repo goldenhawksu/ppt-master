@@ -196,6 +196,22 @@ Then install dependencies:
 pip install -r requirements.txt
 ```
 
+> Windows users who want a fixed local runtime can run `uv venv` once and then use `activate_env.bat` or `run_ppt_python.bat` so every PPT generation script runs from `./.venv`.
+
+For Windows PPT generation, the preferred workflow is:
+
+```powershell
+uv venv
+uv pip install -r requirements.txt
+activate_env.bat
+```
+
+For a single guarded command, use:
+
+```powershell
+run_ppt_python.bat skills\ppt-master\scripts\project_manager.py validate projects\demo_ppt169_20260601
+```
+
 To update later (Option A / B): `python3 skills/ppt-master/scripts/update_repo.py`
 
 > **Option C — Skill marketplace**: the repo ships `.claude-plugin/marketplace.json`, so it can be installed through the [Claude Code plugin marketplace](https://code.claude.com/docs/en/plugin-marketplaces) ecosystem:

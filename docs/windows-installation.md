@@ -23,6 +23,7 @@ Python is the only hard requirement.
    You should see `Python 3.12.x` or similar. If you see "Python was not found" or it opens the Microsoft Store, see [Troubleshooting](#python-was-not-found-or-opens-microsoft-store) below.
 
 > **💡 Tip**: Python installed via Anaconda or Miniconda works too — just make sure `python --version` shows 3.10+.
+> For PPT generation on Windows, the recommended runtime is the uv-created `./.venv`. Use `activate_env.bat` for an interactive shell or `run_ppt_python.bat` for one-off commands.
 
 ---
 
@@ -52,6 +53,8 @@ pip install -r requirements.txt
 
 > If `pip` is not recognized, try `python -m pip install -r requirements.txt`.
 
+> Recommended for PPT generation work: run `uv venv` once, then use `activate_env.bat` or `run_ppt_python.bat` so all project scripts execute inside the `./.venv` environment created by uv.
+
 Wait for it to finish. You should see `Successfully installed ...` at the end.
 
 ---
@@ -60,6 +63,12 @@ Wait for it to finish. You should see `Successfully installed ...` at the end.
 
 ```powershell
 python -c "import pptx; import fitz; print('All core dependencies OK')"
+```
+
+If you are using the uv virtual environment, prefer:
+
+```powershell
+.venv\Scripts\python.exe -c "import pptx; import fitz; print('All core dependencies OK')"
 ```
 
 ✅ Output: `All core dependencies OK` → you're good.
@@ -139,6 +148,22 @@ pip install -r requirements.txt --proxy http://your-proxy:port
 
 ```powershell
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+
+### Recommended uv workflow for PPT generation
+
+If you want a fixed local runtime for PPT Master, use the uv-managed virtual environment instead of the system Python:
+
+```powershell
+uv venv
+uv pip install -r requirements.txt
+activate_env.bat
+```
+
+For a one-off command, use:
+
+```powershell
+run_ppt_python.bat scripts\project_manager.py validate projects\demo_ppt169_20260601
 ```
 
 ---

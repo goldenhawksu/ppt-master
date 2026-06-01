@@ -155,3 +155,17 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 - 📖 [常见问题 (FAQ)](./faq.md)
 - 🐛 [GitHub Issues](https://github.com/hugohe3/ppt-master/issues) — 附上 Python 版本、Windows 版本和完整报错
 - 💬 [GitHub Discussions](https://github.com/hugohe3/ppt-master/discussions)
+## 推荐的 uv 工作流
+
+如果你需要一个固定、可重复的 PPT Master 运行环境，推荐直接使用 uv 创建的 `./.venv`。
+
+1. 运行 `uv venv`
+2. 运行 `uv pip install -r requirements.txt`
+3. 在交互式 shell 中运行 `activate_env.bat`
+4. 单条命令优先使用 `run_ppt_python.bat`
+
+单条命令示例：
+
+```powershell
+run_ppt_python.bat scripts\project_manager.py validate projects\demo_ppt169_20260601
+```
