@@ -43,6 +43,29 @@ except ImportError:
 
 
 HEX_VALUE_RE = re.compile(r"#[0-9A-Fa-f]{3,8}")
+SVG_NS = 'http://www.w3.org/2000/svg'
+
+
+def _reconfigure_stdio_utf8() -> None:
+    """Prefer UTF-8 console output so Windows terminals don't crash on Unicode."""
+    for stream in (sys.stdout, sys.stderr):
+        reconfigure = getattr(stream, 'reconfigure', None)
+        if not callable(reconfigure):
+            continue
+        try:
+            reconfigure(encoding='utf-8', errors='replace')
+        except (OSError, ValueError):
+            continue
+
+
+def _console_safe(text: str) -> str:
+    """Return text encodable by the current stdout encoding."""
+    encoding = getattr(sys.stdout, 'encoding', None) or 'utf-8'
+    try:
+        text.encode(encoding)
+        return text
+    except UnicodeEncodeError:
+        return text.encode(encoding, errors='replace').decode(encoding, errors='replace')
 
 # Ramp envelope for font-size drift detection.
 # From design_spec_reference.md §IV — Font Size Hierarchy: the ramp spans
@@ -1267,7 +1290,11 @@ class SVGQualityChecker:
         # Fix suggestions
         if self.summary['errors'] > 0 or self.summary['warnings'] > 0:
             print(f"\n[TIP] Common fixes:")
-            print(f"  1. XML well-formedness: write typography as raw Unicode (—, ©, →, NBSP); escape XML reserved chars as &amp; &lt; &gt; &quot; &apos; — never use HTML named entities like &nbsp; &mdash; &copy;")
+            print(_console_safe(
+                "  1. XML well-formedness: write typography as raw Unicode (—, ©, →, NBSP); "
+                "escape XML reserved chars as &amp; &lt; &gt; &quot; &apos; — never use "
+                "HTML named entities like &nbsp; &mdash; &copy;"
+            ))
             print(f"  2. viewBox issues: Ensure consistency with canvas format (see references/canvas-formats.md)")
             print(f"  3. foreignObject: Use <text> + <tspan> for manual line breaks")
             print(f"  4. Font issues: end every font-family stack with a PPT-safe family (e.g. Microsoft YaHei / Arial / Consolas)")
@@ -1425,6 +1452,7 @@ def print_usage() -> None:
 
 def main() -> None:
     """Run the CLI entry point."""
+    _reconfigure_stdio_utf8()
     if len(sys.argv) < 2:
         print_usage()
         sys.exit(0)

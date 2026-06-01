@@ -9,13 +9,17 @@ Configuration keys:
   OPENAI_API_KEY   (required) API key
   OPENAI_BASE_URL  (optional) Custom API endpoint (e.g. http://127.0.0.1:3000/v1)
   OPENAI_MODEL     (optional) Model name (default: gpt-image-2)
+  OPENAI_COMPAT_MODE         (optional) Set to 1/true to use proxy-compatible request format:
+                             sends response_format=b64_json instead of quality/background/etc.
+                             Use when the proxy doesn't support gpt-image-2-specific parameters.
   OPENAI_OUTPUT_FORMAT       (optional) png, jpeg, or webp for GPT image models
   OPENAI_OUTPUT_COMPRESSION  (optional) 0-100, only for jpeg/webp GPT image output
   OPENAI_BACKGROUND          (optional) auto or opaque for gpt-image-2
   OPENAI_MODERATION          (optional) auto or low for GPT image models
+  OPENAI_TIMEOUT             (optional) request timeout in seconds, default 180
 
 Dependencies:
-  pip install openai Pillow
+  pip install requests Pillow
 """
 
 import sys
@@ -26,12 +30,13 @@ if __name__ == "__main__" and any(arg in {"-h", "--help", "help"} for arg in sys
     raise SystemExit(0)
 
 import base64
+import json
 import os
-import time
 import threading
-from collections.abc import Mapping
+import time
 
-from openai import OpenAI
+import requests
+
 from image_backends.backend_common import (
     MAX_RETRIES,
     download_image,
@@ -137,13 +142,7 @@ GPT_IMAGE_OUTPUT_EXTENSIONS = {
 }
 GPT_IMAGE_BACKGROUNDS = {"auto", "opaque", "transparent"}
 GPT_IMAGE_MODERATION_VALUES = {"auto", "low"}
-
-
-def _field(value, name: str):
-    """Read a response field from either an SDK object or a dict."""
-    if isinstance(value, Mapping):
-        return value.get(name)
-    return getattr(value, name, None)
+DEFAULT_TIMEOUT_SECONDS = 180
 
 
 def _normalized_model(model: str) -> str:
@@ -234,6 +233,14 @@ def _read_env_int(name: str, minimum: int, maximum: int) -> int | None:
     return parsed
 
 
+def _client_kwargs() -> dict[str, str]:
+    """Return a user-agent override header if configured."""
+    user_agent = os.environ.get("OPENAI_USER_AGENT")
+    if user_agent:
+        return {"User-Agent": user_agent}
+    return {}
+
+
 def _gpt_image_options(model: str) -> tuple[dict, str]:
     """Read optional GPT Image request parameters from environment."""
     output_format = _read_env_choice("OPENAI_OUTPUT_FORMAT", GPT_IMAGE_OUTPUT_FORMATS)
@@ -264,6 +271,51 @@ def _gpt_image_options(model: str) -> tuple[dict, str]:
     return options, output_ext
 
 
+def _timeout_seconds() -> int:
+    """Read the HTTP timeout from the environment."""
+    value = os.environ.get("OPENAI_TIMEOUT")
+    if not value:
+        return DEFAULT_TIMEOUT_SECONDS
+    try:
+        timeout = int(value)
+    except ValueError as exc:
+        raise ValueError("Invalid OPENAI_TIMEOUT. Expected integer seconds.") from exc
+    if timeout <= 0:
+        raise ValueError("Invalid OPENAI_TIMEOUT. Expected a positive integer.")
+    return timeout
+
+
+def _resolve_endpoint(base_url: str) -> str:
+    """Build the final OpenAI-compatible endpoint URL."""
+    base = (base_url or "").rstrip("/")
+    if not base:
+        raise ValueError("OPENAI_BASE_URL is required for the OpenAI backend.")
+    return base + "/images/generations"
+
+
+def _request_headers(api_key: str) -> dict[str, str]:
+    """Build request headers for the OpenAI-compatible API."""
+    headers = {
+        "Authorization": f"Bearer {api_key}",
+        "Content-Type": "application/json",
+    }
+    headers.update(_client_kwargs())
+    return headers
+
+
+def _post_json(url: str, *, headers: dict[str, str], payload: dict, timeout_seconds: int) -> requests.Response:
+    """POST JSON with environment-proxy isolation and retries handled by caller."""
+    session = requests.Session()
+    session.trust_env = False
+    response = session.post(
+        url,
+        headers=headers,
+        data=json.dumps(payload, ensure_ascii=False).encode("utf-8"),
+        timeout=timeout_seconds,
+    )
+    return response
+
+
 # ╔══════════════════════════════════════════════════════════════════╗
 # ║  Image Generation                                               ║
 # ╚══════════════════════════════════════════════════════════════════╝
@@ -283,7 +335,7 @@ def _generate_image(api_key: str, prompt: str,
     Raises:
         RuntimeError: When generation fails
     """
-    client = OpenAI(api_key=api_key, base_url=base_url)
+    compat_mode = os.environ.get("OPENAI_COMPAT_MODE", "").lower() in {"1", "true", "yes"}
 
     # Map parameters
     size = _select_size(model, aspect_ratio, image_size)
@@ -293,14 +345,20 @@ def _generate_image(api_key: str, prompt: str,
         "prompt": prompt,
         "model": model,
         "size": size,
-        "quality": quality,
         "n": 1,
     }
-    if _is_gpt_image_model(model):
-        gpt_options, output_ext = _gpt_image_options(model)
-        request.update(gpt_options)
-    elif _supports_response_format(model):
+    if compat_mode:
+        # Proxy-compatible mode: send response_format instead of quality.
+        # Mirrors the raw-request pattern that works with OpenAI-compatible proxies
+        # that don't support gpt-image-2-specific params (quality, background, etc.).
         request["response_format"] = "b64_json"
+    else:
+        request["quality"] = quality
+        if _is_gpt_image_model(model):
+            gpt_options, output_ext = _gpt_image_options(model)
+            request.update(gpt_options)
+        elif _supports_response_format(model):
+            request["response_format"] = "b64_json"
 
     mode_label = f"Proxy: {base_url}" if base_url else "OpenAI API"
     print(f"[OpenAI - {mode_label}]")
@@ -334,8 +392,12 @@ def _generate_image(api_key: str, prompt: str,
     hb_thread = threading.Thread(target=_heartbeat, daemon=True)
     hb_thread.start()
 
+    endpoint = _resolve_endpoint(base_url)
+    headers = _request_headers(api_key)
+    timeout_seconds = _timeout_seconds()
+
     try:
-        resp = client.images.generate(**request)
+        resp = _post_json(endpoint, headers=headers, payload=request, timeout_seconds=timeout_seconds)
     finally:
         heartbeat_stop.set()
         hb_thread.join(timeout=1)
@@ -343,19 +405,32 @@ def _generate_image(api_key: str, prompt: str,
     elapsed = time.time() - start_time
     print(f"\n  [DONE] Image generated ({elapsed:.1f}s)")
 
-    data = _field(resp, "data") if resp is not None else None
-    if data:
-        path = resolve_output_path(prompt, output_dir, filename, output_ext)
-        first_image = data[0]
-        b64_json = _field(first_image, "b64_json")
-        image_url = _field(first_image, "url")
-        if b64_json:
-            image_data = base64.b64decode(b64_json)
-            return save_image_bytes(image_data, path)
-        if image_url:
-            return download_image(image_url, path)
+    if resp.status_code != 200:
+        body = resp.text.strip()
+        if len(body) > 500:
+            body = body[:500] + "..."
+        raise RuntimeError(f"OpenAI image generation failed ({resp.status_code}): {body}")
 
-    raise RuntimeError("No image was generated. The server may have refused the request.")
+    try:
+        data = resp.json()
+    except ValueError as exc:
+        raise RuntimeError("OpenAI image generation returned invalid JSON.") from exc
+
+    items = data.get("data") or []
+    if not items:
+        raise RuntimeError("No image was generated. The server may have refused the request.")
+
+    path = resolve_output_path(prompt, output_dir, filename, output_ext)
+    first_image = items[0] or {}
+    b64_json = first_image.get("b64_json")
+    image_url = first_image.get("url")
+    if b64_json:
+        image_data = base64.b64decode(b64_json)
+        return save_image_bytes(image_data, path)
+    if image_url:
+        return download_image(image_url, path)
+
+    raise RuntimeError(f"OpenAI response missing image data: {data}")
 
 
 # ╔══════════════════════════════════════════════════════════════════╗

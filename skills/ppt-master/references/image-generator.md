@@ -388,6 +388,8 @@ C (AI-generated) supports three implementation modes sharing one `image_prompts.
 
 ### Path A — `image_gen.py --manifest` (Default)
 
+For `IMAGE_BACKEND=openai`, Path A uses native `requests` HTTP against `POST /v1/images/generations`, with `gpt-image-2` as the default model.
+
 ```bash
 python3 scripts/image_gen.py \
   --manifest project/images/image_prompts.json \
@@ -431,6 +433,8 @@ Precedence:
 > `IMAGE_API_KEY`, `IMAGE_MODEL`, and `IMAGE_BASE_URL` are intentionally unsupported.
 
 > If `.env` or the current environment contains multiple provider configs, `IMAGE_BACKEND` explicitly selects the active one.
+
+> For the OpenAI backend, `gpt-image-2` is the default model and `requests` HTTP is the supported transport; do not rely on SDK-specific behavior.
 
 **Support tiers (recommended usage)**: Core / Extended / Experimental. Run `image_gen.py --list-backends` for the current assignments.
 

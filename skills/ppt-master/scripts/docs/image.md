@@ -68,9 +68,11 @@ export OPENAI_OUTPUT_FORMAT=png
 Current process environment wins over `.env`.
 
 OpenAI backend notes:
-- `gpt-image-2` is the default OpenAI model.
+- `gpt-image-2` is the default OpenAI model, and this backend now prefers native `requests` HTTP instead of the SDK path.
+- The default endpoint is `POST /v1/images/generations`; this is the stable path for `gpt-image-2` in this repository's `sub2api` setup.
 - For `gpt-image-2`, `image_size=512px` means a low-quality draft preset, not a literal 512px edge. The model requires both edges to be multiples of 16px, a long:short ratio no greater than 3:1, and total pixels between 655,360 and 8,294,400.
 - `OPENAI_BACKGROUND=transparent` is not supported by `gpt-image-2`; use `auto` or `opaque`.
+- `OPENAI_TIMEOUT` controls the HTTP timeout in seconds. Default: 180.
 - If `OPENAI_OUTPUT_FORMAT=jpeg` or `webp`, generated files use `.jpg` or `.webp` extensions instead of `.png`.
 
 Use provider-specific keys only (e.g. `GEMINI_API_KEY`, `OPENAI_API_KEY`). See `.env.example` in clone mode or `${SKILL_DIR}/.env.example` in skill-install mode for the full list per backend.
