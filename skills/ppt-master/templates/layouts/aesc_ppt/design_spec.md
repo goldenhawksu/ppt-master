@@ -33,12 +33,14 @@
 | **Main Text** | `#1A1818` | Primary headings, body text |
 | **Body Text** | `#3A3838` | Body copy, descriptions |
 | **Header Gray** | `#9B9B9B` | Header auxiliary text (domain, classification) |
+| **Neutral Gray** | `#6B7280` | Downward / flat trend annotations that are NOT problems |
 | **Divider** | `#DDDDDD` | Header dividers, borders |
 | **Light Divider** | `#EEEEEE` | Content dividers |
 | **Pure White** | `#FFFFFF` | Content/chapter/TOC page background |
 | **Ending Black** | `#1C1C1C` | Ending page background (from end.jpg) |
 | **Ending Text** | `#DEDEDE` | Ending page "Thanks" text |
 | **Ending Subdued** | `#888888` | Ending page contact info, date |
+| **Alert Red** | `#DC2626` | **Semantic-only**: risk labels, warning callouts, critical threshold breach, problem indicators — NEVER decorative; see §XIV |
 
 ## IV. Typography System
 
@@ -298,3 +300,48 @@ Ch 6 — 资源诉求与预期收益
   • 所需资源拆解（预算 + 人力 + 跨部门协同）
   • ROI 预期：投入 vs 预计收益对比
 ```
+
+## XIV. Red Color Restriction Policy
+
+**Core rule**: Red (`#DC2626`) is a **semantic-only** color in this template. Regular content pages MUST NOT use any red-family color (including `#EF4444`, `#F44336`, `#FF0000`, `#B91C1C`, etc.). Only the palette-defined `#DC2626` is permitted, and only in the contexts listed below.
+
+### Permitted uses of red (semantic alert contexts)
+
+| Context | Example |
+| --- | --- |
+| Risk section label or risk-category badge | "⚠ 高风险", "Risk: Unresolved" badge on a risk register row |
+| Warning callout box | Highlighted box identifying a confirmed problem or issue in the analysis |
+| Critical threshold breach indicator | KPI card annotation when a value falls below a defined critical threshold (not merely "down") |
+| Problem/issue annotation on a chart | Callout arrow pointing to a specific anomaly with "质量异常" label |
+| Unresolved blocker alert banner | "Blocker: Pending approval from Legal" strip at the top of an action plan page |
+| Negative deviation that is a recognized problem | A performance gap explicitly described in the deck as a problem needing remediation |
+
+### Prohibited uses of red (use the listed alternative instead)
+
+| Prohibited context | Use instead |
+| --- | --- |
+| Section headers, chapter markers, page title accents | `#2563EB` Volt Blue |
+| Decorative card borders, accent bars, structural dividers | `#2563EB` or `#EEEEEE` |
+| Icon fill colors or bullet markers | `#2563EB` or `#374151` |
+| Chart series colors (declining but within-target series) | `#374151` Deep Charcoal or `#6B7280` Neutral Gray |
+| KPI trend annotation: value is down but not a problem | `#6B7280` Neutral Gray + `arrow-trend-down` icon |
+| Background panels, card fills, or section zone tints | White `#FFFFFF` or Volt Blue tint `#2563EB` at low fill-opacity |
+| Any purely decorative use | Not applicable — never use red for decoration |
+
+### Distinguishing a "downward trend" from a "problem"
+
+The general consulting convention "Red = down" does **not** apply to this template. Use the decision rule below:
+
+```
+Is the downward value explicitly flagged as a risk, issue, or below a named threshold?
+  YES → #DC2626 Alert Red is appropriate
+  NO  → #6B7280 Neutral Gray (direction only, no alarm signal)
+```
+
+**Example**:
+- Spare-parts cost rose 12% — but still within the annual budget cap → `#6B7280` gray
+- Field-repair first-time fix rate fell to 63% vs. the 80% SLA target → `#DC2626` red (SLA breach = problem)
+
+### Override of executor-consultant color convention
+
+The generic `executor-consultant.md` rule "Red=down / Green=up" for trend annotations is **overridden** by this policy for all aesc_ppt decks. Executors reading this design_spec must apply the decision rule above, not the generic convention.
