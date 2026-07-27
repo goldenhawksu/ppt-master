@@ -32,6 +32,7 @@ PPT Master is an AI-driven presentation generation system. Multi-role collaborat
 - Technical SVG/PPT constraints live in [`skills/ppt-master/references/shared-standards.md`](skills/ppt-master/references/shared-standards.md).
 - Canvas choices live in [`skills/ppt-master/references/canvas-formats.md`](skills/ppt-master/references/canvas-formats.md).
 - Icon library details live in [`skills/ppt-master/templates/icons/README.md`](skills/ppt-master/templates/icons/README.md).
+- **Windows/Codex export ACL check**: after exporting any PPTX under `projects/*/exports/` on Windows, verify the generated file is readable by the desktop user. If PowerPoint reports "cannot read/open file" while ZIP/XML validation passes, first check ACL with `icacls <pptx>`; generated files must inherit the exports directory and include `BUILTIN\Users:(RX)` or an equivalent user-readable ACE. Fix with `icacls <pptx> /inheritance:e` before changing PPTX generation code.
 
 ## Required Conventions
 
