@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" data-pptx-master="aesc_corporate_master" data-pptx-master-name="AESC Corporate" data-pptx-layout="aesc_corporate_content" data-pptx-layout-name="AESC Corporate · Flexible Content">
+<rect id="master-background" x="0" y="0" width="1280" height="720" fill="#FFFFFF" data-pptx-layer="master" data-pptx-editable="false"/>
+<line id="header-divider-320" x1="320" y1="10" x2="320" y2="28" stroke="#DDDDDD" stroke-width="1" data-pptx-layer="layout" data-pptx-editable="false"/>
+<line id="header-divider-640" x1="640" y1="10" x2="640" y2="28" stroke="#DDDDDD" stroke-width="1" data-pptx-layer="layout" data-pptx-editable="false"/>
+<line id="header-divider-1120" x1="1120" y1="10" x2="1120" y2="28" stroke="#DDDDDD" stroke-width="1" data-pptx-layer="layout" data-pptx-editable="false"/>
+<text id="header-domain" x="480" y="24" fill="#9B9B9B" font-size="13" text-anchor="middle" data-pptx-layer="layout" data-pptx-editable="false">aesc-group.com</text>
+<text id="header-confidential" x="880" y="24" fill="#9B9B9B" font-size="13" text-anchor="middle" data-pptx-layer="layout" data-pptx-editable="false">document level : confidential</text>
+<line id="header-bottom" x1="0" y1="38" x2="1280" y2="38" stroke="#DDDDDD" stroke-width="1" data-pptx-layer="layout" data-pptx-editable="false"/>
+<rect id="content-accent" x="56" y="55" width="5" height="38" fill="#2563EB" data-pptx-layer="layout" data-pptx-editable="false"/>
+<line id="content-title-rule" x1="68" y1="98" x2="268" y2="98" stroke="#2563EB" stroke-width="2" data-pptx-layer="layout" data-pptx-editable="false"/>
+<line id="content-separator" x1="56" y1="148" x2="1224" y2="148" stroke="#EEEEEE" stroke-width="1" data-pptx-layer="layout" data-pptx-editable="false"/>
+<g id="brand-label" data-pptx-placeholder="body" data-pptx-idx="97" data-pptx-bounds="24 6 280 30"><text id="brand-label-carrier" x="24" y="24" fill="#1A1818" font-size="16" text-anchor="start" data-pptx-carrier="true" font-weight="700" letter-spacing="2">{{BRAND_LABEL}}</text></g>
+<g id="page-number" data-pptx-placeholder="slide-number" data-pptx-idx="98" data-pptx-bounds="1140 6 120 28"><text id="page-number-carrier" x="1200" y="24" fill="#9B9B9B" font-size="13" text-anchor="middle" data-pptx-carrier="true">{{PAGE_NUM}}</text></g>
+<g id="page-title" data-pptx-placeholder="title" data-pptx-idx="0" data-pptx-bounds="68 51 1156 45"><text id="page-title-carrier" x="68" y="84" fill="#1A1818" font-size="32" text-anchor="start" data-pptx-carrier="true" font-weight="700">{{PAGE_TITLE}}</text></g>
+<g id="key-message" data-pptx-placeholder="body" data-pptx-idx="1" data-pptx-bounds="68 108 1156 32"><text id="key-message-carrier" x="68" y="128" fill="#374151" font-size="20" text-anchor="start" data-pptx-carrier="true">{{KEY_MESSAGE}}</text></g>
+<g id="content-area" data-pptx-placeholder="object" data-pptx-idx="2" data-pptx-bounds="56 154 1168 502"><text id="content-area-carrier" x="56" y="182" fill="#3A3838" font-size="22" text-anchor="start" data-pptx-carrier="true">{{CONTENT_AREA}}</text></g>
+<g id="source" data-pptx-placeholder="footer" data-pptx-idx="99" data-pptx-bounds="56 682 1080 28"><text id="source-carrier" x="56" y="700" fill="#9B9B9B" font-size="12" text-anchor="start" data-pptx-carrier="true">{{SOURCE}}</text></g>
+</svg>

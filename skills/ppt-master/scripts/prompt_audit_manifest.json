@@ -83,6 +83,27 @@
     "skills/ppt-master/templates/icons/README.md": 1750
   },
   "load_sets": {
+    "stage.generate.template.aesc": {
+      "description": "Optional registered AESC base Deck plus its single-owner visualization adaptation; selected-template loading only, not a baseline runtime bundle.",
+      "scope": "incremental",
+      "files": [
+        "skills/ppt-master/templates/decks/aesc_ppt/templates/design_spec.md",
+        "skills/ppt-master/templates/decks/aesc_ppt_data_viz/templates/design_spec.md",
+        "skills/ppt-master/references/data-viz-grammar/SKILL.md",
+        "skills/ppt-master/scripts/docs/aesc-data-viz.md"
+      ],
+      "max_tokens": 20000
+    },
+    "stage.generate.template.aesc-data-viz": {
+      "description": "Optional AESC evidence-led visualization reference and supplementary audit contract; loaded only for the selected AESC template, never added to baseline runtime bundles. The structured Deck spec owns AESC adaptation; the legacy source package is not a valid workspace.",
+      "scope": "incremental",
+      "files": [
+        "skills/ppt-master/templates/decks/aesc_ppt_data_viz/templates/design_spec.md",
+        "skills/ppt-master/references/data-viz-grammar/SKILL.md",
+        "skills/ppt-master/scripts/docs/aesc-data-viz.md"
+      ],
+      "max_tokens": 20000
+    },
     "bootstrap.routing": {
       "description": "Repository entry plus the single route-selection authority.",
       "scope": "cumulative",
@@ -2321,6 +2342,10 @@
   ],
   "coverage": {
     "exempt": [
+      {
+        "glob": "skills/ppt-master/references/data-viz-grammar/references/*.md",
+        "reason": "Vendored standalone HTML, Excel, and matplotlib companion documentation; not loaded by the AESC PPT integration, which adapts only the source Skill."
+      },
       {
         "glob": "skills/ppt-master/workflows/index.md",
         "reason": "Maintainer-only workflow inventory; never loaded during task execution."

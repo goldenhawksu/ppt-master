@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" data-pptx-master="aesc_corporate_master" data-pptx-master-name="AESC Corporate" data-pptx-layout="aesc_corporate_chapter" data-pptx-layout-name="AESC Corporate · Chapter">
+<rect id="master-background" x="0" y="0" width="1280" height="720" fill="#FFFFFF" data-pptx-layer="master" data-pptx-editable="false"/>
+<line id="header-divider-320" x1="320" y1="10" x2="320" y2="28" stroke="#DDDDDD" stroke-width="1" data-pptx-layer="layout" data-pptx-editable="false"/>
+<line id="header-divider-640" x1="640" y1="10" x2="640" y2="28" stroke="#DDDDDD" stroke-width="1" data-pptx-layer="layout" data-pptx-editable="false"/>
+<line id="header-divider-1120" x1="1120" y1="10" x2="1120" y2="28" stroke="#DDDDDD" stroke-width="1" data-pptx-layer="layout" data-pptx-editable="false"/>
+<text id="header-domain" x="480" y="24" fill="#9B9B9B" font-size="13" text-anchor="middle" data-pptx-layer="layout" data-pptx-editable="false">aesc-group.com</text>
+<text id="header-confidential" x="880" y="24" fill="#9B9B9B" font-size="13" text-anchor="middle" data-pptx-layer="layout" data-pptx-editable="false">document level : confidential</text>
+<line id="header-bottom" x1="0" y1="38" x2="1280" y2="38" stroke="#DDDDDD" stroke-width="1" data-pptx-layer="layout" data-pptx-editable="false"/>
+<rect id="chapter-accent" x="56" y="80" width="5" height="340" fill="#2563EB" data-pptx-layer="layout" data-pptx-editable="false"/>
+<g id="brand-label" data-pptx-placeholder="body" data-pptx-idx="97" data-pptx-bounds="24 6 280 30"><text id="brand-label-carrier" x="24" y="24" fill="#1A1818" font-size="16" text-anchor="start" data-pptx-carrier="true" font-weight="700" letter-spacing="2">{{BRAND_LABEL}}</text></g>
+<g id="page-number" data-pptx-placeholder="slide-number" data-pptx-idx="98" data-pptx-bounds="1140 6 120 28"><text id="page-number-carrier" x="1200" y="24" fill="#9B9B9B" font-size="13" text-anchor="middle" data-pptx-carrier="true">{{PAGE_NUM}}</text></g>
+<g id="chapter-number" data-pptx-placeholder="body" data-pptx-idx="1" data-pptx-bounds="84 144 1100 80"><text id="chapter-number-carrier" x="84" y="200" fill="#2563EB" font-size="52" text-anchor="start" data-pptx-carrier="true" font-weight="700">{{CHAPTER_NUM}}</text></g>
+<g id="chapter-title" data-pptx-placeholder="title" data-pptx-idx="0" data-pptx-bounds="84 238 1100 60"><text id="chapter-title-carrier" x="84" y="280" fill="#1A1818" font-size="40" text-anchor="start" data-pptx-carrier="true" font-weight="700">{{CHAPTER_TITLE}}</text></g>
+<g id="chapter-description" data-pptx-placeholder="body" data-pptx-idx="2" data-pptx-bounds="84 312 1100 88"><text id="chapter-description-carrier" x="84" y="336" fill="#3A3838" font-size="20" text-anchor="start" data-pptx-carrier="true">{{CHAPTER_DESC}}</text></g>
+</svg>

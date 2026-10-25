@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-pptx-master="aesc_data_viz_master" data-pptx-master-name="AESC Data Insights" data-pptx-layout="aesc_cover" data-pptx-layout-name="AESC · Cover">
+<rect id="master-background" x="0" y="0" width="1280" height="720" fill="#FFFFFF" data-pptx-layer="master" data-pptx-editable="false"/>
+<image id="cover-photo" href="../images/cover.jpg" x="0" y="44" width="1280" height="534" preserveAspectRatio="xMidYMid slice" data-pptx-layer="layout" data-pptx-editable="false"/>
+<text id="cover-brand" x="24" y="29" font-size="16" fill="#1A1818" text-anchor="start" font-weight="700" data-pptx-layer="layout" data-pptx-editable="false">ΛESC</text>
+<line id="cover-strip-rule" x1="0" y1="44" x2="1280" y2="44" stroke="#EEEEEE" stroke-width="1" data-pptx-layer="layout" data-pptx-editable="false"/>
+<g id="cover-title" data-pptx-placeholder="title" data-pptx-idx="0" data-pptx-bounds="60 140 1100 140"><text id="cover-title-carrier" x="60" y="206" font-size="56" fill="#FFFFFF" text-anchor="start" font-weight="700" data-pptx-carrier="true">{{TITLE}}</text></g>
+<g id="cover-subtitle" data-pptx-placeholder="subtitle" data-pptx-idx="1" data-pptx-bounds="60 302 1020 80"><text id="cover-subtitle-carrier" x="60" y="326" font-size="24" fill="#FFFFFF" text-anchor="start" data-pptx-carrier="true">{{SUBTITLE}}</text></g>
+<g id="cover-author" data-pptx-placeholder="body" data-pptx-idx="2" data-pptx-bounds="56 600 1050 56"><text id="cover-author-carrier" x="56" y="628" font-size="28" fill="#1A1818" text-anchor="start" font-weight="700" data-pptx-carrier="true">{{AUTHOR}}</text></g>
+<g id="cover-date" data-pptx-placeholder="date" data-pptx-idx="3" data-pptx-bounds="56 662 1050 30"><text id="cover-date-carrier" x="56" y="678" font-size="16" fill="#3A3838" text-anchor="start" data-pptx-carrier="true">{{DATE}}</text></g>
+</svg>

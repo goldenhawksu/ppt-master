@@ -120,11 +120,11 @@ Vertical dividers: y1=10 → y2=28, stroke #DDDDDD, 1px
 
 | Mode | Recommendation |
 | --- | --- |
-| **Data Dashboard** | Use full-width body with 3-4 KPI cards + chart area |
+| **Data Dashboard** | Prefer one dominant evidence chart with an insight rail; use a KPI strip only when the metrics support the same decision; see §XV |
 | **Comparison** | Use split columns (560+560, gap 24px) |
 | **Process / Flow** | Use horizontal flow with 3-6 stages, full width |
 | **Table** | Use full-width body area, max height ~400px |
-| **KPI + Detail** | Top row of data cards (3-4) + bottom detail area |
+| **KPI + Detail** | Prefer a hero metric plus its baseline, trend, and management implication; see §XV |
 
 ## VIII. Spacing Specification
 
@@ -234,7 +234,7 @@ The aesc_ppt template is **data-first**. Every conclusion page in Ch 2 / Ch 3 / 
 | **Ch 2** 执行痛点 | Stacked / grouped bar chart, horizontal bar (ranking), heatmap table | Quantify gaps across regions / process steps |
 | **Ch 3** 问题分析 | SWOT matrix (2×2), cost waterfall chart, event retrospective frame | Waterfall chart: shows cost deltas by factor; use for cost gap attribution |
 | **Ch 4** 解决方案 | Two-column comparison table (option A vs B), process flowchart, cost-benefit scatter plot | If scatter plot is unclear, replace with a two-column table (投入 vs 产出) |
-| **Ch 5** 行动计划 | Gantt-style timeline, swimlane flowchart (cross-department), SMART action table | Swimlane for processes involving ≥ 2 departments |
+| **Ch 5** 行动计划 | ThinkCell-style Gantt timeline, swimlane flowchart (cross-department), SMART action table | Swimlane for processes involving ≥ 2 departments |
 | **Ch 6** 资源诉求 | Budget breakdown table, ROI comparison bar chart | Keep this chapter separate from Ch 5 — do not merge |
 
 **Chart selection decision rules:**
@@ -293,7 +293,7 @@ Ch 4 — 改进方案设计
   • 改进后流程图（泳道图 or flowchart）
 
 Ch 5 — 行动计划
-  • 甘特式时间线（按季度展示关键里程碑）
+  • 甘特式时间线（ThinkCell风格，按季度展示关键里程碑）
   • SMART 行动表（责任人 / 完成标准 / 截止时间）
 
 Ch 6 — 资源诉求与预期收益
@@ -345,3 +345,15 @@ Is the downward value explicitly flagged as a risk, issue, or below a named thre
 ### Override of executor-consultant color convention
 
 The generic `executor-consultant.md` rule "Red=down / Green=up" for trend annotations is **overridden** by this policy for all aesc_ppt decks. Executors reading this design_spec must apply the decision rule above, not the generic convention.
+
+## XV. Data Visualization Grammar
+
+The AESC-specific chart preference and adaptation have one owner:
+`${SKILL_DIR}/templates/decks/aesc_ppt_data_viz/templates/design_spec.md` §VIII.
+Read that section when using these legacy materials as AESC design evidence.
+
+This directory remains legacy source evidence, not a current structured
+workspace. New work uses the separately authored `aesc_ppt_data_viz` Deck
+workspace after its prototype review; never add Master/Layout metadata to these
+existing SVGs or silently redirect a legacy template selection. An unregistered
+workspace can be selected by its exact root, not by an unresolved bare name.

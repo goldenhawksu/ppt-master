@@ -1,16 +1,4 @@
 {
-  "aesc_ppt": {
-    "summary": "AESC (远景动力) corporate 16:9 system for CTS business reviews, overseas project analysis, quality reports, after-sales logistics proposals, and strategic planning.",
-    "canvas_format": "ppt169",
-    "page_count": 5,
-    "page_types": [
-      "cover",
-      "chapter",
-      "toc",
-      "content",
-      "ending"
-    ]
-  },
   "editorial_bleed": {
     "summary": "A structure-only 16:9 system with 10 authored PowerPoint Layouts whose images bleed to the canvas edge and whose text sits on the image behind a scrim.",
     "canvas_format": "ppt169",

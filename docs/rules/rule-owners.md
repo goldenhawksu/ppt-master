@@ -40,6 +40,13 @@
 | R31 | Legacy structured contracts (`baseline`, `template`, `preserve`, `layout_strategy`, `data-pptx-layout-kind`, `distilled` / `utility`, direct atomic placeholders) are never upgraded in place; create a new workspace | `references/pptx-structure-interface.md` §3 | `workflows/routing.md` §4, `references/executor-structured.md`, `references/strategist-template.md`, `workflows/stages/apply-template-workspace.md`, `references/artifact-ownership.md`, `scripts/docs/svg-pipeline.md` |
 | R32 | Mirror preserves the reachable Slide → Layout → Master chain, text-node topology, placeholder facts, and similar presentation; it never synthesizes, renames, re-parents, or redesigns | `references/template-designer.md` Mirror mode | `workflows/create-template.md` Step 1A/1B/4, `workflows/create-template/create-layout.md`, `workflows/create-template/create-deck.md`, `references/executor-structured.md` §1.1 |
 
+## AESC Visualization Extension
+
+| ID | Rule (one line) | Owner | Pointer only |
+|---|---|---|---|
+| AESC-V1 | Evidence-led chart preference and AESC-specific adaptation of the vendored source grammar | `templates/decks/aesc_ppt_data_viz/templates/design_spec.md` §VIII | `templates/decks/aesc_ppt/templates/design_spec.md` §VIII; `docs/zh/aesc-data-viz.md`; source grammar: `references/data-viz-grammar/SKILL.md` |
+| AESC-V2 | Supplementary SVG audit attributes, discovery, exit codes, and evidence boundaries | `scripts/docs/aesc-data-viz.md` §1–§3 | `templates/decks/aesc_ppt_data_viz/templates/design_spec.md` §VIII; `templates/decks/aesc_ppt/templates/design_spec.md` §VIII; `docs/zh/aesc-data-viz.md` |
+
 ## 4. Term renames (recorded here when decided)
 
 Decided 2026-09-02 and applied in one sweep. Each row names the old term, the new term, and every file the rename touched; a later file that still uses the old term is a defect.

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-pptx-master="aesc_data_viz_master" data-pptx-master-name="AESC Data Insights" data-pptx-layout="aesc_comparison" data-pptx-layout-name="AESC · Before and After" data-viz-page-type="comparison_swing">
+<rect id="master-background" x="0" y="0" width="1280" height="720" fill="#FFFFFF" data-pptx-layer="master" data-pptx-editable="false"/>
+<text id="header-brand" x="24" y="26" font-size="16" fill="#1A1818" text-anchor="start" font-weight="700" data-pptx-layer="layout" data-pptx-editable="false">ΛESC</text>
+<line id="header-divider-320" x1="320" y1="10" x2="320" y2="28" stroke="#DDDDDD" stroke-width="1" data-pptx-layer="layout" data-pptx-editable="false"/>
+<line id="header-divider-640" x1="640" y1="10" x2="640" y2="28" stroke="#DDDDDD" stroke-width="1" data-pptx-layer="layout" data-pptx-editable="false"/>
+<line id="header-divider-1120" x1="1120" y1="10" x2="1120" y2="28" stroke="#DDDDDD" stroke-width="1" data-pptx-layer="layout" data-pptx-editable="false"/>
+<text id="header-domain" x="480" y="26" font-size="13" fill="#9B9B9B" text-anchor="middle" data-pptx-layer="layout" data-pptx-editable="false">aesc-group.com</text>
+<text id="header-classification" x="880" y="26" font-size="13" fill="#9B9B9B" text-anchor="middle" data-pptx-layer="layout" data-pptx-editable="false">document level: confidential</text>
+<line id="header-bottom" x1="0" y1="38" x2="1280" y2="38" stroke="#DDDDDD" stroke-width="1" data-pptx-layer="layout" data-pptx-editable="false"/>
+<rect id="title-accent" x="56" y="62" width="5" height="36" fill="#2563EB" data-pptx-layer="layout" data-pptx-editable="false"/>
+<line id="title-underline" x1="76" y1="116" x2="276" y2="116" stroke="#2563EB" stroke-width="2" data-pptx-layer="layout" data-pptx-editable="false"/>
+<line id="title-separator" x1="56" y1="184" x2="1224" y2="184" stroke="#EEEEEE" stroke-width="1" data-pptx-layer="layout" data-pptx-editable="false"/>
+<line id="comparison-divider" x1="640" y1="214" x2="640" y2="530" stroke="#DDDDDD" stroke-width="1" data-pptx-layer="layout" data-pptx-editable="false"/>
+<line id="comparison-outcome-rule" x1="56" y1="556" x2="1224" y2="556" stroke="#2563EB" stroke-width="2" data-pptx-layer="layout" data-pptx-editable="false"/>
+<g id="page-title" data-pptx-placeholder="title" data-pptx-idx="0" data-pptx-bounds="76 60 1148 52"><text id="page-title-carrier" x="76" y="94" font-size="32" fill="#1A1818" text-anchor="start" font-weight="700" data-pptx-carrier="true">{{PAGE_TITLE}}</text></g>
+<g id="key-message" data-pptx-placeholder="body" data-pptx-idx="1" data-pptx-bounds="76 132 1148 40"><text id="key-message-carrier" x="76" y="154" font-size="20" fill="#374151" text-anchor="start" data-pptx-carrier="true">{{KEY_MESSAGE}}</text></g>
+<g id="baseline-label" data-pptx-placeholder="body" data-pptx-idx="2" data-pptx-bounds="56 218 548 40"><text id="baseline-label-carrier" x="56" y="242" font-size="24" fill="#6B7280" text-anchor="start" font-weight="700" data-pptx-carrier="true">{{BASELINE_LABEL}}</text></g>
+<g id="proposed-label" data-pptx-placeholder="body" data-pptx-idx="3" data-pptx-bounds="676 218 548 40"><text id="proposed-label-carrier" x="676" y="242" font-size="24" fill="#2563EB" text-anchor="start" font-weight="700" data-pptx-carrier="true">{{PROPOSED_LABEL}}</text></g>
+<g id="baseline-evidence" data-pptx-placeholder="object" data-pptx-idx="4" data-pptx-bounds="56 280 548 242"><text id="baseline-evidence-carrier" x="56" y="302" font-size="22" fill="#374151" text-anchor="start" data-pptx-carrier="true">{{BASELINE_EVIDENCE}}</text></g>
+<g id="proposed-evidence" data-pptx-placeholder="object" data-pptx-idx="5" data-pptx-bounds="676 280 548 242"><text id="proposed-evidence-carrier" x="676" y="302" font-size="22" fill="#374151" text-anchor="start" data-pptx-carrier="true">{{PROPOSED_EVIDENCE}}</text></g>
+<g id="comparison-takeaway" data-pptx-placeholder="body" data-pptx-idx="6" data-pptx-bounds="56 582 1168 58"><text id="comparison-takeaway-carrier" x="56" y="610" font-size="28" fill="#2563EB" text-anchor="start" font-weight="700" data-pptx-carrier="true">{{COMPARISON_TAKEAWAY}}</text></g>
+<g id="page-number" data-pptx-placeholder="slide-number" data-pptx-idx="98" data-pptx-bounds="1160 7 64 28"><text id="page-number-carrier" x="1224" y="26" font-size="13" fill="#9B9B9B" text-anchor="end" data-pptx-carrier="true">{{PAGE_NUM}}</text></g>
+<g id="source" data-pptx-placeholder="footer" data-pptx-idx="99" data-pptx-bounds="56 672 1080 28"><text id="source-carrier" x="56" y="688" font-size="12" fill="#6B7280" text-anchor="start" data-pptx-carrier="true">{{SOURCE}}</text></g>
+</svg>

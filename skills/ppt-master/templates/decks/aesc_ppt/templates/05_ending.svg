@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" data-pptx-master="aesc_corporate_master" data-pptx-master-name="AESC Corporate" data-pptx-layout="aesc_corporate_ending" data-pptx-layout-name="AESC Corporate · Closing">
+<rect id="master-background" x="0" y="0" width="1280" height="720" fill="#FFFFFF" data-pptx-layer="master" data-pptx-editable="false"/>
+<image id="ending-photo" href="../images/end.jpg" x="0" y="0" width="1280" height="720" preserveAspectRatio="xMidYMid slice" data-pptx-layer="layout" data-pptx-editable="false"/>
+<g id="ending-title" data-pptx-placeholder="title" data-pptx-idx="0" data-pptx-bounds="140 210 1000 90"><text id="ending-title-carrier" x="640.0" y="252" fill="#DEDEDE" font-size="36" text-anchor="middle" data-pptx-carrier="true" letter-spacing="6">{{THANK_YOU}}</text></g>
+<g id="brand-label" data-pptx-placeholder="body" data-pptx-idx="97" data-pptx-bounds="140 610 1000 42"><text id="brand-label-carrier" x="640.0" y="636" fill="#FFFFFF" font-size="20" text-anchor="middle" data-pptx-carrier="true" font-weight="700" letter-spacing="2">{{BRAND_LABEL}}</text></g>
+<g id="ending-contact" data-pptx-placeholder="body" data-pptx-idx="1" data-pptx-bounds="140 648 1000 30"><text id="ending-contact-carrier" x="640.0" y="666" fill="#888888" font-size="14" text-anchor="middle" data-pptx-carrier="true">{{CONTACT_INFO}}</text></g>
+<g id="ending-date" data-pptx-placeholder="date" data-pptx-idx="2" data-pptx-bounds="140 680 1000 30"><text id="ending-date-carrier" x="640.0" y="696" fill="#888888" font-size="12" text-anchor="middle" data-pptx-carrier="true">{{DATE}}</text></g>
+</svg>

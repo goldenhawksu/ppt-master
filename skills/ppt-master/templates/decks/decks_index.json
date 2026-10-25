@@ -1,4 +1,16 @@
 {
+  "aesc_ppt": {
+    "summary": "AESC corporate management reviews for CTS, quality, cost, and service logistics, supporting evidence-led decisions and follow-up reading.",
+    "canvas_format": "ppt169",
+    "page_count": 5,
+    "primary_color": "#2563EB"
+  },
+  "aesc_ppt_data_viz": {
+    "summary": "AESC branded data insights for CTS, quality, cost, and service-logistics management reviews.",
+    "canvas_format": "ppt169",
+    "page_count": 10,
+    "primary_color": "#2563EB"
+  },
   "中国电信": {
     "summary": "中国电信政企数字化方案、转型规划与内部评审，用于说明方案并对齐决策和下一步；采用克制的红灰品牌视觉。",
     "canvas_format": "ppt169",

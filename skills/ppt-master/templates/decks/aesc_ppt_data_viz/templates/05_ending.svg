@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-pptx-master="aesc_data_viz_master" data-pptx-master-name="AESC Data Insights" data-pptx-layout="aesc_ending" data-pptx-layout-name="AESC · Closing">
+<rect id="master-background" x="0" y="0" width="1280" height="720" fill="#FFFFFF" data-pptx-layer="master" data-pptx-editable="false"/>
+<rect id="ending-background" x="0" y="0" width="1280" height="720" fill="#1C1C1C" data-pptx-layer="layout" data-pptx-editable="false"/>
+<image id="ending-photo" href="../images/end.jpg" x="0" y="0" width="1280" height="720" preserveAspectRatio="xMidYMid slice" data-pptx-layer="layout" data-pptx-editable="false"/>
+<text id="ending-brand" x="640" y="620" font-size="20" fill="#FFFFFF" text-anchor="middle" font-weight="700" data-pptx-layer="layout" data-pptx-editable="false">ΛESC</text>
+<g id="ending-title" data-pptx-placeholder="title" data-pptx-idx="0" data-pptx-bounds="140 190 1000 96"><text id="ending-title-carrier" x="640.0" y="244" font-size="40" fill="#DEDEDE" text-anchor="middle" data-pptx-carrier="true">{{THANK_YOU}}</text></g>
+<g id="ending-contact" data-pptx-placeholder="body" data-pptx-idx="1" data-pptx-bounds="140 644 1000 32"><text id="ending-contact-carrier" x="640.0" y="660" font-size="16" fill="#DEDEDE" text-anchor="middle" data-pptx-carrier="true">{{CONTACT_INFO}}</text></g>
+<g id="ending-date" data-pptx-placeholder="date" data-pptx-idx="2" data-pptx-bounds="140 684 1000 24"><text id="ending-date-carrier" x="640.0" y="696" font-size="12" fill="#DEDEDE" text-anchor="middle" data-pptx-carrier="true">{{DATE}}</text></g>
+</svg>

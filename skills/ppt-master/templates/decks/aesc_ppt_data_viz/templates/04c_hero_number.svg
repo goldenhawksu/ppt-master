@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-pptx-master="aesc_data_viz_master" data-pptx-master-name="AESC Data Insights" data-pptx-layout="aesc_hero_number" data-pptx-layout-name="AESC · Metric and Trend" data-viz-page-type="hero_number">
+<rect id="master-background" x="0" y="0" width="1280" height="720" fill="#FFFFFF" data-pptx-layer="master" data-pptx-editable="false"/>
+<text id="header-brand" x="24" y="26" font-size="16" fill="#1A1818" text-anchor="start" font-weight="700" data-pptx-layer="layout" data-pptx-editable="false">ΛESC</text>
+<line id="header-divider-320" x1="320" y1="10" x2="320" y2="28" stroke="#DDDDDD" stroke-width="1" data-pptx-layer="layout" data-pptx-editable="false"/>
+<line id="header-divider-640" x1="640" y1="10" x2="640" y2="28" stroke="#DDDDDD" stroke-width="1" data-pptx-layer="layout" data-pptx-editable="false"/>
+<line id="header-divider-1120" x1="1120" y1="10" x2="1120" y2="28" stroke="#DDDDDD" stroke-width="1" data-pptx-layer="layout" data-pptx-editable="false"/>
+<text id="header-domain" x="480" y="26" font-size="13" fill="#9B9B9B" text-anchor="middle" data-pptx-layer="layout" data-pptx-editable="false">aesc-group.com</text>
+<text id="header-classification" x="880" y="26" font-size="13" fill="#9B9B9B" text-anchor="middle" data-pptx-layer="layout" data-pptx-editable="false">document level: confidential</text>
+<line id="header-bottom" x1="0" y1="38" x2="1280" y2="38" stroke="#DDDDDD" stroke-width="1" data-pptx-layer="layout" data-pptx-editable="false"/>
+<rect id="title-accent" x="56" y="62" width="5" height="36" fill="#2563EB" data-pptx-layer="layout" data-pptx-editable="false"/>
+<line id="title-underline" x1="76" y1="116" x2="276" y2="116" stroke="#2563EB" stroke-width="2" data-pptx-layer="layout" data-pptx-editable="false"/>
+<line id="title-separator" x1="56" y1="184" x2="1224" y2="184" stroke="#EEEEEE" stroke-width="1" data-pptx-layer="layout" data-pptx-editable="false"/>
+<line id="hero-divider" x1="548" y1="214" x2="548" y2="628" stroke="#DDDDDD" stroke-width="1" data-pptx-layer="layout" data-pptx-editable="false"/>
+<g id="page-title" data-pptx-placeholder="title" data-pptx-idx="0" data-pptx-bounds="76 60 1148 52"><text id="page-title-carrier" x="76" y="94" font-size="32" fill="#1A1818" text-anchor="start" font-weight="700" data-pptx-carrier="true">{{PAGE_TITLE}}</text></g>
+<g id="key-message" data-pptx-placeholder="body" data-pptx-idx="1" data-pptx-bounds="76 132 1148 40"><text id="key-message-carrier" x="76" y="154" font-size="20" fill="#374151" text-anchor="start" data-pptx-carrier="true">{{KEY_MESSAGE}}</text></g>
+<g id="metric-label" data-pptx-placeholder="body" data-pptx-idx="2" data-pptx-bounds="56 222 452 42"><text id="metric-label-carrier" x="56" y="244" font-size="22" fill="#374151" text-anchor="start" data-pptx-carrier="true">{{METRIC_LABEL}}</text></g>
+<g id="metric-value" data-pptx-placeholder="body" data-pptx-idx="3" data-pptx-bounds="56 286 452 120"><text id="metric-value-carrier" x="56" y="366" font-size="80" fill="#2563EB" text-anchor="start" font-weight="700" data-pptx-carrier="true">{{VALUE}}</text></g>
+<g id="metric-baseline" data-pptx-placeholder="body" data-pptx-idx="4" data-pptx-bounds="56 432 452 62"><text id="metric-baseline-carrier" x="56" y="454" font-size="22" fill="#6B7280" text-anchor="start" data-pptx-carrier="true">{{BASELINE}}</text></g>
+<g id="metric-implication" data-pptx-placeholder="body" data-pptx-idx="6" data-pptx-bounds="56 530 452 90"><text id="metric-implication-carrier" x="56" y="554" font-size="24" fill="#374151" text-anchor="start" font-weight="700" data-pptx-carrier="true">{{IMPLICATION}}</text></g>
+<g id="hero-trend-slot" data-pptx-placeholder="chart" data-pptx-idx="5" data-pptx-bounds="588 244 636 346"><g id="hero-trend" data-pptx-carrier="true" data-pptx-replace-with="chart" data-pptx-native-authority="json" data-viz-intent="change_over_time" data-viz-chart="line_chart" data-viz-title="page-title-carrier" data-viz-source="source-carrier"><metadata type="application/json">{&quot;type&quot;: &quot;line&quot;, &quot;categories&quot;: [&quot;P1&quot;, &quot;P2&quot;, &quot;P3&quot;, &quot;P4&quot;], &quot;series&quot;: [{&quot;name&quot;: &quot;Illustrative cycle time&quot;, &quot;values&quot;: [20, 18, 16, 14], &quot;color&quot;: &quot;#2563EB&quot;}], &quot;line_style&quot;: &quot;lineMarker&quot;, &quot;show_legend&quot;: false, &quot;axes&quot;: {&quot;value&quot;: {&quot;minimum&quot;: 0, &quot;maximum&quot;: 24, &quot;major_unit&quot;: 6}}, &quot;data_labels&quot;: {&quot;show_value&quot;: true, &quot;position&quot;: &quot;above&quot;, &quot;font_size&quot;: 18, &quot;color&quot;: &quot;#374151&quot;}, &quot;style&quot;: {&quot;colors&quot;: [&quot;#2563EB&quot;, &quot;#6B7280&quot;, &quot;#374151&quot;], &quot;font_family&quot;: &quot;Arial&quot;, &quot;axis_font_size&quot;: 16, &quot;text_color&quot;: &quot;#374151&quot;, &quot;axis_color&quot;: &quot;#DDDDDD&quot;, &quot;grid_color&quot;: &quot;#EEEEEE&quot;, &quot;chart_area_fill&quot;: &quot;#FFFFFF&quot;, &quot;plot_area_fill&quot;: &quot;#FFFFFF&quot;, &quot;note_font_size&quot;: 12}, &quot;name&quot;: &quot;hero-trend&quot;, &quot;x&quot;: 588, &quot;y&quot;: 244, &quot;width&quot;: 636, &quot;height&quot;: 346}</metadata>
+<line id="hero-trend-axis" x1="636" y1="524" x2="1172" y2="524" stroke="#DDDDDD" stroke-width="1"/>
+<polyline id="hero-trend-line" points="636.00,327.33 814.67,347.00 993.33,366.67 1172.00,386.33" fill="none" stroke="#2563EB" stroke-width="3"/>
+<circle id="hero-trend-point-0" cx="636.0" cy="327.33" r="4" fill="#2563EB"/>
+<text id="hero-trend-value-0" x="636.0" y="313.3333333333333" font-size="18" fill="#374151" text-anchor="middle" font-weight="700">20</text>
+<text id="hero-trend-category-0" x="636.0" y="552" font-size="16" fill="#374151" text-anchor="middle">P1</text>
+<circle id="hero-trend-point-1" cx="814.67" cy="347.0" r="4" fill="#2563EB"/>
+<text id="hero-trend-value-1" x="814.6666666666666" y="333.0" font-size="18" fill="#374151" text-anchor="middle" font-weight="700">18</text>
+<text id="hero-trend-category-1" x="814.6666666666666" y="552" font-size="16" fill="#374151" text-anchor="middle">P2</text>
+<circle id="hero-trend-point-2" cx="993.33" cy="366.67" r="4" fill="#2563EB"/>
+<text id="hero-trend-value-2" x="993.3333333333333" y="352.66666666666663" font-size="18" fill="#374151" text-anchor="middle" font-weight="700">16</text>
+<text id="hero-trend-category-2" x="993.3333333333333" y="552" font-size="16" fill="#374151" text-anchor="middle">P3</text>
+<circle id="hero-trend-point-3" cx="1172.0" cy="386.33" r="4" fill="#2563EB"/>
+<text id="hero-trend-value-3" x="1172.0" y="372.33333333333337" font-size="18" fill="#374151" text-anchor="middle" font-weight="700">14</text>
+<text id="hero-trend-category-3" x="1172.0" y="552" font-size="16" fill="#374151" text-anchor="middle">P4</text>
+</g></g>
+<g id="page-number" data-pptx-placeholder="slide-number" data-pptx-idx="98" data-pptx-bounds="1160 7 64 28"><text id="page-number-carrier" x="1224" y="26" font-size="13" fill="#9B9B9B" text-anchor="end" data-pptx-carrier="true">{{PAGE_NUM}}</text></g>
+<g id="source" data-pptx-placeholder="footer" data-pptx-idx="99" data-pptx-bounds="56 672 1080 28"><text id="source-carrier" x="56" y="688" font-size="12" fill="#6B7280" text-anchor="start" data-pptx-carrier="true">{{SOURCE}}</text></g>
+<text id="hero-trend-demo" x="636" y="582" font-size="12" fill="#6B7280" text-anchor="start">Illustrative periods; replace before use</text>
+</svg>

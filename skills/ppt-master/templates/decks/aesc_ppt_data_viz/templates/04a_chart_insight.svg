@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-pptx-master="aesc_data_viz_master" data-pptx-master-name="AESC Data Insights" data-pptx-layout="aesc_chart_insight" data-pptx-layout-name="AESC · Chart and Insight" data-viz-page-type="chart_insight_rail">
+<rect id="master-background" x="0" y="0" width="1280" height="720" fill="#FFFFFF" data-pptx-layer="master" data-pptx-editable="false"/>
+<text id="header-brand" x="24" y="26" font-size="16" fill="#1A1818" text-anchor="start" font-weight="700" data-pptx-layer="layout" data-pptx-editable="false">ΛESC</text>
+<line id="header-divider-320" x1="320" y1="10" x2="320" y2="28" stroke="#DDDDDD" stroke-width="1" data-pptx-layer="layout" data-pptx-editable="false"/>
+<line id="header-divider-640" x1="640" y1="10" x2="640" y2="28" stroke="#DDDDDD" stroke-width="1" data-pptx-layer="layout" data-pptx-editable="false"/>
+<line id="header-divider-1120" x1="1120" y1="10" x2="1120" y2="28" stroke="#DDDDDD" stroke-width="1" data-pptx-layer="layout" data-pptx-editable="false"/>
+<text id="header-domain" x="480" y="26" font-size="13" fill="#9B9B9B" text-anchor="middle" data-pptx-layer="layout" data-pptx-editable="false">aesc-group.com</text>
+<text id="header-classification" x="880" y="26" font-size="13" fill="#9B9B9B" text-anchor="middle" data-pptx-layer="layout" data-pptx-editable="false">document level: confidential</text>
+<line id="header-bottom" x1="0" y1="38" x2="1280" y2="38" stroke="#DDDDDD" stroke-width="1" data-pptx-layer="layout" data-pptx-editable="false"/>
+<rect id="title-accent" x="56" y="62" width="5" height="36" fill="#2563EB" data-pptx-layer="layout" data-pptx-editable="false"/>
+<line id="title-underline" x1="76" y1="116" x2="276" y2="116" stroke="#2563EB" stroke-width="2" data-pptx-layer="layout" data-pptx-editable="false"/>
+<line id="title-separator" x1="56" y1="184" x2="1224" y2="184" stroke="#EEEEEE" stroke-width="1" data-pptx-layer="layout" data-pptx-editable="false"/>
+<line id="insight-divider" x1="808" y1="214" x2="808" y2="628" stroke="#DDDDDD" stroke-width="1" data-pptx-layer="layout" data-pptx-editable="false"/>
+<text id="insight-conclusion" x="840" y="234" font-size="13" fill="#6B7280" text-anchor="start" font-weight="700" data-pptx-layer="layout" data-pptx-editable="false">CONCLUSION</text>
+<text id="insight-evidence" x="840" y="364" font-size="13" fill="#6B7280" text-anchor="start" font-weight="700" data-pptx-layer="layout" data-pptx-editable="false">EVIDENCE</text>
+<text id="insight-action" x="840" y="494" font-size="13" fill="#6B7280" text-anchor="start" font-weight="700" data-pptx-layer="layout" data-pptx-editable="false">ACTION</text>
+<g id="page-title" data-pptx-placeholder="title" data-pptx-idx="0" data-pptx-bounds="76 60 1148 52"><text id="page-title-carrier" x="76" y="94" font-size="32" fill="#1A1818" text-anchor="start" font-weight="700" data-pptx-carrier="true">{{PAGE_TITLE}}</text></g>
+<g id="key-message" data-pptx-placeholder="body" data-pptx-idx="1" data-pptx-bounds="76 132 1148 40"><text id="key-message-carrier" x="76" y="154" font-size="20" fill="#374151" text-anchor="start" data-pptx-carrier="true">{{KEY_MESSAGE}}</text></g>
+<g id="ranking-evidence-slot" data-pptx-placeholder="chart" data-pptx-idx="2" data-pptx-bounds="56 222 728 386"><g id="ranking-evidence" data-pptx-carrier="true" data-pptx-replace-with="chart" data-pptx-native-authority="json" data-viz-intent="ranking" data-viz-chart="horizontal_bar_chart" data-viz-title="page-title-carrier" data-viz-source="source-carrier"><metadata type="application/json">{&quot;type&quot;: &quot;bar&quot;, &quot;grouping&quot;: &quot;clustered&quot;, &quot;categories&quot;: [&quot;Region A&quot;, &quot;Region B&quot;, &quot;Region C&quot;, &quot;Other&quot;], &quot;series&quot;: [{&quot;name&quot;: &quot;Illustrative cost&quot;, &quot;values&quot;: [42, 28, 18, 12], &quot;point_colors&quot;: [&quot;#2563EB&quot;, &quot;#6B7280&quot;, &quot;#6B7280&quot;, &quot;#6B7280&quot;]}], &quot;show_legend&quot;: false, &quot;axes&quot;: {&quot;value&quot;: {&quot;minimum&quot;: 0, &quot;maximum&quot;: 50, &quot;major_unit&quot;: 10}}, &quot;data_labels&quot;: {&quot;show_value&quot;: true, &quot;position&quot;: &quot;outside_end&quot;, &quot;font_size&quot;: 18, &quot;color&quot;: &quot;#374151&quot;}, &quot;style&quot;: {&quot;colors&quot;: [&quot;#2563EB&quot;, &quot;#6B7280&quot;, &quot;#374151&quot;], &quot;font_family&quot;: &quot;Arial&quot;, &quot;axis_font_size&quot;: 16, &quot;text_color&quot;: &quot;#374151&quot;, &quot;axis_color&quot;: &quot;#DDDDDD&quot;, &quot;grid_color&quot;: &quot;#EEEEEE&quot;, &quot;chart_area_fill&quot;: &quot;#FFFFFF&quot;, &quot;plot_area_fill&quot;: &quot;#FFFFFF&quot;, &quot;note_font_size&quot;: 12}, &quot;name&quot;: &quot;ranking-evidence&quot;, &quot;x&quot;: 56, &quot;y&quot;: 222, &quot;width&quot;: 728, &quot;height&quot;: 386}</metadata>
+<line id="ranking-evidence-axis" x1="166" y1="262" x2="166" y2="550" stroke="#DDDDDD" stroke-width="1"/>
+<text id="ranking-evidence-category-0" x="150" y="298" font-size="16" fill="#374151" text-anchor="end">Region A</text>
+<rect id="ranking-evidence-bar-0" x="166" y="274" width="473.76" height="32" fill="#2563EB"/>
+<text id="ranking-evidence-value-0" x="651.76" y="298" font-size="18" fill="#374151" text-anchor="start" font-weight="700">42</text>
+<text id="ranking-evidence-category-1" x="150" y="360" font-size="16" fill="#374151" text-anchor="end">Region B</text>
+<rect id="ranking-evidence-bar-1" x="166" y="336" width="315.84" height="32" fill="#6B7280"/>
+<text id="ranking-evidence-value-1" x="493.84000000000003" y="360" font-size="18" fill="#374151" text-anchor="start" font-weight="700">28</text>
+<text id="ranking-evidence-category-2" x="150" y="422" font-size="16" fill="#374151" text-anchor="end">Region C</text>
+<rect id="ranking-evidence-bar-2" x="166" y="398" width="203.04" height="32" fill="#6B7280"/>
+<text id="ranking-evidence-value-2" x="381.03999999999996" y="422" font-size="18" fill="#374151" text-anchor="start" font-weight="700">18</text>
+<text id="ranking-evidence-category-3" x="150" y="484" font-size="16" fill="#374151" text-anchor="end">Other</text>
+<rect id="ranking-evidence-bar-3" x="166" y="460" width="135.36" height="32" fill="#6B7280"/>
+<text id="ranking-evidence-value-3" x="313.36" y="484" font-size="18" fill="#374151" text-anchor="start" font-weight="700">12</text>
+</g></g>
+<g id="insight" data-pptx-placeholder="body" data-pptx-idx="3" data-pptx-bounds="840 246 384 82"><text id="insight-carrier" x="840" y="270" font-size="24" fill="#2563EB" text-anchor="start" font-weight="700" data-pptx-carrier="true">{{INSIGHT}}</text></g>
+<g id="evidence" data-pptx-placeholder="body" data-pptx-idx="4" data-pptx-bounds="840 376 384 82"><text id="evidence-carrier" x="840" y="396" font-size="20" fill="#374151" text-anchor="start" data-pptx-carrier="true">{{EVIDENCE}}</text></g>
+<g id="action" data-pptx-placeholder="body" data-pptx-idx="5" data-pptx-bounds="840 506 384 94"><text id="action-carrier" x="840" y="526" font-size="20" fill="#374151" text-anchor="start" data-pptx-carrier="true">{{ACTION}}</text></g>
+<g id="page-number" data-pptx-placeholder="slide-number" data-pptx-idx="98" data-pptx-bounds="1160 7 64 28"><text id="page-number-carrier" x="1224" y="26" font-size="13" fill="#9B9B9B" text-anchor="end" data-pptx-carrier="true">{{PAGE_NUM}}</text></g>
+<g id="source" data-pptx-placeholder="footer" data-pptx-idx="99" data-pptx-bounds="56 672 1080 28"><text id="source-carrier" x="56" y="688" font-size="12" fill="#6B7280" text-anchor="start" data-pptx-carrier="true">{{SOURCE}}</text></g>
+<text id="ranking-evidence-demo" x="166" y="596" font-size="12" fill="#6B7280" text-anchor="start">Illustrative units; replace before use</text>
+</svg>

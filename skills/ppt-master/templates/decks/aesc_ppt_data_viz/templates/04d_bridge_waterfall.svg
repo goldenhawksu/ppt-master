@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-pptx-master="aesc_data_viz_master" data-pptx-master-name="AESC Data Insights" data-pptx-layout="aesc_bridge" data-pptx-layout-name="AESC · Additive Cost Bridge" data-viz-page-type="bridge_waterfall">
+<rect id="master-background" x="0" y="0" width="1280" height="720" fill="#FFFFFF" data-pptx-layer="master" data-pptx-editable="false"/>
+<text id="header-brand" x="24" y="26" font-size="16" fill="#1A1818" text-anchor="start" font-weight="700" data-pptx-layer="layout" data-pptx-editable="false">ΛESC</text>
+<line id="header-divider-320" x1="320" y1="10" x2="320" y2="28" stroke="#DDDDDD" stroke-width="1" data-pptx-layer="layout" data-pptx-editable="false"/>
+<line id="header-divider-640" x1="640" y1="10" x2="640" y2="28" stroke="#DDDDDD" stroke-width="1" data-pptx-layer="layout" data-pptx-editable="false"/>
+<line id="header-divider-1120" x1="1120" y1="10" x2="1120" y2="28" stroke="#DDDDDD" stroke-width="1" data-pptx-layer="layout" data-pptx-editable="false"/>
+<text id="header-domain" x="480" y="26" font-size="13" fill="#9B9B9B" text-anchor="middle" data-pptx-layer="layout" data-pptx-editable="false">aesc-group.com</text>
+<text id="header-classification" x="880" y="26" font-size="13" fill="#9B9B9B" text-anchor="middle" data-pptx-layer="layout" data-pptx-editable="false">document level: confidential</text>
+<line id="header-bottom" x1="0" y1="38" x2="1280" y2="38" stroke="#DDDDDD" stroke-width="1" data-pptx-layer="layout" data-pptx-editable="false"/>
+<rect id="title-accent" x="56" y="62" width="5" height="36" fill="#2563EB" data-pptx-layer="layout" data-pptx-editable="false"/>
+<line id="title-underline" x1="76" y1="116" x2="276" y2="116" stroke="#2563EB" stroke-width="2" data-pptx-layer="layout" data-pptx-editable="false"/>
+<line id="title-separator" x1="56" y1="184" x2="1224" y2="184" stroke="#EEEEEE" stroke-width="1" data-pptx-layer="layout" data-pptx-editable="false"/>
+<line id="bridge-takeaway-rule" x1="56" y1="592" x2="1224" y2="592" stroke="#2563EB" stroke-width="2" data-pptx-layer="layout" data-pptx-editable="false"/>
+<g id="page-title" data-pptx-placeholder="title" data-pptx-idx="0" data-pptx-bounds="76 60 1148 52"><text id="page-title-carrier" x="76" y="94" font-size="32" fill="#1A1818" text-anchor="start" font-weight="700" data-pptx-carrier="true">{{PAGE_TITLE}}</text></g>
+<g id="key-message" data-pptx-placeholder="body" data-pptx-idx="1" data-pptx-bounds="76 132 1148 40"><text id="key-message-carrier" x="76" y="154" font-size="20" fill="#374151" text-anchor="start" data-pptx-carrier="true">{{KEY_MESSAGE}}</text></g>
+<g id="bridge-evidence-slot" data-pptx-placeholder="chart" data-pptx-idx="2" data-pptx-bounds="56 214 1168 354"><g id="bridge-evidence" data-pptx-carrier="true" data-pptx-replace-with="chart" data-pptx-native-authority="json" data-viz-intent="flow" data-viz-chart="waterfall_chart" data-viz-title="page-title-carrier" data-viz-source="source-carrier"><metadata type="application/json">{&quot;type&quot;: &quot;waterfall&quot;, &quot;categories&quot;: [&quot;Baseline&quot;, &quot;Freight&quot;, &quot;Rework&quot;, &quot;Mix&quot;, &quot;Current&quot;], &quot;values&quot;: [120, -18, -12, 6, 96], &quot;subtotals&quot;: [0, 4], &quot;series_name&quot;: &quot;Illustrative cost bridge&quot;, &quot;style&quot;: {&quot;colors&quot;: [&quot;#2563EB&quot;, &quot;#6B7280&quot;, &quot;#374151&quot;], &quot;font_family&quot;: &quot;Arial&quot;, &quot;axis_font_size&quot;: 16, &quot;text_color&quot;: &quot;#374151&quot;, &quot;axis_color&quot;: &quot;#DDDDDD&quot;, &quot;grid_color&quot;: &quot;#EEEEEE&quot;, &quot;chart_area_fill&quot;: &quot;#FFFFFF&quot;, &quot;plot_area_fill&quot;: &quot;#FFFFFF&quot;, &quot;note_font_size&quot;: 12}, &quot;name&quot;: &quot;bridge-evidence&quot;, &quot;x&quot;: 56, &quot;y&quot;: 214, &quot;width&quot;: 1168, &quot;height&quot;: 354}</metadata>
+<rect id="bridge-bar-0" x="150" y="270" width="112" height="240" fill="#374151"/>
+<text id="bridge-value-0" x="206" y="256" font-size="22" fill="#374151" text-anchor="middle" font-weight="700">120</text>
+<text id="bridge-category-0" x="206" y="540" font-size="18" fill="#374151" text-anchor="middle">Baseline</text>
+<rect id="bridge-bar-1" x="360" y="270" width="112" height="36" fill="#2563EB"/>
+<text id="bridge-value-1" x="416" y="256" font-size="22" fill="#374151" text-anchor="middle" font-weight="700">-18</text>
+<text id="bridge-category-1" x="416" y="540" font-size="18" fill="#374151" text-anchor="middle">Freight</text>
+<line id="bridge-connector-1" x1="472" y1="306" x2="570" y2="306" stroke="#DDDDDD" stroke-width="1"/>
+<rect id="bridge-bar-2" x="570" y="306" width="112" height="24" fill="#2563EB"/>
+<text id="bridge-value-2" x="626" y="292" font-size="22" fill="#374151" text-anchor="middle" font-weight="700">-12</text>
+<text id="bridge-category-2" x="626" y="540" font-size="18" fill="#374151" text-anchor="middle">Rework</text>
+<line id="bridge-connector-2" x1="682" y1="330" x2="780" y2="330" stroke="#DDDDDD" stroke-width="1"/>
+<rect id="bridge-bar-3" x="780" y="318" width="112" height="12" fill="#2563EB"/>
+<text id="bridge-value-3" x="836" y="304" font-size="22" fill="#374151" text-anchor="middle" font-weight="700">+6</text>
+<text id="bridge-category-3" x="836" y="540" font-size="18" fill="#374151" text-anchor="middle">Mix</text>
+<line id="bridge-connector-3" x1="892" y1="318" x2="990" y2="318" stroke="#DDDDDD" stroke-width="1"/>
+<rect id="bridge-bar-4" x="990" y="318" width="112" height="192" fill="#374151"/>
+<text id="bridge-value-4" x="1046" y="304" font-size="22" fill="#374151" text-anchor="middle" font-weight="700">96</text>
+<text id="bridge-category-4" x="1046" y="540" font-size="18" fill="#374151" text-anchor="middle">Current</text>
+<text id="bridge-demo" x="56" y="564" font-size="12" fill="#6B7280" text-anchor="start">Illustrative units; 120 - 18 - 12 + 6 = 96</text></g></g>
+<g id="bridge-takeaway" data-pptx-placeholder="body" data-pptx-idx="3" data-pptx-bounds="56 606 1168 46"><text id="bridge-takeaway-carrier" x="56" y="630" font-size="24" fill="#2563EB" text-anchor="start" font-weight="700" data-pptx-carrier="true">{{BRIDGE_TAKEAWAY}}</text></g>
+<g id="page-number" data-pptx-placeholder="slide-number" data-pptx-idx="98" data-pptx-bounds="1160 7 64 28"><text id="page-number-carrier" x="1224" y="26" font-size="13" fill="#9B9B9B" text-anchor="end" data-pptx-carrier="true">{{PAGE_NUM}}</text></g>
+<g id="source" data-pptx-placeholder="footer" data-pptx-idx="99" data-pptx-bounds="56 672 1080 28"><text id="source-carrier" x="56" y="688" font-size="12" fill="#6B7280" text-anchor="start" data-pptx-carrier="true">{{SOURCE}}</text></g>
+<text id="bridge-native-caption" x="56" y="582" font-size="12" fill="#6B7280">Illustrative units: Baseline 120 | Freight -18 | Rework -12 | Mix +6 | Current 96</text>
+</svg>
