@@ -1,5 +1,9 @@
 # Windows Installation Guide
 
+[English](./windows-installation.md) | [Chinese](./zh/windows-installation.md)
+
+---
+
 This guide walks you through installing PPT Master on Windows step by step. Follow along and you'll have a working setup in under 10 minutes.
 
 ---
@@ -11,8 +15,6 @@ Python is the only hard requirement.
 1. Go to **[python.org/downloads](https://www.python.org/downloads/)** and download the latest **Python 3.10+** installer.
 
 2. **⚠️ CRITICAL: Check "Add python.exe to PATH"** during installation — this is the single most common mistake on Windows. Skipping this will break every step that follows.
-
-   ![Python installer — check Add to PATH](assets/windows-python-path.png)
 
 3. After installation, open **PowerShell** (search "PowerShell" in Start menu) and verify:
 
@@ -31,14 +33,25 @@ Python is the only hard requirement.
 
 **Option A — Download ZIP** (easiest):
 
-1. Go to [github.com/hugohe3/ppt-master](https://github.com/hugohe3/ppt-master)
+1. Go to [github.com/hugohe3/ppt-master](https://github.com/hugohe3/ppt-master), or use the [AtomGit mirror](https://atomgit.com/hugohe3/ppt-master) in mainland China
 2. Click the green **Code** button → **Download ZIP**
 3. Unzip to `C:\Users\YourName\ppt-master`
 
-**Option B — Git Clone** (requires [Git](https://git-scm.com/downloads)):
+**Option B — Git Clone** (requires [Git](https://git-scm.com/downloads)). Run one of these clone commands:
 
 ```powershell
+# GitHub
 git clone https://github.com/hugohe3/ppt-master.git
+```
+
+```powershell
+# AtomGit mirror
+git clone https://atomgit.com/hugohe3/ppt-master.git
+```
+
+Then enter the cloned folder:
+
+```powershell
 cd ppt-master
 ```
 
@@ -79,23 +92,28 @@ If you are using the uv virtual environment, prefer:
 
 ## Step 5 — Run a Minimal Example
 
-Open your AI editor (Cursor, VS Code + Copilot, etc.), open the `ppt-master` folder, and type in the chat:
+Open the `ppt-master` folder in an agent-capable AI tool (Claude Code, Codex, Cursor, a VS Code agent, etc.) and type in the chat:
 
 ```
-Please create a simple 3-page test PPT with a cover, one content page, and a closing page. Topic: "Hello World".
+Quickly generate a simple 3-page test PPT with a cover, one content page, and a closing page. Topic: "Hello World". No need to confirm with me.
 ```
 
-If a `.pptx` file appears in `exports/` that opens in PowerPoint — **you're done.**
+Asking for **quick generation** is what keeps this smoke test short: the AI skips the Strategist analysis and the design-confirmation round trips and goes straight to authoring and export. The default flow confirms the design spec with you first, which is what you want for a real deck but slow when all you are checking is that the environment works. Full guide → [Quick mode](./getting-started.md#quick-mode).
+
+When it finishes, you should see:
+
+- A native DrawingML `.pptx` under `exports/`, generated from `svg_output/`, that opens in PowerPoint and remains editable element by element.
+
+That's the check that matters — if the file is there and opens, **you're done.** Note that quick generation skips `finalize_svg.py`, so there is no `svg_final/` preview directory; the default flow produces one, containing self-contained visual-preview SVGs. They may be inserted manually as SVG pictures, but manual "Convert to Shape" is outside the supported contract.
 
 ---
 
 ## Step 6 — Optional Enhancements (most users can skip this)
 
-With Python and `requirements.txt` installed, you already have everything needed to generate presentations. The items below are **edge-case fallbacks and enhancements** — install only if you hit the specific scenario.
+With Python and `requirements.txt` installed, you already have everything needed to generate presentations. PPTX export writes native DrawingML shapes, so it does not require CairoSVG, GTK, or a separate SVG rasterization stack. The item below is an **edge-case fallback** — install it only if you hit the specific scenario.
 
 | Enhancement | Install only if… | How to install | Verify |
 |-------------|-----------------|----------------|--------|
-| **CairoSVG** — higher quality PNG fallbacks | You want crisper PNG fallbacks for Office versions that don't render SVG natively. `svglib` (already installed) is fine for most cases. | Install [GTK3 Runtime](https://github.com/nickvdp/gtk3/releases), then `pip install cairosvg` | `python -c "import cairosvg"` |
 | **Pandoc** — legacy document formats | You need to convert `.doc`, `.odt`, `.rtf`, `.tex`, `.rst`, `.org`, or `.typ`. `.docx`/`.html`/`.epub`/`.ipynb` work natively in Python. | Download `.msi` from [pandoc.org](https://pandoc.org/installing.html) | `pandoc --version` |
 
 ---
@@ -120,6 +138,10 @@ With Python and `requirements.txt` installed, you already have everything needed
 
 **Fix 3** — Try `python3` or `py` instead.
 
+### A `python3` command fails (exit 49 / opens Microsoft Store)
+
+The python.org installer ships `python.exe` but not `python3.exe`. **Just replace `python3` with `python` in the command** (the AI agent usually switches to `python` and continues on its own too).
+
 ### `pip install` fails with permission errors
 
 ```powershell
@@ -131,6 +153,10 @@ Or run PowerShell as Administrator.
 ### `pip install` fails due to network issues
 
 ```powershell
+# Tsinghua PyPI mirror
+pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+# Proxy
 pip install -r requirements.txt --proxy http://your-proxy:port
 ```
 

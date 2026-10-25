@@ -1,143 +1,149 @@
 {
-  "academic_defense": {
-    "summary": "Thesis defense, academic presentations, research progress reports, grant applications.",
-    "keywords": [
-      "Professional",
-      "rigorous",
-      "research-oriented",
-      "clear hierarchy"
-    ]
-  },
   "aesc_ppt": {
-    "summary": "CTS 业务汇报、海外项目分析、质量表现报告、售后物流方案、战略规划.",
-    "keywords": [
-      "Clean",
-      "data-dense",
-      "professional",
-      "dual-language (default English)"
+    "summary": "AESC (远景动力) corporate 16:9 system for CTS business reviews, overseas project analysis, quality reports, after-sales logistics proposals, and strategic planning.",
+    "canvas_format": "ppt169",
+    "page_count": 5,
+    "page_types": [
+      "cover",
+      "chapter",
+      "toc",
+      "content",
+      "ending"
     ]
   },
-  "ai_ops": {
-    "summary": "Telecom AI operations architecture, IT system overviews, digital transformation proposals, smart infrastructure reports.",
-    "keywords": [
-      "Information-dense",
-      "structured",
-      "modular zoning",
-      "telecom",
-      "enterprise style"
+  "editorial_bleed": {
+    "summary": "A structure-only 16:9 system with 10 authored PowerPoint Layouts whose images bleed to the canvas edge and whose text sits on the image behind a scrim.",
+    "canvas_format": "ppt169",
+    "page_count": 10,
+    "page_types": [
+      "hero_full",
+      "hero_side_scrim",
+      "split_bleed",
+      "split_bleed_reverse",
+      "chapter_full",
+      "quote_over_image",
+      "triptych",
+      "image_grid_four",
+      "full_statement",
+      "closing_full"
     ]
   },
-  "china_telecom_template": {
-    "summary": "China Telecom related briefings, 政企数字化方案, 转型规划, 内部汇报.",
-    "keywords": [
-      "Authoritative",
-      "structured",
-      "restrained",
-      "enterprise-government hybrid"
+  "moments_square": {
+    "summary": "A structure-only 1:1 system with 8 authored PowerPoint Layouts that use both horizontal and vertical division on a square canvas.",
+    "canvas_format": "moments",
+    "page_count": 8,
+    "page_types": [
+      "cover",
+      "statement",
+      "title_content",
+      "two_column",
+      "three_row",
+      "image_center",
+      "image_full",
+      "ending"
     ]
   },
-  "government_blue": {
-    "summary": "Key project briefings, Five-Year Plan presentations, work summaries, investment promotion, policy interpretation.",
-    "keywords": [
-      "Grand",
-      "tech-forward",
-      "modern",
-      "professional government style"
+  "presentation_core": {
+    "summary": "A structure-only 16:9 system with 20 authored PowerPoint Layouts for general, editorial, image, process, and data presentations.",
+    "canvas_format": "ppt169",
+    "page_count": 20,
+    "page_types": [
+      "title_slide",
+      "title_content",
+      "section_header",
+      "two_content",
+      "comparison",
+      "title_only",
+      "blank",
+      "content_caption",
+      "picture_caption",
+      "hero_statement",
+      "editorial_split",
+      "three_card",
+      "kpi_dashboard",
+      "process_timeline",
+      "data_story",
+      "title_picture",
+      "two_picture_caption",
+      "screenshot_focus",
+      "chart_insight",
+      "table_summary"
     ]
   },
-  "government_red": {
-    "summary": "Government briefings, policy interpretation, work summaries, project introductions, investment promotion.",
-    "keywords": [
-      "Authoritative",
-      "dignified",
-      "professional",
-      "modern government style"
+  "presentation_core_43": {
+    "summary": "A structure-only 4:3 system with 16 authored PowerPoint Layouts for projector, classroom, academic, and meeting-room presentations.",
+    "canvas_format": "ppt43",
+    "page_count": 16,
+    "page_types": [
+      "title_slide",
+      "title_content",
+      "section_header",
+      "two_content",
+      "comparison",
+      "title_only",
+      "blank",
+      "content_caption",
+      "picture_caption",
+      "hero_statement",
+      "three_card",
+      "kpi_grid",
+      "process_timeline",
+      "stacked_split",
+      "chart_insight",
+      "table_summary"
     ]
   },
-  "medical_university": {
-    "summary": "Medical academic reports, case discussions, research presentations, hospital work reports, medical education and training.",
-    "keywords": [
-      "Professional",
-      "rigorous",
-      "life-affirming",
-      "tech-forward",
-      "trustworthy"
+  "report_core": {
+    "summary": "A structure-only 16:9 system with 13 authored PowerPoint Layouts across two Masters, carrying persistent page chrome and page-number placeholders.",
+    "canvas_format": "ppt169",
+    "page_count": 13,
+    "page_types": [
+      "cover",
+      "section_divider",
+      "agenda",
+      "title_content",
+      "two_content",
+      "three_block",
+      "kpi_row",
+      "chart_insight",
+      "table_summary",
+      "process_timeline",
+      "matrix_2x2",
+      "appendix",
+      "closing"
     ]
   },
-  "pixel_retro": {
-    "summary": "Tech talks, programming tutorials, game introductions, geek-style showcases.",
-    "keywords": [
-      "Retro gaming",
-      "neon cyberpunk",
-      "geek tech",
-      "8-bit style"
+  "story_vertical": {
+    "summary": "A structure-only 9:16 system with 9 authored PowerPoint Layouts whose text geometry respects the top and bottom story safe zones.",
+    "canvas_format": "story",
+    "page_count": 9,
+    "page_types": [
+      "cover",
+      "statement",
+      "title_content",
+      "numbered_list",
+      "image_full",
+      "image_top_text",
+      "two_block",
+      "step_flow",
+      "ending"
     ]
   },
-  "psychology_attachment": {
-    "summary": "Psychotherapy training, academic lectures, counseling case analysis, professional sharing.",
-    "keywords": [
-      "Professional",
-      "warm",
-      "healing",
-      "trustworthy"
-    ]
-  },
-  "中国电建_常规": {
-    "summary": "Engineering project reports, technical proposal presentations, business negotiations, corporate promotion, annual summaries.",
-    "keywords": [
-      "Professional",
-      "composed",
-      "international",
-      "state-owned enterprise style"
-    ]
-  },
-  "中国电建_现代": {
-    "summary": "Major engineering reports, international market promotion, technology achievement showcases, high-end business negotiations.",
-    "keywords": [
-      "Grand narrative",
-      "modern precision",
-      "digital tech",
-      "international vision"
-    ]
-  },
-  "中汽研_商务": {
-    "summary": "Product certification display, evaluation presentations, technology promotion, high-end business reporting.",
-    "keywords": [
-      "Modern tech",
-      "authoritative & professional",
-      "composed & grand"
-    ]
-  },
-  "中汽研_常规": {
-    "summary": "Product certification display, evaluation presentations, technology promotion, business visits.",
-    "keywords": [
-      "Professional",
-      "authoritative",
-      "trustworthy",
-      "consulting style"
-    ]
-  },
-  "中汽研_现代": {
-    "summary": "Forward-looking technology showcases, strategic releases, high-end business reporting.",
-    "keywords": [
-      "Futuristic",
-      "tech-forward",
-      "deep & refined"
-    ]
-  },
-  "招商银行": {
-    "summary": "交易银行产品介绍、销售收款方案汇报、客户案例拆解、分行培训材料.",
-    "keywords": [
-      "Brand-consistent",
-      "structured",
-      "product-focused",
-      "refined finance"
-    ]
-  },
-  "重庆大学": {
-    "summary": "Academic defense, research reports, teaching presentations, scholarly exchange.",
-    "keywords": [
-      "Academically grounded · Mountain City charm · Modern minimalism"
+  "xiaohongshu_post": {
+    "summary": "A structure-only 3:4 vertical system with 10 authored PowerPoint Layouts for single-column image-text posts on tall social canvases.",
+    "canvas_format": "xiaohongshu",
+    "page_count": 10,
+    "page_types": [
+      "cover",
+      "statement",
+      "title_content",
+      "numbered_list",
+      "two_card_stack",
+      "image_top_text",
+      "image_full_caption",
+      "quote",
+      "step_flow",
+      "ending"
     ]
   }
 }

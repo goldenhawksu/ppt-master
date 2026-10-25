@@ -1,96 +1,36 @@
-# Palettes — Index
+# Image Palettes Legacy Reference
 
-A **palette** is the deck's **color behavior** — proportion, role, temperament. It does **not** supply HEX values; those come from `design_spec.colors`. The palette tells the model how to use the HEX values: which dominates, which carries accent, what proportion the background occupies, what the overall temperament feels like.
+Compatibility tombstone for retired `image_palette` fields and historical palette comparison assets.
 
-> Why this split: SVG renders the HEX precisely from `design_spec`. The AI image must use the **same HEX values** so the image visually belongs in the deck — but the image needs more than a HEX list; it needs a **usage rule**. That's the palette.
+## 1. Current Generation Contract
 
----
+**Hard rule**: Current deck generation never presents, selects, authors, or consumes `image_palette` or `image_palette_behavior`.
 
-## 1. Catalog (14 palettes)
+| Input | Current behavior |
+|---|---|
+| `spec_lock.md colors` | Core recurring deck-color anchors; interpret them with the completed Design Spec and image context, and allow coherent tonal/material/lighting derivatives without creating another palette |
+| `image_rendering` | Controls rendering treatment only; it does not create a second color decision |
+| Legacy `image_palette` row | Ignore it; it cannot override the confirmed deck identity or current contextual color judgment |
+| No palette row | Expected; do not synthesize a preset or `custom` fallback |
 
-Each palette has its own file with: rendering compatibility matrix and a fewshot prompt snippet.
+**Forbidden — legacy activation**:
 
-| Palette | Temperament | Best for |
-|---|---|---|
-| [`cool-corporate`](./cool-corporate.md) | Stable, professional, restrained | Consulting / B2B / finance |
-| [`warm-earth`](./warm-earth.md) | Friendly, grounded, human | Brand / lifestyle / education |
-| [`tech-neon`](./tech-neon.md) | Energetic, futuristic, high-contrast | AI / SaaS / product launch |
-| [`editorial-classic`](./editorial-classic.md) | Refined, magazine, balanced | Journalism / opinion / culture |
-| [`macaron`](./macaron.md) | Soft pastel, gentle, approachable | Education / children / onboarding |
-| [`mono-ink`](./mono-ink.md) | High-contrast monochrome with sparse accents | Methodology / Before-After / manifesto |
-| [`vivid-launch`](./vivid-launch.md) | Bold, saturated, attention-grabbing | Product launch / marketing / event |
-| [`dark-cinematic`](./dark-cinematic.md) | Premium, atmospheric, low-light | Premium product / film / entertainment |
-| [`duotone`](./duotone.md) | Two-color limited, poster-like | Cultural / cover hero / cinematic |
-| [`nature-organic`](./nature-organic.md) | Earthy, natural, wellness | Environment / wellness / outdoor |
-| [`jewel-tone`](./jewel-tone.md) | Deep saturated gemstone — emerald/sapphire/ruby + gold | Luxury / fashion / premium product / heritage |
-| [`frost-ice`](./frost-ice.md) | Near-white field with pale cool accents | Health / medical / beauty / premium SaaS |
-| [`sunset-gradient`](./sunset-gradient.md) | Warm gradient flow (pink → orange → purple) | Lifestyle / creative / travel / event |
-| [`earthy-dusty`](./earthy-dusty.md) | Muted desaturated earth tones, Morandi-adjacent | Interior / wellness / mindfulness / slow living |
+- Do not load sibling palette preset files while planning or generating a current deck.
+- Do not use the historical auto-selection table, compatibility matrix, or prompt snippets.
+- Do not write `image_palette: custom` or `image_palette_behavior`.
 
 ---
 
-## 2. Auto-selection table — `design_spec` → palette
+## 2. Legacy Interpretation and Maintenance
 
-Match `design_spec.md d. Style` + `e. Color Scheme` content vibe. First match wins. If no row matches, default to `cool-corporate`.
+The sibling preset files remain archived in place for diagnosing historical locks and maintaining the legacy palette comparison assets documented by [`README.md`](../ai-image-comparison/README.md). They are not a runtime catalog.
 
-| Content vibe / industry | Recommended palette | Alternates |
-|---|---|---|
-| Consulting / finance / B2B / corporate | `cool-corporate` | `editorial-classic`, `frost-ice` |
-| Tech / SaaS / AI | `tech-neon` | `cool-corporate`, `dark-cinematic` |
-| Modern SaaS / fintech / health-tech | `frost-ice` | `cool-corporate`, `tech-neon` |
-| Health / medical / beauty / skincare | `frost-ice` | `nature-organic`, `earthy-dusty` |
-| Education / training / onboarding | `macaron` | `warm-earth` |
-| Methodology / Before-After / mindset shift | `mono-ink` | `editorial-classic` |
-| Personal / lifestyle / brand story | `warm-earth` | `nature-organic`, `earthy-dusty` |
-| Interior / wellness / mindfulness / slow living | `earthy-dusty` | `warm-earth`, `nature-organic` |
-| Product launch / marketing / event | `vivid-launch` | `tech-neon`, `sunset-gradient` |
-| Creative agency / travel / music / lifestyle | `sunset-gradient` | `vivid-launch`, `warm-earth` |
-| Luxury / fashion / jewelry / premium / heritage | `jewel-tone` | `dark-cinematic`, `editorial-classic` |
-| Children / storybook | `macaron` | `warm-earth` |
-| Premium / entertainment / film | `dark-cinematic` | `jewel-tone`, `duotone` |
-| Cultural / media / cover-art | `duotone` | `editorial-classic` |
-| Environment / wellness / outdoor | `nature-organic` | `warm-earth`, `earthy-dusty` |
-| Finance / journalism / explainer | `editorial-classic` | `cool-corporate` |
-| Government / formal | `cool-corporate` | `editorial-classic` |
+| Legacy row | Historical meaning |
+|---|---|
+| `image_palette: <preset>` | Selects the named sibling preset as the archived color-behavior definition. |
+| `image_palette: custom` | Declares that no preset owns the behavior; the required sibling `image_palette_behavior` row is the complete definition. |
+| `image_palette_behavior: <prose>` | With `custom`, records a 2–5 sentence mapping from the lock's HEX roles to intended proportion and temperament. It must not name a competing preset or invent another HEX value. |
 
----
+A historical `custom` row without a non-empty `image_palette_behavior` is incomplete. Report the missing legacy definition; do not reconstruct it.
 
-## 3. Rendering × Palette compatibility
-
-Some combinations clash. Use this matrix as a sanity check after auto-selection.
-
-| | cool-corp | warm-earth | tech-neon | editorial | macaron | mono-ink | vivid-launch | dark-cinem | duotone | nature-org | jewel-tone | frost-ice | sunset-grad | earthy-dusty |
-|---|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| vector-illustration | ✓✓ | ✓✓ | ✓ | ✓✓ | ✓✓ | ✓ | ✓✓ | ✓ | ✓ | ✓✓ | ✓ | ✓✓ | ✓ | ✓✓ |
-| flat | ✓✓ | ✓✓ | ✓✓ | ✓ | ✓✓ | ✓ | ✓✓ | ✓ | ✓ | ✓ | ✓ | ✓✓ | ✓✓ | ✓✓ |
-| minimalist-swiss | ✓✓ | ✓ | ✓ | ✓✓ | ✓ | ✓✓ | ✗ | ✓ | ✓✓ | ✓ | ✓ | ✓✓ | ✗ | ✓ |
-| glassmorphism | ✓✓ | ✓ | ✓✓ | ✓ | ✓✓ | ✗ | ✓ | ✓✓ | ✗ | ✓ | ✓ | ✓✓ | ✓ | ✓ |
-| 3d-isometric | ✓✓ | ✓ | ✓✓ | ✓ | ✓ | ✗ | ✓✓ | ✓✓ | ✗ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| digital-dashboard | ✓✓ | ✗ | ✓✓ | ✓✓ | ✗ | ✓ | ✓ | ✓✓ | ✗ | ✗ | ✗ | ✓✓ | ✗ | ✗ |
-| corporate-photo | ✓✓ | ✓✓ | ✓ | ✓✓ | ✗ | ✗ | ✓ | ✓✓ | ✗ | ✓✓ | ✓✓ | ✓ | ✗ | ✓✓ |
-| blueprint | ✓✓ | ✗ | ✓✓ | ✓ | ✗ | ✓✓ | ✗ | ✓✓ | ✓ | ✗ | ✗ | ✓ | ✗ | ✗ |
-| editorial | ✓✓ | ✓✓ | ✓ | ✓✓ | ✓ | ✓✓ | ✓ | ✓ | ✓✓ | ✓ | ✓✓ | ✓ | ✓ | ✓✓ |
-| sketch-notes | ✓ | ✓✓ | ✗ | ✓ | ✓✓ | ✓ | ✓ | ✗ | ✗ | ✓✓ | ✗ | ✗ | ✗ | ✓ |
-| ink-notes | ✓ | ✓ | ✗ | ✓✓ | ✗ | ✓✓ | ✗ | ✗ | ✓ | ✗ | ✗ | ✓ | ✗ | ✓ |
-| chalkboard | ✗ | ✓ | ✗ | ✗ | ✓ | ✓ | ✗ | ✓✓ | ✓ | ✓ | ✗ | ✗ | ✗ | ✓ |
-| paper-cut | ✓ | ✓✓ | ✗ | ✓ | ✓✓ | ✗ | ✓ | ✗ | ✓ | ✓✓ | ✗ | ✓ | ✗ | ✓✓ |
-| watercolor | ✓ | ✓✓ | ✗ | ✓ | ✓✓ | ✗ | ✓ | ✓ | ✗ | ✓✓ | ✓ | ✓✓ | ✓✓ | ✓✓ |
-| warm-scene | ✓ | ✓✓ | ✗ | ✓ | ✓ | ✗ | ✓ | ✓✓ | ✓ | ✓✓ | ✓ | ✗ | ✓✓ | ✓ |
-| screen-print | ✓ | ✓ | ✓ | ✓✓ | ✓ | ✓ | ✓✓ | ✓✓ | ✓✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| vintage-poster | ✓ | ✓✓ | ✗ | ✓✓ | ✓ | ✓ | ✓ | ✓ | ✓✓ | ✓ | ✗ | ✗ | ✓ | ✓✓ |
-| fantasy-animation | ✗ | ✓✓ | ✗ | ✗ | ✓✓ | ✗ | ✓ | ✗ | ✗ | ✓✓ | ✗ | ✗ | ✓ | ✗ |
-| pixel-art | ✗ | ✓ | ✓✓ | ✗ | ✓ | ✓ | ✓✓ | ✓ | ✓ | ✗ | ✗ | ✗ | ✗ | ✗ |
-| nature | ✓ | ✓✓ | ✗ | ✓ | ✓ | ✗ | ✓ | ✗ | ✗ | ✓✓ | ✓ | ✓ | ✓ | ✓✓ |
-
-✓✓ recommended | ✓ acceptable | ✗ avoid
-
----
-
-## 4. How to use
-
-1. After picking rendering, look up your candidate palette in the auto-selection table.
-2. Cross-check the compatibility matrix — if `✗`, pick the alternate.
-3. `read_file image-palettes/<chosen>.md`.
-4. Apply its proportion + role rules to the deck's HEX values when assembling prompts.
-
-**Lock for the whole deck.**
+When that maintenance is explicitly requested, read only the named historical asset or preset. Keep its palette behavior inside the historical fixture; do not copy it into current recommendations, `design_spec.md`, `spec_lock.md`, or generated-image prompts.

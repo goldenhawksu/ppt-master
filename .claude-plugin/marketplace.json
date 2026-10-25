@@ -8,7 +8,7 @@
   },
   "metadata": {
     "description": "PPT Master skill — AI generates natively editable PPTX from any document",
-    "version": "2.7.0"
+    "version": "6.7.3"
   },
   "plugins": [
     {
@@ -16,7 +16,7 @@
       "source": {
         "source": "git-subdir",
         "url": "https://github.com/hugohe3/ppt-master.git",
-        "path": "skills/ppt-master"
+        "path": "skills"
       },
       "description": "Generate natively editable PPTX from PDF / DOCX / URL / Markdown — real DrawingML shapes, text boxes, charts, and animations. Note: run `pip install -r requirements.txt` inside the installed plugin directory for the Python post-processing scripts to work.",
       "author": {
@@ -38,10 +38,6 @@
         "skill",
         "office",
         "document-conversion"
-      ],
-      "strict": false,
-      "skills": [
-        "./"
       ]
     }
   ]
