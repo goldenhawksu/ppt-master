@@ -6,17 +6,8 @@
   <text x="24" y="28" fill="#1A1818" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="16" font-weight="700" letter-spacing="2">{{BRAND_LABEL}}</text>
   <line x1="0" y1="44" x2="1280" y2="44" stroke="#EEEEEE" stroke-width="1"/>
 
-  <!-- Cover background image -->
+  <!-- Cover background image: original photograph, no overlay / gradient / filter -->
   <image href="cover.jpg" x="0" y="44" width="1280" height="534" preserveAspectRatio="xMidYMid slice"/>
-
-  <!-- Dark left gradient for title readability -->
-  <defs>
-    <linearGradient id="titleFade" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#000000" stop-opacity="0.35"/>
-      <stop offset="70%" stop-color="#000000" stop-opacity="0"/>
-    </linearGradient>
-  </defs>
-  <rect x="0" y="44" width="700" height="534" fill="url(#titleFade)"/>
 
   <!-- Title over image -->
   <text x="60" y="180" fill="#FFFFFF" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="56" font-weight="700">{{TITLE}}</text>

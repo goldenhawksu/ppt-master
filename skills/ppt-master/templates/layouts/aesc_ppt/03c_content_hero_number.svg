@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+
+  <!-- White background -->
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+
+  <!-- Standard 4-zone header -->
+  <rect x="0" y="0" width="1280" height="38" fill="#FFFFFF"/>
+  <text x="24" y="24" fill="#1A1818" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="16" font-weight="700" letter-spacing="2">{{BRAND_LABEL}}</text>
+  <line x1="320" y1="10" x2="320" y2="28" stroke="#DDDDDD" stroke-width="1"/>
+  <text x="480" y="24" text-anchor="middle" fill="#9B9B9B" font-family="Arial, sans-serif" font-size="13">aesc-group.com</text>
+  <line x1="640" y1="10" x2="640" y2="28" stroke="#DDDDDD" stroke-width="1"/>
+  <text x="880" y="24" text-anchor="middle" fill="#9B9B9B" font-family="Arial, sans-serif" font-size="13">document level : confidential</text>
+  <line x1="1120" y1="10" x2="1120" y2="28" stroke="#DDDDDD" stroke-width="1"/>
+  <text x="1200" y="24" text-anchor="middle" fill="#9B9B9B" font-family="Arial, sans-serif" font-size="13">{{PAGE_NUM}}</text>
+  <line x1="0" y1="38" x2="1280" y2="38" stroke="#DDDDDD" stroke-width="1"/>
+
+  <!-- Title block: claim title + implication line -->
+  <rect x="56" y="55" width="5" height="38" fill="#2563EB"/>
+  <text x="68" y="84" fill="#1A1818" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="32" font-weight="700">{{PAGE_TITLE}}</text>
+  <line x1="68" y1="98" x2="268" y2="98" stroke="#2563EB" stroke-width="2"/>
+  <text x="68" y="128" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="20">{{KEY_MESSAGE}}</text>
+  <line x1="56" y1="148" x2="1224" y2="148" stroke="#EEEEEE" stroke-width="1"/>
+
+  <!--
+      One headline metric (left, x=56-508) tied to its baseline and management implication,
+      with the trend that supports it (right, x=588-1224).
+      Use for ONE decision-grade quantity; several related metrics belong in a chart or table (03a / 03e).
+      Baseline direction icon: arrow-trend-down / arrow-trend-up in #6B7280 unless the value is
+      flagged as a risk or breaches a named threshold (then #DC2626, see design_spec §II).
+  -->
+  <text x="56" y="214" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="22">{{METRIC_LABEL}}</text>
+  <text x="56" y="336" fill="#2563EB" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="80" font-weight="700">{{VALUE}}</text>
+
+  <use data-icon="chunk-filled/arrow-trend-down" x="56" y="404" width="28" height="28" fill="#6B7280"/>
+  <text x="96" y="426" fill="#6B7280" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="22">{{BASELINE}}</text>
+
+  <line x1="56" y1="468" x2="508" y2="468" stroke="#EEEEEE" stroke-width="1"/>
+  <text x="56" y="524" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="24" font-weight="700">{{IMPLICATION}}</text>
+
+  <!-- Supporting trend (sample line chart: 4 periods; replace with real series) -->
+  <line x1="548" y1="184" x2="548" y2="598" stroke="#DDDDDD" stroke-width="1"/>
+  <g id="chart-trend">
+    <line x1="636" y1="494" x2="1172" y2="494" stroke="#DDDDDD" stroke-width="1"/>
+    <polyline points="636,297.33 814.67,317 993.33,336.67 1172,356.33" fill="none" stroke="#2563EB" stroke-width="3"/>
+    <circle cx="636" cy="297.33" r="4" fill="#2563EB"/>
+    <text x="636" y="283.33" text-anchor="middle" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="18" font-weight="700">20</text>
+    <text x="636" y="522" text-anchor="middle" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="16">P1</text>
+    <circle cx="814.67" cy="317" r="4" fill="#2563EB"/>
+    <text x="814.67" y="303" text-anchor="middle" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="18" font-weight="700">18</text>
+    <text x="814.67" y="522" text-anchor="middle" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="16">P2</text>
+    <circle cx="993.33" cy="336.67" r="4" fill="#2563EB"/>
+    <text x="993.33" y="322.67" text-anchor="middle" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="18" font-weight="700">16</text>
+    <text x="993.33" y="522" text-anchor="middle" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="16">P3</text>
+    <circle cx="1172" cy="356.33" r="4" fill="#2563EB"/>
+    <text x="1172" y="342.33" text-anchor="middle" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="18" font-weight="700">14</text>
+    <text x="1172" y="522" text-anchor="middle" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="16">P4</text>
+  </g>
+  <text x="636" y="552" fill="#6B7280" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="12">Illustrative periods; replace before use</text>
+
+  <!-- Footer -->
+  <text x="56" y="700" fill="#9B9B9B" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="12">{{SOURCE}}</text>
+  <text x="1224" y="700" text-anchor="end" fill="#9B9B9B" font-family="Arial, sans-serif" font-size="12">{{PAGE_NUM}}</text>
+
+</svg>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+
+  <!-- White background -->
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+
+  <!-- Standard 4-zone header -->
+  <rect x="0" y="0" width="1280" height="38" fill="#FFFFFF"/>
+  <text x="24" y="24" fill="#1A1818" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="16" font-weight="700" letter-spacing="2">{{BRAND_LABEL}}</text>
+  <line x1="320" y1="10" x2="320" y2="28" stroke="#DDDDDD" stroke-width="1"/>
+  <text x="480" y="24" text-anchor="middle" fill="#9B9B9B" font-family="Arial, sans-serif" font-size="13">aesc-group.com</text>
+  <line x1="640" y1="10" x2="640" y2="28" stroke="#DDDDDD" stroke-width="1"/>
+  <text x="880" y="24" text-anchor="middle" fill="#9B9B9B" font-family="Arial, sans-serif" font-size="13">document level : confidential</text>
+  <line x1="1120" y1="10" x2="1120" y2="28" stroke="#DDDDDD" stroke-width="1"/>
+  <text x="1200" y="24" text-anchor="middle" fill="#9B9B9B" font-family="Arial, sans-serif" font-size="13">{{PAGE_NUM}}</text>
+  <line x1="0" y1="38" x2="1280" y2="38" stroke="#DDDDDD" stroke-width="1"/>
+
+  <!-- Title block: claim title + implication line -->
+  <rect x="56" y="55" width="5" height="38" fill="#2563EB"/>
+  <text x="68" y="84" fill="#1A1818" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="32" font-weight="700">{{PAGE_TITLE}}</text>
+  <line x1="68" y1="98" x2="268" y2="98" stroke="#2563EB" stroke-width="2"/>
+  <text x="68" y="128" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="20">{{KEY_MESSAGE}}</text>
+  <line x1="56" y1="148" x2="1224" y2="148" stroke="#EEEEEE" stroke-width="1"/>
+
+  <!--
+      Evidence field (left, x=56-784, y=184-578): one dominant chart.
+      The sample below is a ranked horizontal bar (value scale 11.28 px/unit from x=166).
+      Replace it with the chart type that fits the relationship (see design_spec §IX):
+      the focus bar is Volt Blue #2563EB, context bars Neutral Gray #6B7280.
+      Insight rail (right, x=840-1224): conclusion -> evidence -> action.
+  -->
+  <g id="chart-evidence">
+    <line x1="166" y1="232" x2="166" y2="520" stroke="#DDDDDD" stroke-width="1"/>
+
+    <text x="150" y="268" text-anchor="end" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="16">Region A</text>
+    <rect x="166" y="244" width="473.76" height="32" fill="#2563EB"/>
+    <text x="651.76" y="268" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="18" font-weight="700">42</text>
+
+    <text x="150" y="330" text-anchor="end" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="16">Region B</text>
+    <rect x="166" y="306" width="315.84" height="32" fill="#6B7280"/>
+    <text x="493.84" y="330" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="18" font-weight="700">28</text>
+
+    <text x="150" y="392" text-anchor="end" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="16">Region C</text>
+    <rect x="166" y="368" width="203.04" height="32" fill="#6B7280"/>
+    <text x="381.04" y="392" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="18" font-weight="700">18</text>
+
+    <text x="150" y="454" text-anchor="end" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="16">Other</text>
+    <rect x="166" y="430" width="135.36" height="32" fill="#6B7280"/>
+    <text x="313.36" y="454" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="18" font-weight="700">12</text>
+  </g>
+  <text x="166" y="566" fill="#6B7280" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="12">Illustrative units; replace chart, unit, period and source before use</text>
+
+  <!-- Insight rail -->
+  <line x1="808" y1="184" x2="808" y2="598" stroke="#DDDDDD" stroke-width="1"/>
+
+  <use data-icon="chunk-filled/lightbulb" x="840" y="186" width="24" height="24" fill="#2563EB"/>
+  <text x="874" y="204" fill="#6B7280" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="13" font-weight="700">CONCLUSION</text>
+  <text x="840" y="240" fill="#2563EB" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="24" font-weight="700">{{INSIGHT}}</text>
+
+  <use data-icon="chunk-filled/chart-bar" x="840" y="316" width="24" height="24" fill="#6B7280"/>
+  <text x="874" y="334" fill="#6B7280" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="13" font-weight="700">EVIDENCE</text>
+  <text x="840" y="366" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="20">{{EVIDENCE}}</text>
+
+  <use data-icon="chunk-filled/flag" x="840" y="446" width="24" height="24" fill="#6B7280"/>
+  <text x="874" y="464" fill="#6B7280" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="13" font-weight="700">ACTION</text>
+  <text x="840" y="496" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="20">{{ACTION}}</text>
+
+  <!-- Footer -->
+  <text x="56" y="700" fill="#9B9B9B" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="12">{{SOURCE}}</text>
+  <text x="1224" y="700" text-anchor="end" fill="#9B9B9B" font-family="Arial, sans-serif" font-size="12">{{PAGE_NUM}}</text>
+
+</svg>

@@ -24,11 +24,13 @@ Send a path to a template directory in your initial message. Anywhere in the sen
 > "用这个模板做汇报：`projects/last_deck/template/`" ✅
 > "做一份产品介绍，模板用 `/Users/me/Desktop/our_brand_v3/`" ✅
 
+> "用 aesc_ppt模板 做本季度质量汇报" ✅ — the one registered shortcut: the exact phrase `aesc_ppt模板` / `aesc_ppt template` resolves to `skills/ppt-master/templates/layouts/aesc_ppt/` without a path.
+
 The AI copies that directory's SVGs, `design_spec.md`, and assets into your project, then proceeds to the Strategist phase. The path can point to anywhere — the built-in library under `skills/ppt-master/templates/layouts/`, a previous project's `template/` folder, or any other location on disk.
 
 ### What does NOT trigger the template flow
 
-- **A bare template name without a path**: "use the academic_defense template" / "用 招商银行 模板" / "做一份 pixel_retro 模板的答辩" → free design. The AI does not look the name up. You must give a path.
+- **A bare template name without a path**: "use the academic_defense template" / "用 招商银行 模板" / "做一份 pixel_retro 模板的答辩" → free design. The AI does not look the name up. You must give a path (the `aesc_ppt模板` shortcut above is the only exception).
 - **Style descriptions**: "McKinsey style" / "Google style" / "麦肯锡那种" / "极简风" / "Keynote 风" → free design. The descriptive words flow into Strategist as a style brief, but no template is copied.
 - **Vague intent**: "想用个模板" / "I want a template" with no path → free design.
 

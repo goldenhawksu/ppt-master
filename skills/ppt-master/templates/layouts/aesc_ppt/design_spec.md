@@ -1,347 +1,256 @@
+---
+template_id: aesc_ppt
+category: brand
+summary: AESC corporate management reviews for CTS, quality, cost, and service logistics — storyline-led, evidence-first decks that turn data into decisions and follow-up actions.
+keywords: [aesc, corporate, management-review, storytelling, data-insights, quality, operations]
+primary_color: "#2563EB"
+canvas_format: ppt169
+replication_mode: standard
+use_cases: CTS 业务汇报、海外项目分析、质量表现报告、售后物流方案、战略规划
+design_tone: Clean, data-dense, professional, evidence-led, bilingual-capable (default English)
+placeholders:
+  01_cover: ["{{BRAND_LABEL}}", "{{TITLE}}", "{{SUBTITLE}}", "{{AUTHOR}}", "{{DATE}}"]
+  02_toc: ["{{BRAND_LABEL}}", "{{PAGE_NUM}}", "{{TOC_ITEM_1_TITLE}}", "{{TOC_ITEM_1_DESC}}", "{{TOC_ITEM_2_TITLE}}", "{{TOC_ITEM_2_DESC}}", "{{TOC_ITEM_3_TITLE}}", "{{TOC_ITEM_3_DESC}}", "{{TOC_ITEM_4_TITLE}}", "{{TOC_ITEM_4_DESC}}", "{{TOC_ITEM_5_TITLE}}", "{{TOC_ITEM_5_DESC}}"]
+  02_chapter: ["{{BRAND_LABEL}}", "{{PAGE_NUM}}", "{{CHAPTER_NUM}}", "{{CHAPTER_TITLE}}", "{{CHAPTER_DESC}}"]
+  03_content: ["{{BRAND_LABEL}}", "{{PAGE_NUM}}", "{{PAGE_TITLE}}", "{{KEY_MESSAGE}}", "{{CONTENT_AREA}}", "{{SOURCE}}"]
+  03a_content_chart_insight: ["{{PAGE_TITLE}}", "{{KEY_MESSAGE}}", "{{INSIGHT}}", "{{EVIDENCE}}", "{{ACTION}}", "{{SOURCE}}"]
+  03b_content_comparison: ["{{PAGE_TITLE}}", "{{KEY_MESSAGE}}", "{{BASELINE_LABEL}}", "{{PROPOSED_LABEL}}", "{{BASELINE_EVIDENCE}}", "{{PROPOSED_EVIDENCE}}", "{{COMPARISON_TAKEAWAY}}", "{{SOURCE}}"]
+  03c_content_hero_number: ["{{PAGE_TITLE}}", "{{KEY_MESSAGE}}", "{{METRIC_LABEL}}", "{{VALUE}}", "{{BASELINE}}", "{{IMPLICATION}}", "{{SOURCE}}"]
+  03d_content_bridge: ["{{PAGE_TITLE}}", "{{KEY_MESSAGE}}", "{{BRIDGE_TAKEAWAY}}", "{{SOURCE}}"]
+  03e_content_table_trend: ["{{PAGE_TITLE}}", "{{KEY_MESSAGE}}", "{{TABLE_NOTE}}", "{{ACTION}}", "{{SOURCE}}"]
+  04_ending: ["{{THANK_YOU}}", "{{BRAND_LABEL}}", "{{CONTACT_INFO}}", "{{DATE}}"]
+---
+
 # AESC-PPT Design Specification
 
 ## I. Template Overview
 
 | Property | Description |
 | --- | --- |
-| **Template Name** | AESC-PPT |
-| **Display Name** | AESC (远景动力) Corporate Template |
-| **Template ID** | `aesc_ppt` |
-| **Use Cases** | CTS 业务汇报、海外项目分析、质量表现报告、售后物流方案、战略规划 |
-| **Design Tone** | Clean, data-dense, professional, dual-language (default English) |
-| **Theme Mode** | Hybrid (white content pages + photo cover + dark photo ending) |
-| **Default Language** | English (brand label: `ΛESC`)；中文演示时替换为 `远景动力` |
+| Template ID | `aesc_ppt` — the single AESC template. Saying "aesc_ppt模板" / "aesc_ppt template" selects it (see SKILL.md Step 3) |
+| Display name | AESC (远景动力) Corporate Template |
+| Recurring family | CTS business reports, overseas project analysis, quality performance, service logistics, cost, and strategy reviews |
+| Audience and purpose | Business managers assessing evidence, alternatives, and follow-up actions; the deck argues toward a decision |
+| Visual voice | Clean, data-dense, professional, bilingual-capable (default English, brand label `ΛESC`; `远景动力` for Chinese decks) |
+| Theme | White interior pages, photographic cover, dark photographic ending |
+| Canvas | 1280 × 720; margins 56 left/right, evidence body y = 154–680 |
 
-## II. Canvas Specification
+At a glance: a four-zone grey header, a blue bar-and-underline claim title, a one-line implication beneath it, and one dominant piece of evidence per page with a compact conclusion / action beside it.
 
-| Property | Value |
-| --- | --- |
-| **Format** | Standard 16:9 |
-| **Dimensions** | 1280 × 720 px |
-| **viewBox** | `0 0 1280 720` |
-| **Safe Margins** | 56px left/right, 46px top, 40px bottom |
-| **Content Area** | x: 56–1224, y: 150–680 |
+This is the consolidated AESC template: the corporate page shell, the six-stage reporting story, the semantic-red policy, and the evidence-led data-visualization and icon grammar live here. No other AESC template remains in the library.
 
-## III. Color Scheme
+The page roster supplies reusable prototypes, not a mandatory agenda, page count, or sequence. The five-item TOC and the storyline in §VIII do not prescribe deck length.
 
-| Role | Color | Usage |
+## II. Color Scheme
+
+| Role | Color | Application |
 | --- | --- | --- |
-| **Volt Blue** | `#2563EB` | Title underlines, accent bars, section markers |
-| **Navy Title** | `#0D1F6E` | Cover titles, large headings (over light backgrounds) |
-| **Eco-Green** | `#00C87A` | Positive indicators, growth markers |
-| **Deep Charcoal** | `#374151` | Subtitles, key message line, secondary text |
-| **Main Text** | `#1A1818` | Primary headings, body text |
-| **Body Text** | `#3A3838` | Body copy, descriptions |
-| **Header Gray** | `#9B9B9B` | Header auxiliary text (domain, classification) |
-| **Neutral Gray** | `#6B7280` | Downward / flat trend annotations that are NOT problems |
-| **Divider** | `#DDDDDD` | Header dividers, borders |
-| **Light Divider** | `#EEEEEE` | Content dividers |
-| **Pure White** | `#FFFFFF` | Content/chapter/TOC page background |
-| **Ending Black** | `#1C1C1C` | Ending page background (from end.jpg) |
-| **Ending Text** | `#DEDEDE` | Ending page "Thanks" text |
-| **Ending Subdued** | `#888888` | Ending page contact info, date |
-| **Alert Red** | `#DC2626` | **Semantic-only**: risk labels, warning callouts, critical threshold breach, problem indicators — NEVER decorative; see §XIV |
+| Volt Blue | `#2563EB` | Title accents, section markers, the series / bar / number in focus |
+| Navy | `#0D1F6E` | Large headings on light fields where needed |
+| Main text | `#1A1818` | Titles and primary body text |
+| Charcoal | `#374151` | Key messages, secondary emphasis, totals and context series |
+| Body text | `#3A3838` | Descriptions and prose |
+| Header gray | `#9B9B9B` | Header metadata and source line |
+| Neutral gray | `#6B7280` | Context and baseline series; decreases that are not problems |
+| Dividers | `#DDDDDD`, `#EEEEEE` | Header divisions and content rules |
+| White | `#FFFFFF` | Page background; cover text |
+| Ending dark | `#1C1C1C` | Dark identity field of the photographic ending |
+| Ending text | `#DEDEDE`, `#888888` | Closing title and subdued details |
+| Eco-Green | `#00C87A` | Source-supported positive meaning only (target met, verified improvement) |
+| Alert Red | `#DC2626` | **Semantic only** — see below |
 
-## IV. Typography System
+**Semantic red (binding)**: `#DC2626` is the only red permitted, and only for an explicit risk label, warning callout, named-threshold breach, chart anomaly annotation, unresolved-blocker banner, or a deviation the deck itself calls a problem. Never use red (or `#EF4444`, `#B91C1C`, …) for headers, accent bars, dividers, card borders, bullets, icon fills, tinted panels, or decoration. Blue focuses the evidence; neutrals carry context.
 
-| Level | Usage | Size | Weight | Color |
-| --- | --- | --- | --- | --- |
-| **Display** | Cover title | 56px | Bold | `#FFFFFF` (over image) / `#0D1F6E` (over light bg) |
-| **Cover Subtitle** | Cover subtitle | 24px | Regular | `#FFFFFF` |
-| **H1** | Content title | 32px | Bold | `#1A1818` |
-| **H2** | Chapter title / TOC "Contents" | 28–40px | Bold | `#1A1818` |
-| **H3** | Section head / TOC item title | 22–24px | Bold | `#1A1818` |
-| **Key Message** | Content key message line | 20px | Regular | `#374151` |
-| **Body** | Paragraph / TOC description | 16–20px | Regular | `#3A3838` |
-| **Caption** | Metadata / source / footer | 12–14px | Regular | `#3A3838` / `#9B9B9B` |
-| **Header** | Header text | 13–16px | Bold/Regular | `#1A1818` / `#9B9B9B` |
+"Down" is not "bad": lower cost, defects, delay, or complaints can be an improvement. Decide with one question — *is the value explicitly flagged as a risk, an issue, or below a named threshold?* Yes → `#DC2626`; no → `#6B7280` (direction only, no alarm) with a trend icon. Example: spare-parts cost +12% within the annual cap → gray; first-time-fix rate 63% against an 80% SLA → red. This overrides the generic consultant convention "red = down, green = up".
 
-**Font Stack (EN)**: `Arial, "Helvetica Neue", "Segoe UI", sans-serif`
-**Font Stack (CN)**: `"方正兰亭黑_GBK", "Microsoft YaHei", "PingFang SC", Arial, sans-serif`
-**Font Stack (Bilingual — Template Default)**: `Arial, "Helvetica Neue", "Microsoft YaHei", "PingFang SC", sans-serif`
+## III. Typography
 
-> All template SVG files use the Bilingual font stack to ensure correct rendering for both English and Chinese content. Executor may override with the language-specific stack based on actual content language.
+Bilingual stack (all template SVGs): `Arial, "Helvetica Neue", "Microsoft YaHei", "PingFang SC", sans-serif`. Executor may switch to a language-specific stack to match the deck (EN: `Arial, "Helvetica Neue", "Segoe UI", sans-serif`; CN: `"方正兰亭黑_GBK", "Microsoft YaHei", "PingFang SC", Arial, sans-serif`).
 
-## V. Header Specification
-
-All content pages share a unified 4-zone header bar:
-
-```
-Height: 38px │ Background: #FFFFFF │ Bottom border: stroke #DDDDDD 1px
-
-Zones (separated by vertical dividers at x = 320, 640, 1120):
-┌──────────────┬──────────────┬──────────────────────────────┬─────────┐
-│ {{BRAND_     │ aesc-group   │ document level :            │ {{PAGE  │
-│  LABEL}}     │ .com         │ confidential                │  _NUM}} │
-│ 16px Bold    │ 13px Regular │ 13px Regular                │ 13px R  │
-│  #1A1818     │  #9B9B9B     │  #9B9B9B                    │ #9B9B9B │
-│  x=24        │  x=480       │  x=880                      │ x=1200  │
-│  y=24        │  y=24        │  y=24                       │ y=24    │
-└──────────────┴──────────────┴──────────────────────────────┴─────────┘
-Vertical dividers: y1=10 → y2=28, stroke #DDDDDD, 1px
-```
-
-## VI. Page Types
-
-### 1. Cover Page (`01_cover.svg`)
-- White top strip (44px) with brand label
-- Full-width background image (`cover.jpg`, 1280×534 zone)
-- Dark left gradient overlay for title readability
-- Large blue title + white subtitle over image
-- White bottom strip (142px) with author + date
-
-### 2. Table of Contents (`02_toc.svg`)
-- Standard 4-zone header
-- White background, no pattern
-- "Contents" title with blue accent underline
-- Up to 5 indexed items with blue numerals
-
-### 3. Chapter Page (`02_chapter.svg`)
-- Standard 4-zone header
-- White background, no pattern
-- Left blue accent bar (5px wide)
-- Chapter number + title + description
-
-### 4. Content Page (`03_content.svg`)
-- Standard 4-zone header
-- Pure white background, no pattern or decoration
-- Blue left accent bar (5px wide) + title + underline
-- Key message line (20px, Deep Charcoal)
-- Open content area (1168 × 502 px)
-- Footer with source (left) + page number (right)
-
-### 5. Ending Page (`04_ending.svg`)
-- Full-bleed dark background (`end.jpg`)
-- Centered "Thanks" text (light gray)
-- Brand label at bottom (white)
-- Optional contact information
-
-## VII. Layout Modes
-
-| Mode | Recommendation |
-| --- | --- |
-| **Data Dashboard** | Use full-width body with 3-4 KPI cards + chart area |
-| **Comparison** | Use split columns (560+560, gap 24px) |
-| **Process / Flow** | Use horizontal flow with 3-6 stages, full width |
-| **Table** | Use full-width body area, max height ~400px |
-| **KPI + Detail** | Top row of data cards (3-4) + bottom detail area |
-
-## VIII. Spacing Specification
-
-| Property | Value |
-| --- | --- |
-| **Base Unit** | 8px |
-| **Card Gap** | 20px |
-| **Title to Body** | 44px |
-| **Header Height** | 38px |
-| **Footer Offset** | 40px from bottom |
-
-## IX. SVG Technical Constraints
-
-1. `viewBox` = `0 0 1280 720` — no exceptions
-2. Banned: `mask`, `<style>`, `class`, `foreignObject`, `textPath`, animation tags, `rgba()`, `<g opacity>`, `<symbol>`+`<use>`
-3. `clipPath` is **conditionally allowed** on `<image>` elements only (for circular/rounded image crops); the referenced `<clipPath>` must live in `<defs>` and contain a single shape child
-4. Use plain hex colors with `fill-opacity` / `stroke-opacity`
-5. Image references use relative paths (e.g. `cover.jpg`, `end.jpg`)
-6. No inline CSS — all styling via SVG attributes
-
-## X. Placeholder Specification
-
-| Placeholder | Pages | Description |
+| Role | Size | Appearance |
 | --- | --- | --- |
-| `{{BRAND_LABEL}}` | All | Brand name (default: `ΛESC`；中文: `远景动力`) |
-| `{{TITLE}}` | Cover | Cover main title |
-| `{{SUBTITLE}}` | Cover | Cover subtitle |
-| `{{DATE}}` | Cover, Ending | Date (cover: bottom left; ending: bottom center) |
-| `{{AUTHOR}}` | Cover | Presenter / organization |
-| `{{CHAPTER_NUM}}` | Chapter | Chapter number |
-| `{{CHAPTER_TITLE}}` | Chapter | Chapter title |
-| `{{CHAPTER_DESC}}` | Chapter | Chapter description |
-| `{{PAGE_TITLE}}` | TOC, Content | Page title |
-| `{{KEY_MESSAGE}}` | Content | Key message line |
-| `{{CONTENT_AREA}}` | Content | Flexible content body |
-| `{{SOURCE}}` | Content | Source attribution |
-| `{{PAGE_NUM}}` | Content, Chapter | Page number |
-| `{{TOC_ITEM_1_TITLE}}` | TOC | TOC item 1 title |
-| `{{TOC_ITEM_1_DESC}}` | TOC | TOC item 1 description |
-| `{{TOC_ITEM_2_TITLE}}` | TOC | TOC item 2 title |
-| `{{TOC_ITEM_2_DESC}}` | TOC | TOC item 2 description |
-| `{{TOC_ITEM_3_TITLE}}` | TOC | TOC item 3 title |
-| `{{TOC_ITEM_3_DESC}}` | TOC | TOC item 3 description |
-| `{{TOC_ITEM_4_TITLE}}` | TOC | TOC item 4 title |
-| `{{TOC_ITEM_4_DESC}}` | TOC | TOC item 4 description |
-| `{{TOC_ITEM_5_TITLE}}` | TOC | TOC item 5 title |
-| `{{TOC_ITEM_5_DESC}}` | TOC | TOC item 5 description |
-| `{{THANK_YOU}}` | Ending | Thank-you message |
-| `{{CONTACT_INFO}}` | Ending | Contact info line |
+| Cover title / subtitle / author | 56 / 24 / 28 px | Bold white / white / bold primary ink, title and subtitle over the photograph |
+| Chapter numeral / title / description | 52 / 40 / 20 px | Bold blue / bold primary ink / body |
+| TOC title / item / description | 28 / 22 / 16 px | Bold primary ink; description in body text |
+| Content title | 32 px | Bold primary ink; an evidence-backed claim on analytical pages |
+| Key message | 20 px | Charcoal |
+| Insight / takeaway | 24–28 px | Bold Volt Blue |
+| Hero metric | 80 px | Bold Volt Blue; unit and baseline set separately |
+| Chart labels / values | 16 / 18 px | Charcoal; values bold |
+| Header | 16 / 13 px | Brand / auxiliary metadata |
+| Source | 12 px | Header gray |
+| Ending | 36 / 20 / 14 / 12 px | Thanks / brand / contact / date |
 
-## XI. Asset Specification
+Rewrite or change the composition instead of shrinking type below reading size.
 
-| Asset | Purpose |
+## IV. Signature Design Elements
+
+- **Four-zone header** on every interior page: brand at x = 24, domain at x = 480, classification at x = 880, page field at x = 1200; dividers at x = 320, 640, 1120 (y 10–28); lower rule y = 38.
+- **Shared title block**: blue bar (x = 56, y = 55, 5 × 38), title baseline y = 84 with a blue 200 px underline at y = 98, key-message baseline y = 128, divider y = 148, evidence body from y = 154, source baseline y = 700.
+- **Cover**: photograph at x = 0, y = 44, 1280 × 534, shown in its original tones — no overlay, gradient, filter, or recoloring. Title and subtitle left-aligned over the photograph; author and date in the white lower strip.
+- **TOC and chapter**: five TOC rows with pale-blue numerals and restrained rules; the chapter page's tall blue bar (x = 56) is a breathing page between dense evidence.
+- **Evidence pages**: claim above evidence; the main visual explains the relationship; a compact conclusion / action sits beside it.
+- **AESC "A" arch mark** (`M-54 98 L0 0 L54 98 L40 98 L0 20 L-40 98 Z`, 100 × 98 base) may appear as a watermark with `fill-opacity`, positioned by `transform="translate(cx,cy) scale(s)"`.
+
+## V. Page Roster
+
+| SVG | Role and when to use |
 | --- | --- |
-| `cover.jpg` | Cover page full-bleed background (cinematic landscape + AESC "A") |
-| `end.jpg` | Ending page full-bleed background (dark + AESC "A" watermark) |
+| `01_cover.svg` | Cover: brand, title, subtitle, author, date over the fixed photograph |
+| `02_toc.svg` | Navigation: up to five title / description rows. Delete unused rows rather than leaving placeholders |
+| `02_chapter.svg` | Chapter divider: numeral, title, lead-in description |
+| `03_content.svg` | Flexible fallback: claim title, key message, free 1168 × 502 body. Use for process / swimlane, Gantt or milestone timeline, SWOT, SMART action table, resource request, or any custom editable chart |
+| `03a_content_chart_insight.svg` | One dominant chart (~62% width) with a conclusion / evidence / action rail. Default page for a ranked, trended, or composed quantitative claim |
+| `03b_content_comparison.svg` | Baseline vs proposed (or option A vs B) in two aligned columns with one comparison takeaway. Alternatives, before / after |
+| `03c_content_hero_number.svg` | One decision-grade metric with its baseline, implication, and the trend that supports it |
+| `03d_content_bridge.svg` | Additive waterfall from a start total to an end total with an attribution takeaway. Cost, delay, or yield bridges |
+| `03e_content_table_trend.svg` | Exact-lookup table with direction icons, a context trend, a note, and one action |
+| `04_ending.svg` | Closing: thanks, brand, contact, date over the fixed dark photograph |
 
-Both assets are required. Place them in the template directory alongside the SVG files.
+The chart, table, and numbers in `03a`–`03e` are synthetic illustrations (marked "Illustrative"), not AESC business facts. Replace payloads, titles, units, periods, and sources before use; replace the sample chart with the chart type that fits the relationship (§IX), keeping the layout zones.
 
-> **Image lock**: `cover.jpg` and `end.jpg` are **fixed template assets**. Cover pages MUST always reference `cover.jpg`; ending pages MUST always reference `end.jpg`. The pipeline must NOT replace or override them with AI-generated images, web-sourced images, or other generated content. If a deck needs a custom cover or ending image, the user must supply the replacement file themselves — the pipeline never auto-generates a substitute for these two assets.
+## VI. Assets
 
-## XII. AESC "A" Arch Logo
+| File | Usage |
+| --- | --- |
+| `cover.jpg` | Cover full-bleed photograph (cinematic landscape + AESC "A"); byte-identical to the original |
+| `end.jpg` | Ending full-bleed dark photograph (AESC "A" watermark); centered aspect-fill |
 
-The AESC logo is a geometric arch (letter "A" without crossbar). SVG path template (100×98 base, scale as needed):
+**Image lock**: cover pages always reference `cover.jpg` and ending pages `end.jpg`. The pipeline never replaces them with AI-generated or web-sourced images; a custom cover or ending image must be supplied by the user. No business facts or invented chart values are bundled.
 
-```
-M-54 98 L0 0 L54 98 L40 98 L0 20 L-40 98 Z
-```
+## VII. Placeholder Overrides
 
-Usage: Apply `transform="translate(cx,cy) scale(s)"` for positioning and sizing. Use `fill-opacity` for watermark effects.
+Contract declared in the `placeholders:` frontmatter. Indexed `{{TOC_ITEM_N_TITLE}}` / `{{TOC_ITEM_N_DESC}}` for N = 1–5. `{{BRAND_LABEL}}` is editable identity wording (`ΛESC` / `远景动力`); `{{CHAPTER_DESC}}` is the chapter lead-in; `{{KEY_MESSAGE}}` is the implication line under the claim title. Evidence pages add `{{INSIGHT}}`, `{{EVIDENCE}}`, `{{ACTION}}`, `{{BASELINE_LABEL}}`, `{{PROPOSED_LABEL}}`, `{{BASELINE_EVIDENCE}}`, `{{PROPOSED_EVIDENCE}}`, `{{COMPARISON_TAKEAWAY}}`, `{{METRIC_LABEL}}`, `{{VALUE}}`, `{{BASELINE}}`, `{{IMPLICATION}}`, `{{BRIDGE_TAKEAWAY}}`, `{{TABLE_NOTE}}`.
 
-## XIII. Business Reporting Story Framework
+Milestone-driven action plans prefer a clear ThinkCell-style Gantt (`gantt_chart`) with readable dates, milestones, and dependencies over decorative timeline cards.
 
-> This section is **mandatory** for business reporting decks (CTS 业务汇报、海外项目分析、质量表现报告、售后物流方案). It governs how the Strategist constructs the Content Outline (Section IX of the design_spec output) and how the Executor designs each page's visual hierarchy.
+## VIII. Business Reporting Story Framework
 
-### A. Narrative Arc（汇报故事线）
+**Trigger**: AESC management reviews (CTS 业务汇报、海外项目分析、质量表现报告、售后物流方案). Strategist carries the selected evidence and message into the Content Outline (design_spec §IX); Executor realizes the visual relationships. Chart selection follows §IX of this file; icon use follows §X.
 
-The deck must follow a six-chapter arc. This is not "show what we did" — it is "help management understand: why the business needs improvement, where the problems are, what foundation already exists, what to do next, and what support is needed."
+### A. Narrative Arc
 
-| Chapter | Story Stage | Management Reader Expects |
+The deck is not "show what we did" — it helps management see why the business needs to change, where the problem sits, what foundation already exists, what to do next, and what support is needed. Default to this six-stage arc; merge, reorder, or drop stages when the confirmed audience, purpose, and page count call for it, but keep actions and resource requests identifiable even when they share a page.
+
+| # | Management question | Evidence to carry forward | Default TOC wording |
+| --- | --- | --- | --- |
+| 1 | Scope and baseline — 这个业务管什么？现有基础是什么？ | Reporting boundary, operational scale, existing capability, reference period | 管理范围与基础能力 |
+| 2 | Gap and priority — 哪里有问题？有多严重？ | Actual vs comparable baseline; affected region, customer, process | 执行侧痛点与现状差距 |
+| 3 | Explanation — 为什么会这样？抓手在哪里？ | Factor contributions, observed handoffs, case evidence; separate hypothesis from verified cause | 问题根因分析 |
+| 4 | Alternatives — 怎么解决？如何取舍？ | Comparable options, assumptions, trade-offs, expected effects | 改进方案设计 |
+| 5 | Execution — 谁来做、何时完成？ | Deliverable, owner, acceptance measure, deadline, dependencies | 行动计划 |
+| 6 | Decision required — 需要什么支持？回报是什么？ | Requested support, cost, benefit horizon, uncertainty, consequence of delay | 资源诉求与预期收益 |
+
+Stages 5 and 6 stay separate: an action plan says what will be done; a resource request says what support makes it possible and what it returns.
+
+### B. Visual Reasoning Patterns
+
+Pick the form from the relationship the reader must understand, not from a chart whitelist.
+
+| Stage | Question | Preferred prototype and visual | Adapt when the fit fails |
+| --- | --- | --- | --- |
+| 1 Baseline | What is the scope and capability? | `03c` hero number + trend; `03e` overview table; a regional map when geography is the argument | Aligned rows for membership; a decorative ring does not establish order or share |
+| 2 Gap | Where, and by how much? | `03a` ranked / grouped / stacked bar with the exception highlighted; heatmap for region × step | `03e` table when exact lookup is the task |
+| 3 Explanation | What drives the gap? | `03d` waterfall for additive attribution; Pareto for cumulative contribution; annotated chart + case retrospective in `03` | State the driver as a hypothesis until verified |
+| 4 Alternatives | How do options differ? | `03b` parallel columns on a shared scale; scatter of cost vs benefit | Labeled comparison table for unlike measures; independent workstreams get no arrows |
+| 5 Execution | Who does what, when? | `gantt_chart` with milestones and dependencies; swimlane when ≥ 2 functions hand off; SMART action table | Milestone timeline when only event dates exist; mark pending dates instead of inventing durations |
+| 6 Decision | What do we need, and what returns? | Budget breakdown table; ROI bar (investment vs return) | Keep uncertainty and delay consequence visible |
+
+Every analytical page in stages 2–4 carries at least one chart, diagram, or structured visual; a bullet list is never the sole evidence. A repeated grid of unrelated KPI cards is not the default composition.
+
+### C. Evidence Completeness and Traceability
+
+| Evidence status | What the page and its trace retain |
+| --- | --- |
+| Observed actual | Source document/system, sheet or page locator, cut-off date, inclusion/exclusion rules |
+| Derived value | Source inputs, formula, aggregation or weighting, rounding; label as calculated |
+| Target or benchmark | Who set it, applicable population/period, whether its definition matches the actual |
+| Forecast or scenario | Explicit label, assumptions, horizon, range or sensitivity when supported |
+| Missing or conflicting | Name the missing field or conflicting definitions; keep the conclusion provisional |
+| Qualitative observation | Case, interview, inspection, or process record; label an unverified explanation a hypothesis |
+
+**Source authority**: actual results come from approved source facts only. Template demonstration values are not AESC data. Preserve missing values as missing; a target, estimated benefit, or assumption is not an observed result.
+
+**Reconciliation**: recompute totals, shares, changes, and target attainment from retained inputs; headline metrics, charts, tables, and annotations must agree. Distinguish percentage change from percentage-point change; explain rounding residuals, excluded categories, and differing denominators. Put a concise, locatable source in the footer; "internal data" is insufficient. Longer calculations go to speaker notes or an appendix page.
+
+### D. From Evidence to Message and Action
+
+**Claim title**: analytical pages carry an evidence-backed takeaway; a cover, agenda, or divider keeps a functional title. The key-message line adds the implication or decision rather than repeating the title. Pattern: `[value] vs [benchmark] — [management implication]`.
+
+**Worked example (hypothetical)**: inputs "on-time delivery 400/500 in Q1, 430/500 in Q2, target 90%" → derived 80% → 86%, +6 pp, still 4 pp below target → compare both rates against a shared target marker with counts labeled → claim "On-time delivery improved 6 pp; the target gap is still 4 pp" → implication: the data does not show which intervention caused it → action tied to owner, acceptance measure, deadline, or marked pending.
+
+**Per-row action (SMART)**: specific deliverable, measurable acceptance criterion, accountable function, feasible resource basis, deadline. Tie each resource request to the action it enables and its expected benefit. Pending owners, approvals, budgets, or dates stay visibly pending; never manufacture commitments to complete a table.
+
+### E. Page Readback
+
+| Readback question | Repair when unclear |
+| --- | --- |
+| Can the reader state the decision or finding? | Refocus the title; remove competing claims |
+| Does the visual itself reveal the comparison or relationship? | Align shared dimensions, expose a baseline, or change form |
+| Can the reader reproduce the critical number? | Restore inputs, formula, locator |
+| Does the visual imply only what the source establishes? | Remove unsupported arrows, causal labels, areas, progress percentages |
+| Is the important exception visible beside the aggregate? | Add the breakdown and its implication |
+| Is the evidence legible at viewing size? | Rephrase or move secondary detail to a follow-up page |
+
+## IX. Evidence-Led Data Visualization
+
+**Principle — maximize useful evidence, not chart count.** Review every quantitative claim for the chart that makes the argument visible fastest. Prefer a chart over a list of numbers when comparison, change, composition, distribution, or attribution carries the argument; keep a table for lookup, a hero number for one quantity, a diagram for qualitative relationships. Explain an uncharted quantitative claim in the page rationale; never invent values to raise coverage.
+
+Strategist records the chosen chart per page in `page_charts` (spec_lock); Executor adapts the matching `templates/charts/` SVG inside the evidence prototype's zones. Consult `templates/charts/charts_index.json` and each entry's "Skip if" rule before choosing; the table below is a starting point, not a whitelist.
+
+| Intent | Starting points (`templates/charts/`) | Prototype |
 | --- | --- | --- |
-| **Ch 1** | 业务背景 / 管理现状 — Scope & Baseline | 这个业务管什么？我们目前有哪些管理能力和基础？ |
-| **Ch 2** | 执行痛点 — Execution Pain Points | 哪里有问题？严重程度如何？数据说明什么？ |
-| **Ch 3** | 问题分析 — Root Cause Analysis | 为什么会这样？根因是什么？管理抓手在哪里？ |
-| **Ch 4** | 解决方案 — Solution Design | 怎么解决？方案是否可行？多个方案如何取舍？ |
-| **Ch 5** | 行动计划 — Action Plan | 谁来做？做什么？什么时候完成？当前进展如何？ |
-| **Ch 6** | 资源诉求 — Resource Request | 需要哪些跨部门支持或资源投入？预期回报是什么？ |
+| Ranking / magnitude | `horizontal_bar_chart`, `bar_chart`, `dumbbell_chart` | `03a` |
+| Deviation vs target | `bullet_chart`, `butterfly_chart`, `progress_bar_chart` | `03a` |
+| Change over time | `line_chart`, `area_chart`, `dual_axis_line_chart` | `03c`, `03a` |
+| Part-to-whole | `stacked_bar_chart`, `donut_chart`, `treemap_chart` | `03a` |
+| Regional / multi-series comparison | `grouped_bar_chart`, `heatmap_chart` | `03a`, `03b` |
+| Distribution / concentration | `box_plot_chart`, `pareto_chart` | `03a` |
+| Correlation / cost-benefit | `scatter_chart`, `bubble_chart`, `quadrant_bubble_scatter` | `03a` |
+| Additive attribution | `waterfall_chart` | `03d` |
+| Flow / conversion | `sankey_chart`, `funnel_chart` | `03` |
+| Schedule | `gantt_chart`, `project_schedule_table`, `timeline` | `03` |
+| Exact lookup | `basic_table`, `consulting_table`, `comparison_table` | `03e` |
 
-**Recommended TOC structure** (Strategist should default to this for aesc_ppt decks):
+A waterfall answers additive attribution, not arbitrary flow; a Pareto answers cumulative contribution; a pie / donut is for 3–5 parts that sum to a meaningful whole.
 
-```
-1. 管理范围与基础能力
-2. 执行侧痛点与现状差距
-3. 问题根因分析
-4. 改进方案设计
-5. 行动计划
-6. 资源诉求与预期收益
-```
+**Persuasion rules**
 
-### B. Visualization Guide per Chapter（各章节图表选型）
+- One dominant chart per page; the claim title states what the chart proves.
+- Blue is the series, bar, or point the claim is about; everything else is Neutral Gray / Charcoal. Do not use a rainbow palette.
+- Label values directly; drop gridlines and legends the labels make redundant. Sort ranked bars by value. Bars start at zero; use actual calendar spacing on time axes.
+- Show period, unit, denominator, baseline / target, and source wherever they affect interpretation. Distinguish correlation from causation.
+- Annotate the exception (the breach, the outlier, the step that moves the total) with a short callout; use `#DC2626` only when §II allows it.
+- Keep missing observations missing unless the source says no record means zero.
+- Charts stay editable SVG geometry, never a screenshot. Run `verify-charts` on decks with data charts before post-processing.
 
-The aesc_ppt template is **data-first**. Every conclusion page in Ch 2 / Ch 3 / Ch 4 must carry a chart or structured visual. Pure bullet-point pages are not permitted in these chapters.
+Vary neighboring pages when the argument changes; do not force a chart quota or width ratio for variety.
 
-| Chapter | Preferred Chart Types | Notes |
-| --- | --- | --- |
-| **Ch 1** 管理现状 | KPI Dashboard cards (3–4), overview table, regional coverage map | Establish scope and capability baseline |
-| **Ch 2** 执行痛点 | Stacked / grouped bar chart, horizontal bar (ranking), heatmap table | Quantify gaps across regions / process steps |
-| **Ch 3** 问题分析 | SWOT matrix (2×2), cost waterfall chart, event retrospective frame | Waterfall chart: shows cost deltas by factor; use for cost gap attribution |
-| **Ch 4** 解决方案 | Two-column comparison table (option A vs B), process flowchart, cost-benefit scatter plot | If scatter plot is unclear, replace with a two-column table (投入 vs 产出) |
-| **Ch 5** 行动计划 | Gantt-style timeline, swimlane flowchart (cross-department), SMART action table | Swimlane for processes involving ≥ 2 departments |
-| **Ch 6** 资源诉求 | Budget breakdown table, ROI comparison bar chart | Keep this chapter separate from Ch 5 — do not merge |
+## X. Icons as Evidence Marks
 
-**Chart selection decision rules:**
+An icon earns its place only when it carries meaning a number or word would carry slower: a direction, a state, a category, or a step. Data and chart stay primary; the icon is the quick-read tag beside them. Never use icons as bullets or decoration, and never to stand in for a quantity.
 
-- 各区域对比 → grouped / stacked bar chart
-- 各环节成本构成 / 成本增减因素 → waterfall chart
-- 跨部门流程 → swimlane / flowchart
-- 典型问题复盘 → event retrospective (事件性复盘框架)
-- 方案投入产出比较 → scatter plot; if data is sparse or two dimensions are insufficient to tell the story, use a two-column table instead
-- 管理抓手识别 → annotated chart with callout boxes (not plain bullets)
+- **One library**: `chunk-filled` (compact solid silhouettes that stay crisp when projected and match the data-dense tone). Lock it as the deck's icon library; when an exact icon is missing, take the nearest object within it, or let a chart, number, or typography carry the meaning. Reference as `data-icon="chunk-filled/<name>"`.
+- **Where an icon is persuasive**: trend direction beside a KPI or delta; status of a risk or target (met / at risk / breached); category identity in a comparison or component breakdown; step type in a process or handoff; action owner or deliverable type in an action table; the conclusion / evidence / action headings of a chart-insight rail.
+- **Size and color**: 24–32 px inline with 16–22 px text, 40–48 px as a category anchor; at most one icon per unit and roughly six per page. Volt Blue by default, Neutral Gray for context, Eco-Green and Alert Red only with their §II meaning. Red is never for a mere decrease: use `arrow-trend-down` in `#6B7280`.
 
-### C. Content Quality Gates（内容质量原则）
+Curated starting pool (all verified in `chunk-filled`; pick the drawable object, not the abstract concept):
 
-The Strategist **must** enforce these rules when drafting the Content Outline, and the Executor must enforce them when writing page titles and key message lines.
-
-1. **Assertion page titles** — every page title must be a conclusive statement, not a label.
-   - ❌ `海外仓成本分析` → ✅ `亚太区仓储成本超标 18%，是三区域中差距最大的`
-   - ❌ `行动计划` → ✅ `三项优先行动将在 Q3 落地，责任人已确定`
-
-2. **Data-backed conclusions** — every management conclusion requires three elements: the value itself + a comparison benchmark + the implication.
-   - Pattern: `[数值] 相比 [基准], 说明 [管理含义]`
-
-3. **SMART action items** — every row in the action plan table must satisfy:
-   - **S**pecific — 具体说明做什么
-   - **M**easurable — 有可量化的完成标准
-   - **A**ssignable — 明确负责人（姓名或职能）
-   - **R**ealistic — 当前资源条件下可执行
-   - **T**ime-bound — 有明确截止时间
-
-4. **Action Plan ≠ Resource Request** — Ch 5 and Ch 6 must be separate chapters. Do not merge resource asks into the action plan page.
-
-5. **图文结合 (visual + text integration)** — Ch 2 / Ch 3 / Ch 4 pages: each data conclusion page must have at least one chart, diagram, or structured visual. Plain text bullet lists are not acceptable as the sole content element on these pages.
-
-### D. Example Narrative: Overseas Warehouse Logistics Reporting
-
-This is the reference narrative for a 海外仓储物流汇报 deck. Use it to validate outline structure and logic flow.
-
-```
-Ch 1 — 管理范围与基础能力
-  • 当前海外仓管理区域与仓点数量（KPI dashboard）
-  • 已建立的制度、流程、系统（结构化表格）
-  • 当前具备的管理能力概览
-
-Ch 2 — 执行侧痛点与现状差距
-  • 各区域执行难度对比（堆积柱状图）
-  • 效率低的关键环节及量化数据（横向条形图）
-  • 反复发生的问题类型统计（分类汇总表）
-
-Ch 3 — 问题根因分析
-  • SWOT 分析：管理体系的优势、劣势、机会、威胁
-  • 成本瀑布图：识别各区域成本差异的驱动因素
-  • 事件性复盘：1–2 个典型案例的经验教训
-
-Ch 4 — 改进方案设计
-  • 方案对比：两列表格（方案A vs 方案B）
-  • 改进后流程图（泳道图 or flowchart）
-
-Ch 5 — 行动计划
-  • 甘特式时间线（按季度展示关键里程碑）
-  • SMART 行动表（责任人 / 完成标准 / 截止时间）
-
-Ch 6 — 资源诉求与预期收益
-  • 所需资源拆解（预算 + 人力 + 跨部门协同）
-  • ROI 预期：投入 vs 预计收益对比
-```
-
-## XIV. Red Color Restriction Policy
-
-**Core rule**: Red (`#DC2626`) is a **semantic-only** color in this template. Regular content pages MUST NOT use any red-family color (including `#EF4444`, `#F44336`, `#FF0000`, `#B91C1C`, etc.). Only the palette-defined `#DC2626` is permitted, and only in the contexts listed below.
-
-### Permitted uses of red (semantic alert contexts)
-
-| Context | Example |
+| Meaning | Icon objects |
 | --- | --- |
-| Risk section label or risk-category badge | "⚠ 高风险", "Risk: Unresolved" badge on a risk register row |
-| Warning callout box | Highlighted box identifying a confirmed problem or issue in the analysis |
-| Critical threshold breach indicator | KPI card annotation when a value falls below a defined critical threshold (not merely "down") |
-| Problem/issue annotation on a chart | Callout arrow pointing to a specific anomaly with "质量异常" label |
-| Unresolved blocker alert banner | "Blocker: Pending approval from Legal" strip at the top of an action plan page |
-| Negative deviation that is a recognized problem | A performance gap explicitly described in the deck as a problem needing remediation |
+| Trend up / down | `arrow-trend-up`, `arrow-trend-down` |
+| Risk, warning, breach | `triangle-exclamation`, `circle-exclamation` |
+| Met, verified, approved | `circle-checkmark`, `badge-check`, `shield-check` |
+| Target, goal, KPI gap | `target-arrow`, `gauge-high`, `gauge-low` |
+| Time, schedule, delay | `clock`, `calendar`, `hourglass-half-top`, `stopwatch` |
+| Logistics, delivery | `truck`, `ship`, `plane`, `box`, `route` |
+| Operations, manufacturing | `factory`, `wrench`, `toolbox`, `cog`, `battery-full`, `bolt` |
+| Cost, budget | `dollar`, `coin`, `wallet`, `receipt` |
+| Region, site | `globe`, `map-pin`, `building` |
+| People, owner | `users`, `user` |
+| Insight, idea | `lightbulb` |
+| Chart type cue | `chart-bar`, `chart-line`, `chart-pie` |
+| Feedback loop | `arrows-rotate-clockwise` |
+| Milestone, deliverable | `flag`, `clipboard`, `list-ordered` |
 
-### Prohibited uses of red (use the listed alternative instead)
-
-| Prohibited context | Use instead |
-| --- | --- |
-| Section headers, chapter markers, page title accents | `#2563EB` Volt Blue |
-| Decorative card borders, accent bars, structural dividers | `#2563EB` or `#EEEEEE` |
-| Icon fill colors or bullet markers | `#2563EB` or `#374151` |
-| Chart series colors (declining but within-target series) | `#374151` Deep Charcoal or `#6B7280` Neutral Gray |
-| KPI trend annotation: value is down but not a problem | `#6B7280` Neutral Gray + `arrow-trend-down` icon |
-| Background panels, card fills, or section zone tints | White `#FFFFFF` or Volt Blue tint `#2563EB` at low fill-opacity |
-| Any purely decorative use | Not applicable — never use red for decoration |
-
-### Distinguishing a "downward trend" from a "problem"
-
-The general consulting convention "Red = down" does **not** apply to this template. Use the decision rule below:
-
-```
-Is the downward value explicitly flagged as a risk, issue, or below a named threshold?
-  YES → #DC2626 Alert Red is appropriate
-  NO  → #6B7280 Neutral Gray (direction only, no alarm signal)
-```
-
-**Example**:
-- Spare-parts cost rose 12% — but still within the annual budget cap → `#6B7280` gray
-- Field-repair first-time fix rate fell to 63% vs. the 80% SLA target → `#DC2626` red (SLA breach = problem)
-
-### Override of executor-consultant color convention
-
-The generic `executor-consultant.md` rule "Red=down / Green=up" for trend annotations is **overridden** by this policy for all aesc_ppt decks. Executors reading this design_spec must apply the decision rule above, not the generic convention.
+The pool is a recall aid, not a whitelist; any `chunk-filled` object that carries the page's meaning is valid.

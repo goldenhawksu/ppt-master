@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+
+  <!-- White background -->
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+
+  <!-- Standard 4-zone header -->
+  <rect x="0" y="0" width="1280" height="38" fill="#FFFFFF"/>
+  <text x="24" y="24" fill="#1A1818" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="16" font-weight="700" letter-spacing="2">{{BRAND_LABEL}}</text>
+  <line x1="320" y1="10" x2="320" y2="28" stroke="#DDDDDD" stroke-width="1"/>
+  <text x="480" y="24" text-anchor="middle" fill="#9B9B9B" font-family="Arial, sans-serif" font-size="13">aesc-group.com</text>
+  <line x1="640" y1="10" x2="640" y2="28" stroke="#DDDDDD" stroke-width="1"/>
+  <text x="880" y="24" text-anchor="middle" fill="#9B9B9B" font-family="Arial, sans-serif" font-size="13">document level : confidential</text>
+  <line x1="1120" y1="10" x2="1120" y2="28" stroke="#DDDDDD" stroke-width="1"/>
+  <text x="1200" y="24" text-anchor="middle" fill="#9B9B9B" font-family="Arial, sans-serif" font-size="13">{{PAGE_NUM}}</text>
+  <line x1="0" y1="38" x2="1280" y2="38" stroke="#DDDDDD" stroke-width="1"/>
+
+  <!-- Title block: claim title + implication line -->
+  <rect x="56" y="55" width="5" height="38" fill="#2563EB"/>
+  <text x="68" y="84" fill="#1A1818" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="32" font-weight="700">{{PAGE_TITLE}}</text>
+  <line x1="68" y1="98" x2="268" y2="98" stroke="#2563EB" stroke-width="2"/>
+  <text x="68" y="128" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="20">{{KEY_MESSAGE}}</text>
+  <line x1="56" y1="148" x2="1224" y2="148" stroke="#EEEEEE" stroke-width="1"/>
+
+  <!--
+      Lookup table (left, x=56-804, header 56 px + 4 rows x 72 px, y=186-530) for exact values,
+      with a context trend (right) and one action. Use when the reader must look values up;
+      when one comparison answers the question, use a chart page (03a) instead.
+      Change column: pair each delta with a direction icon (arrow-trend-up / arrow-trend-down);
+      gray #6B7280 for direction only, #DC2626 only when the row is flagged as a problem or breaches a named threshold.
+  -->
+  <rect x="56" y="186" width="748" height="56" fill="#EEEEEE"/>
+  <text x="68" y="221" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="17" font-weight="700">Illustrative region</text>
+  <text x="294" y="221" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="17" font-weight="700">Units</text>
+  <text x="424" y="221" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="17" font-weight="700">Change</text>
+  <text x="554" y="221" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="17" font-weight="700">Implication</text>
+
+  <g id="table-rows">
+    <text x="68" y="286" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="17" font-weight="700">Region A</text>
+    <text x="294" y="286" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="17">42</text>
+    <use data-icon="chunk-filled/arrow-trend-down" x="424" y="268" width="22" height="22" fill="#6B7280"/>
+    <text x="454" y="286" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="17">-18%</text>
+    <text x="554" y="286" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="17">Prioritize</text>
+    <line x1="56" y1="314" x2="804" y2="314" stroke="#DDDDDD" stroke-width="1"/>
+
+    <text x="68" y="358" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="17" font-weight="700">Region B</text>
+    <text x="294" y="358" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="17">28</text>
+    <use data-icon="chunk-filled/arrow-trend-down" x="424" y="340" width="22" height="22" fill="#6B7280"/>
+    <text x="454" y="358" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="17">-10%</text>
+    <text x="554" y="358" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="17">Maintain</text>
+    <line x1="56" y1="386" x2="804" y2="386" stroke="#DDDDDD" stroke-width="1"/>
+
+    <text x="68" y="430" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="17" font-weight="700">Region C</text>
+    <text x="294" y="430" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="17">18</text>
+    <use data-icon="chunk-filled/arrow-trend-down" x="424" y="412" width="22" height="22" fill="#6B7280"/>
+    <text x="454" y="430" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="17">-6%</text>
+    <text x="554" y="430" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="17">Monitor</text>
+    <line x1="56" y1="458" x2="804" y2="458" stroke="#DDDDDD" stroke-width="1"/>
+
+    <text x="68" y="502" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="17" font-weight="700">Other</text>
+    <text x="294" y="502" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="17">12</text>
+    <text x="454" y="502" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="17">0%</text>
+    <text x="554" y="502" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="17">Review</text>
+    <line x1="56" y1="530" x2="804" y2="530" stroke="#DDDDDD" stroke-width="1"/>
+  </g>
+  <text x="56" y="556" fill="#6B7280" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="12">Illustrative values; replace rows, unit, period and source before use</text>
+
+  <!-- Context trend -->
+  <line x1="832" y1="186" x2="832" y2="598" stroke="#DDDDDD" stroke-width="1"/>
+  <g id="chart-context-trend">
+    <line x1="906" y1="440" x2="1172" y2="440" stroke="#DDDDDD" stroke-width="1"/>
+    <polyline points="906,305 994.67,318.5 1083.33,332 1172,345.5" fill="none" stroke="#2563EB" stroke-width="3"/>
+    <circle cx="906" cy="305" r="4" fill="#2563EB"/>
+    <text x="906" y="291" text-anchor="middle" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="18" font-weight="700">20</text>
+    <text x="906" y="468" text-anchor="middle" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="16">P1</text>
+    <circle cx="994.67" cy="318.5" r="4" fill="#2563EB"/>
+    <text x="994.67" y="304.5" text-anchor="middle" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="18" font-weight="700">18</text>
+    <text x="994.67" y="468" text-anchor="middle" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="16">P2</text>
+    <circle cx="1083.33" cy="332" r="4" fill="#2563EB"/>
+    <text x="1083.33" y="318" text-anchor="middle" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="18" font-weight="700">16</text>
+    <text x="1083.33" y="468" text-anchor="middle" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="16">P3</text>
+    <circle cx="1172" cy="345.5" r="4" fill="#2563EB"/>
+    <text x="1172" y="331.5" text-anchor="middle" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="18" font-weight="700">14</text>
+    <text x="1172" y="468" text-anchor="middle" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="16">P4</text>
+  </g>
+  <text x="906" y="496" fill="#6B7280" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="12">Illustrative periods; replace before use</text>
+
+  <!-- Action -->
+  <use data-icon="chunk-filled/flag" x="866" y="534" width="24" height="24" fill="#2563EB"/>
+  <text x="900" y="552" fill="#6B7280" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="13" font-weight="700">ACTION</text>
+  <text x="866" y="584" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="20">{{ACTION}}</text>
+
+  <!-- Table note -->
+  <text x="56" y="600" fill="#6B7280" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="18">{{TABLE_NOTE}}</text>
+
+  <!-- Footer -->
+  <text x="56" y="700" fill="#9B9B9B" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="12">{{SOURCE}}</text>
+  <text x="1224" y="700" text-anchor="end" fill="#9B9B9B" font-family="Arial, sans-serif" font-size="12">{{PAGE_NUM}}</text>
+
+</svg>

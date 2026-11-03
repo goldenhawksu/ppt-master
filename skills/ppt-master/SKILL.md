@@ -159,9 +159,12 @@ Import source content (choose based on the situation):
 | User input contains | Step 3 action |
 |---|---|
 | An explicit path to a template directory (e.g. `skills/ppt-master/templates/layouts/academic_defense/`, `projects/foo/template/`, or any other absolute / relative path that resolves to a directory containing `design_spec.md` and one or more page SVGs) | Copy that directory's SVGs + `design_spec.md` + assets into the project, advance |
+| The registered shortcut phrase **`aesc_ppt模板`** / **`aesc_ppt template`** (the exact id `aesc_ppt` followed by 模板 / template) | Resolve to `skills/ppt-master/templates/layouts/aesc_ppt/` and treat as if the user had supplied that path — copy as below, advance. This is the only name-to-path shortcut; it is an exact-phrase match, not fuzzy |
 | Anything else — including bare template names ("用 academic_defense 模板"), style descriptions ("麦肯锡风格" / "Google style"), brand mentions ("招商银行风格"), vague intent ("想用个模板"), or silence | Skip Step 3, free design |
 
-There is no slug matching, no name lookup, no fuzzy resolution. A template name without a path does not trigger — the user must give a path the AI can `cd` into.
+There is no slug matching, no name lookup, no fuzzy resolution — the single exception is the exact `aesc_ppt模板` / `aesc_ppt template` shortcut above ("aesc"、"远景动力风格" or any other wording does not qualify). Any other template name without a path does not trigger — the user must give a path the AI can `cd` into.
+
+When the `aesc_ppt` template is in use, its `design_spec.md` §VIII (reporting story), §IX (evidence-led data visualization) and §X (icons as evidence marks) are binding Strategist / Executor inputs: lock `chunk-filled` as the icon library, record the chosen chart per data page in `page_charts`, and apply the semantic-red rule in §II.
 
 The path may live anywhere — `skills/ppt-master/templates/layouts/<name>/` (the built-in library), `projects/<other_project>/template/` (reusing a previous project's templates), or any other location. Location is irrelevant; what matters is that the user named the path.
 
@@ -175,7 +178,7 @@ cp ${TEMPLATE_DIR}/*.jpg <project_path>/images/ 2>/dev/null || true
 
 > Style descriptions ("麦肯锡风格" / "Keynote 风" / "极简风" / etc.) never trigger Step 3. They flow naturally into Strategist's Eight Confirmations as part of the user's input — Strategist uses them as a style brief when proposing color / typography / tone in confirmations e and g.
 
-> Bare template names ("academic_defense", "招商银行") do NOT trigger Step 3 even if a folder by that name exists in the library. The user must give a path. AI must not "helpfully" resolve a name to a path.
+> Bare template names ("academic_defense", "招商银行") do NOT trigger Step 3 even if a folder by that name exists in the library. The user must give a path (only the `aesc_ppt模板` shortcut above is exempt). AI must not "helpfully" resolve any other name to a path.
 
 > "What templates exist?" is out-of-band Q&A — answer by listing entries from `layouts_index.json` together with their paths. Listing alone does not advance the pipeline; the user still has to send a path to trigger the Step 3 copy.
 

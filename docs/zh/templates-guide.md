@@ -24,11 +24,13 @@ PPT Master 的"模板"是一份**结构 + 风格**的预设包：包含若干页
 > "用上次那个模板：`projects/last_deck/template/`" ✅
 > "做一份产品介绍，模板用 `/Users/me/Desktop/our_brand_v3/`" ✅
 
+> "用 aesc_ppt模板 做本季度质量汇报" ✅ —— 唯一的注册快捷方式：完整短语 `aesc_ppt模板` / `aesc_ppt template` 会直接解析到 `skills/ppt-master/templates/layouts/aesc_ppt/`，无需写路径。
+
 AI 会把这个目录里的 SVG、`design_spec.md` 和素材复制到项目目录，然后进入 Strategist 阶段。路径可以是任意位置——内置库的 `skills/ppt-master/templates/layouts/` 下、上一个项目的 `template/` 文件夹、或者磁盘上其他任何地方都行。
 
 ### 什么**不会**触发模板流程
 
-- **只写模板名、不给路径**："用 academic_defense 模板" / "做一份 招商银行 模板的产品介绍" → 走自由设计。AI 不会替你把名字解析成路径。要用模板，请直接给路径。
+- **只写模板名、不给路径**："用 academic_defense 模板" / "做一份 招商银行 模板的产品介绍" → 走自由设计。AI 不会替你把名字解析成路径。要用模板，请直接给路径（上面的 `aesc_ppt模板` 快捷方式是唯一例外）。
 - **风格描述**："麦肯锡风格" / "Google style" / "麦肯锡那种" / "极简风" / "Keynote 风" → 走自由设计。这些描述会顺着对话流到 Strategist 那边作为风格说明使用，但**不会复制任何模板文件**。
 - **模糊意图**："想用个模板" / "选一个吧"——没给路径 → 走自由设计。
 

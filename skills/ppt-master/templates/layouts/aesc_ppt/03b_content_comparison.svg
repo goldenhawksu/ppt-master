@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+
+  <!-- White background -->
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+
+  <!-- Standard 4-zone header -->
+  <rect x="0" y="0" width="1280" height="38" fill="#FFFFFF"/>
+  <text x="24" y="24" fill="#1A1818" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="16" font-weight="700" letter-spacing="2">{{BRAND_LABEL}}</text>
+  <line x1="320" y1="10" x2="320" y2="28" stroke="#DDDDDD" stroke-width="1"/>
+  <text x="480" y="24" text-anchor="middle" fill="#9B9B9B" font-family="Arial, sans-serif" font-size="13">aesc-group.com</text>
+  <line x1="640" y1="10" x2="640" y2="28" stroke="#DDDDDD" stroke-width="1"/>
+  <text x="880" y="24" text-anchor="middle" fill="#9B9B9B" font-family="Arial, sans-serif" font-size="13">document level : confidential</text>
+  <line x1="1120" y1="10" x2="1120" y2="28" stroke="#DDDDDD" stroke-width="1"/>
+  <text x="1200" y="24" text-anchor="middle" fill="#9B9B9B" font-family="Arial, sans-serif" font-size="13">{{PAGE_NUM}}</text>
+  <line x1="0" y1="38" x2="1280" y2="38" stroke="#DDDDDD" stroke-width="1"/>
+
+  <!-- Title block: claim title + implication line -->
+  <rect x="56" y="55" width="5" height="38" fill="#2563EB"/>
+  <text x="68" y="84" fill="#1A1818" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="32" font-weight="700">{{PAGE_TITLE}}</text>
+  <line x1="68" y1="98" x2="268" y2="98" stroke="#2563EB" stroke-width="2"/>
+  <text x="68" y="128" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="20">{{KEY_MESSAGE}}</text>
+  <line x1="56" y1="148" x2="1224" y2="148" stroke="#EEEEEE" stroke-width="1"/>
+
+  <!--
+      Two evidence columns share the SAME dimensions row by row
+      (objective / actual vs target / measure / constraint / next action).
+      Left x=56-604 = baseline or option A (neutral); right x=676-1224 = proposed or option B (Volt Blue).
+      Fill each column with a chart pair on a shared scale, an aligned table, or aligned rows.
+      Do not add arrows between independent workstreams; the centre chevron means baseline -> proposed only.
+  -->
+  <text x="56" y="212" fill="#6B7280" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="24" font-weight="700">{{BASELINE_LABEL}}</text>
+  <line x1="56" y1="228" x2="604" y2="228" stroke="#DDDDDD" stroke-width="2"/>
+  <text x="676" y="212" fill="#2563EB" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="24" font-weight="700">{{PROPOSED_LABEL}}</text>
+  <line x1="676" y1="228" x2="1224" y2="228" stroke="#2563EB" stroke-width="2"/>
+
+  <line x1="640" y1="188" x2="640" y2="500" stroke="#EEEEEE" stroke-width="1"/>
+  <path d="M632 332 L648 344 L632 356" fill="none" stroke="#9B9B9B" stroke-width="2"/>
+
+  <text x="56" y="272" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="22">{{BASELINE_EVIDENCE}}</text>
+  <text x="676" y="272" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="22">{{PROPOSED_EVIDENCE}}</text>
+
+  <!-- One comparison takeaway -->
+  <line x1="56" y1="540" x2="1224" y2="540" stroke="#2563EB" stroke-width="2"/>
+  <text x="56" y="584" fill="#2563EB" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="28" font-weight="700">{{COMPARISON_TAKEAWAY}}</text>
+
+  <!-- Footer -->
+  <text x="56" y="700" fill="#9B9B9B" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="12">{{SOURCE}}</text>
+  <text x="1224" y="700" text-anchor="end" fill="#9B9B9B" font-family="Arial, sans-serif" font-size="12">{{PAGE_NUM}}</text>
+
+</svg>

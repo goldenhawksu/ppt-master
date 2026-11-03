@@ -32,26 +32,22 @@
 
   <!-- Flexible content area placeholder -->
   <!--
-      AI Flexible Layout Zone
+      AI Flexible Layout Zone (fallback for arguments the 03a-03e evidence pages do not fit)
       Available space: x=56, y=154, w=1168, h=502
 
-      Recommended layouts:
-      - Left-right columns (560+560, gap=24)
-      - Top-bottom split
-      - 2×2 matrix (560×240 each, gap=20)
-      - 3-column cards (376×480, gap=24)
-      - Data card cluster (280×150 each)
-      - Horizontal flow (full width, 120-140px height, 3-6 nodes)
-      - Dashboard: KPI row (top 100px) + chart area (below)
-      - Dense table: full width, max 400px height
+      Use for: process / handoff swimlane, Gantt or milestone timeline, SWOT / 2x2, event
+      retrospective, SMART action table, resource request, or any custom editable chart.
+      Evidence-first pages: 03a chart + insight rail, 03b comparison, 03c hero number,
+      03d bridge, 03e table + trend (see design_spec §V and §IX).
+
+      Composition: the main visual explains the relationship; a compact implication or
+      action sits beside it. Do not default to a grid of unrelated KPI cards.
 
       Common elements:
-      Data card: <rect fill="#FFFFFF" stroke="#EEEEEE" stroke-width="1" rx="4"/>
-                 <rect width="4" fill="#2563EB"/> (left accent)
+      Focus evidence: Volt Blue #2563EB; context/baseline: Neutral Gray #6B7280 / Charcoal #374151
+      Positive (source-supported): <text fill="#00C87A"/>
       Key metric: <text fill="#2563EB" font-size="44" font-weight="700"/>
-      Positive:   <text fill="#00C87A"/>
-      Comparison: <text fill="#2563EB"/> vs <text fill="#374151"/>
-      Divider:    <line stroke="#EEEEEE"/>
+      Divider: <line stroke="#EEEEEE"/>
   -->
   <text x="640" y="420" text-anchor="middle" fill="#BBBBBB" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="28" font-weight="700" letter-spacing="3">{{CONTENT_AREA}}</text>
   <text x="640" y="456" text-anchor="middle" fill="#CCCCCC" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="14">Content Area: 1168 × 502 px</text>

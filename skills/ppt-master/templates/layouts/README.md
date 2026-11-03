@@ -1,11 +1,11 @@
-# Page Layout Template Library (15 Templates)
+# Page Layout Template Library (16 Templates)
 
 Pre-built PPT page layout templates supporting multiple styles and use cases.
 
 - **Full Index**: [README.md](./README.md) (human browsing — includes categories, primary colors, detailed tone)
 - **Slim Index**: [layouts_index.json](./layouts_index.json) (lightweight lookup — `summary` / `keywords` per template id)
 
-> **Template selection is opt-in by explicit path.** The main workflow defaults to free design. A template is only used when the user gives an explicit directory path (e.g. `skills/ppt-master/templates/layouts/academic_defense/` or any other path) in their initial message. Bare names like "academic_defense" do not trigger — `layouts_index.json` and this README are discovery aids for finding the path, not triggers in themselves. See `SKILL.md` Step 3.
+> **Template selection is opt-in by explicit path.** The main workflow defaults to free design. A template is only used when the user gives an explicit directory path (e.g. `skills/ppt-master/templates/layouts/academic_defense/` or any other path) in their initial message. Bare names like "academic_defense" do not trigger — `layouts_index.json` and this README are discovery aids for finding the path, not triggers in themselves. The one registered shortcut is `aesc_ppt`: saying "aesc_ppt模板" / "aesc_ppt template" resolves to `skills/ppt-master/templates/layouts/aesc_ppt/`. See `SKILL.md` Step 3.
 
 ---
 
@@ -15,6 +15,7 @@ Pre-built PPT page layout templates supporting multiple styles and use cases.
 | Template Name | Category | Use Cases | Primary Color | Design Tone |
 |---------------|----------|-----------|---------------|-------------|
 | `academic_defense` | General | Thesis defense, academic presentations, research progress reports, grant applications | `#003366` | Professional, rigorous, research-oriented, clear hierarchy |
+| `aesc_ppt` | Brand | CTS 业务汇报、海外项目分析、质量表现报告、售后物流方案、战略规划 | `#2563EB` | Clean, data-dense, professional, evidence-led, bilingual-capable (default English) |
 | `ai_ops` | General | Telecom AI operations architecture, IT system overviews, digital transformation proposals, smart infrastructure reports | `#C00000` | Information-dense, structured, modular zoning, telecom/enterprise style |
 | `china_telecom_template` | General | China Telecom related briefings, 政企数字化方案, 转型规划, 内部汇报 | `#C00000` | Authoritative, structured, restrained, enterprise-government hybrid |
 | `government_blue` | General | Key project briefings, Five-Year Plan presentations, work summaries, investment promotion, policy interpretation | `#0050B3` | Grand, tech-forward, modern, professional government style |
@@ -42,6 +43,7 @@ Templates mimicking **specific well-known brands/institutions** with their exclu
 
 | Template | Description |
 |----------|-------------|
+| `aesc_ppt` | AESC (远景动力) management-review template: storyline-led, evidence-first pages (chart + insight rail, comparison, hero number, waterfall bridge, table + trend), semantic-only red, icons as evidence marks. Selected by saying "aesc_ppt模板" |
 | `china_telecom_template` | China Telecom brand style, red-gray structural header + ribbon footer |
 | `中汽研_常规` | CATARC standard style (v1), suitable for certification and evaluation |
 | `中汽研_商务` | CATARC business style (v2), modern tech business, composed and sophisticated |

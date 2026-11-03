@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+
+  <!-- White background -->
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+
+  <!-- Standard 4-zone header -->
+  <rect x="0" y="0" width="1280" height="38" fill="#FFFFFF"/>
+  <text x="24" y="24" fill="#1A1818" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="16" font-weight="700" letter-spacing="2">{{BRAND_LABEL}}</text>
+  <line x1="320" y1="10" x2="320" y2="28" stroke="#DDDDDD" stroke-width="1"/>
+  <text x="480" y="24" text-anchor="middle" fill="#9B9B9B" font-family="Arial, sans-serif" font-size="13">aesc-group.com</text>
+  <line x1="640" y1="10" x2="640" y2="28" stroke="#DDDDDD" stroke-width="1"/>
+  <text x="880" y="24" text-anchor="middle" fill="#9B9B9B" font-family="Arial, sans-serif" font-size="13">document level : confidential</text>
+  <line x1="1120" y1="10" x2="1120" y2="28" stroke="#DDDDDD" stroke-width="1"/>
+  <text x="1200" y="24" text-anchor="middle" fill="#9B9B9B" font-family="Arial, sans-serif" font-size="13">{{PAGE_NUM}}</text>
+  <line x1="0" y1="38" x2="1280" y2="38" stroke="#DDDDDD" stroke-width="1"/>
+
+  <!-- Title block: claim title + implication line -->
+  <rect x="56" y="55" width="5" height="38" fill="#2563EB"/>
+  <text x="68" y="84" fill="#1A1818" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="32" font-weight="700">{{PAGE_TITLE}}</text>
+  <line x1="68" y1="98" x2="268" y2="98" stroke="#2563EB" stroke-width="2"/>
+  <text x="68" y="128" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="20">{{KEY_MESSAGE}}</text>
+  <line x1="56" y1="148" x2="1224" y2="148" stroke="#EEEEEE" stroke-width="1"/>
+
+  <!--
+      Additive attribution bridge: start total -> signed factor steps -> end total.
+      Totals in Deep Charcoal #374151, factor steps in Volt Blue #2563EB.
+      Sample scale: 2 px per unit; the baseline of 120 spans y=240-480; every step is recomputed
+      from its inputs (120 - 18 - 12 + 6 = 96). Use only when the steps genuinely add up;
+      otherwise choose a bar, Pareto or Sankey (design_spec §IX).
+  -->
+  <g id="chart-bridge">
+    <rect x="150" y="240" width="112" height="240" fill="#374151"/>
+    <text x="206" y="226" text-anchor="middle" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="22" font-weight="700">120</text>
+    <text x="206" y="510" text-anchor="middle" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="18">Baseline</text>
+
+    <line x1="262" y1="240" x2="360" y2="240" stroke="#DDDDDD" stroke-width="1"/>
+    <rect x="360" y="240" width="112" height="36" fill="#2563EB"/>
+    <text x="416" y="226" text-anchor="middle" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="22" font-weight="700">-18</text>
+    <text x="416" y="510" text-anchor="middle" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="18">Freight</text>
+
+    <line x1="472" y1="276" x2="570" y2="276" stroke="#DDDDDD" stroke-width="1"/>
+    <rect x="570" y="276" width="112" height="24" fill="#2563EB"/>
+    <text x="626" y="262" text-anchor="middle" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="22" font-weight="700">-12</text>
+    <text x="626" y="510" text-anchor="middle" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="18">Rework</text>
+
+    <line x1="682" y1="300" x2="780" y2="300" stroke="#DDDDDD" stroke-width="1"/>
+    <rect x="780" y="288" width="112" height="12" fill="#2563EB"/>
+    <text x="836" y="274" text-anchor="middle" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="22" font-weight="700">+6</text>
+    <text x="836" y="510" text-anchor="middle" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="18">Mix</text>
+
+    <line x1="892" y1="288" x2="990" y2="288" stroke="#DDDDDD" stroke-width="1"/>
+    <rect x="990" y="288" width="112" height="192" fill="#374151"/>
+    <text x="1046" y="274" text-anchor="middle" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="22" font-weight="700">96</text>
+    <text x="1046" y="510" text-anchor="middle" fill="#374151" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="18">Current</text>
+  </g>
+  <text x="56" y="538" fill="#6B7280" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="12">Illustrative units; 120 - 18 - 12 + 6 = 96. Replace factors, unit, period and source before use</text>
+
+  <!-- Attribution takeaway -->
+  <line x1="56" y1="562" x2="1224" y2="562" stroke="#2563EB" stroke-width="2"/>
+  <text x="56" y="604" fill="#2563EB" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="24" font-weight="700">{{BRIDGE_TAKEAWAY}}</text>
+
+  <!-- Footer -->
+  <text x="56" y="700" fill="#9B9B9B" font-family="Arial, &quot;Helvetica Neue&quot;, &quot;Microsoft YaHei&quot;, &quot;PingFang SC&quot;, sans-serif" font-size="12">{{SOURCE}}</text>
+  <text x="1224" y="700" text-anchor="end" fill="#9B9B9B" font-family="Arial, sans-serif" font-size="12">{{PAGE_NUM}}</text>
+
+</svg>
