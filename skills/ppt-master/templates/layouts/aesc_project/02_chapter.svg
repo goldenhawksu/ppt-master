@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <image href="assets/chapter_bg.jpeg" x="0" y="0" width="1280" height="720" preserveAspectRatio="none"/>
+  <rect x="0" y="0" width="1280" height="720" fill="#3B3B44" fill-opacity="0.5"/>
+  <rect x="0" y="0" width="1280" height="6" fill="#3B3B44"/>
+  <text x="1162" y="24" font-family="Calibri, sans-serif" font-size="13" fill="#FFFFFF">AESC CONFIDENTIAL</text>
+
+  <g id="chapter-banner" transform="translate(100, 250)">
+    <rect x="0" y="0" width="8" height="120" fill="#4472C4"/>
+    <text x="30" y="36" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" fill="#4472C4">CHAPTER {{CHAPTER_NUM}}</text>
+    <text x="30" y="86" font-family="Helvetica, Arial, sans-serif" font-size="44" font-weight="bold" fill="#FFFFFF">{{CHAPTER_TITLE}}</text>
+    <text x="30" y="125" font-family="Calibri, Arial, sans-serif" font-size="20" fill="#E2E8F0">{{CHAPTER_DESC}}</text>
+  </g>
+
+  <!-- Footer -->
+  <rect x="0" y="656" width="1280" height="64" fill="#3B3B44"/>
+  <image href="assets/logo_aesc_white.png" x="12" y="660" width="150" height="54" preserveAspectRatio="xMidYMid meet"/>
+  <text x="180" y="678" font-family="Calibri, sans-serif" font-size="11" fill="#F2F2F2" font-style="italic">
+    <tspan x="180" dy="0">Without AESC’s explicit authorization, any recording of photos, screen captures, videos or other form of data collection for the purpose of reproducing</tspan>
+    <tspan x="180" dy="14">or disseminating information contained in this document is strictly prohibited, and AESC reserves the right to pursue violations of its information security</tspan>
+    <tspan x="180" dy="14">policy to the fullest extent permitted by law.</tspan>
+  </text>
+  <text x="1240" y="700" text-anchor="end" font-family="Calibri, sans-serif" font-size="14" fill="#FFFFFF">{{PAGE_NUM}}</text>
+</svg>

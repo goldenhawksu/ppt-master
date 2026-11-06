@@ -1,4 +1,4 @@
-# Page Layout Template Library (16 Templates)
+# Page Layout Template Library (17 Templates)
 
 Pre-built PPT page layout templates supporting multiple styles and use cases.
 
@@ -16,6 +16,7 @@ Pre-built PPT page layout templates supporting multiple styles and use cases.
 |---------------|----------|-----------|---------------|-------------|
 | `academic_defense` | General | Thesis defense, academic presentations, research progress reports, grant applications | `#003366` | Professional, rigorous, research-oriented, clear hierarchy |
 | `aesc_ppt` | Brand | CTS 业务汇报、海外项目分析、质量表现报告、售后物流方案、战略规划 | `#2563EB` | Clean, data-dense, professional, evidence-led, bilingual-capable (default English) |
+| `aesc_project` | Brand | 储能工程项目管理、周度例会汇报、PMO状态看板、甘特排程推进、工作包交付跟踪 | `#3B3B44` | Rigorous, data-dense, engineering-focused, structured, bilingual-capable (default English ΛESC, Chinese 远景动力) |
 | `ai_ops` | General | Telecom AI operations architecture, IT system overviews, digital transformation proposals, smart infrastructure reports | `#C00000` | Information-dense, structured, modular zoning, telecom/enterprise style |
 | `china_telecom_template` | General | China Telecom related briefings, 政企数字化方案, 转型规划, 内部汇报 | `#C00000` | Authoritative, structured, restrained, enterprise-government hybrid |
 | `government_blue` | General | Key project briefings, Five-Year Plan presentations, work summaries, investment promotion, policy interpretation | `#0050B3` | Grand, tech-forward, modern, professional government style |

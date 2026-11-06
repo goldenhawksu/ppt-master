@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="1280" height="6" fill="#3B3B44"/>
+  <text x="1162" y="24" font-family="Calibri, sans-serif" font-size="13" fill="#000000">AESC CONFIDENTIAL</text>
+  <text x="33" y="65" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" fill="#000000">{{PAGE_TITLE}}</text>
+  <line x1="20" y1="79.8" x2="1262" y2="79.8" stroke="#3B3B44" stroke-width="1"/>
+
+  <!-- Left: SCHEDULE STATUS CARD -->
+  <g id="status-card" transform="translate(33, 90)">
+    <rect x="0" y="0" width="280" height="26" fill="#3C3A45"/>
+    <text x="12" y="18" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">WP: {{WP_NAME}}</text>
+
+    <rect x="0" y="26" width="280" height="140" fill="#F3F4F6" stroke="#D5D8DE" stroke-width="1"/>
+
+    <!-- Status Dots Indicator: BEHIND | ON TRACK | AHEAD -->
+    <g id="status-dots" transform="translate(30, 40)">
+      <ellipse cx="25" cy="15" rx="14" ry="14" fill="#C4C7CE"/>
+      <text x="25" y="44" text-anchor="middle" font-family="Calibri, sans-serif" font-size="12" font-weight="bold" fill="#64748B">BEHIND</text>
+
+      <ellipse cx="110" cy="15" rx="14" ry="14" fill="#00B050"/>
+      <text x="110" y="44" text-anchor="middle" font-family="Calibri, sans-serif" font-size="12" font-weight="bold" fill="#1E293B">ON TRACK</text>
+
+      <ellipse cx="195" cy="15" rx="14" ry="14" fill="#C4C7CE"/>
+      <text x="195" y="44" text-anchor="middle" font-family="Calibri, sans-serif" font-size="12" font-weight="bold" fill="#64748B">AHEAD</text>
+    </g>
+
+    <!-- Status Metadata Lines -->
+    <text x="14" y="112" font-family="Calibri, sans-serif" font-size="13" font-weight="bold" fill="#22222A">Status: <tspan font-weight="normal">{{SCHEDULE_STATUS}}</tspan></text>
+    <text x="14" y="132" font-family="Calibri, sans-serif" font-size="13" font-weight="bold" fill="#22222A">Variance vs. baseline: <tspan font-weight="normal">{{VARIANCE_DAYS}}</tspan></text>
+    <text x="14" y="152" font-family="Calibri, sans-serif" font-size="13" font-weight="bold" fill="#22222A">WP Owner: <tspan font-weight="normal">{{WP_OWNER}}</tspan> | Week: <tspan font-weight="normal">{{WEEK_NUM}}</tspan></text>
+  </g>
+
+  <!-- Right: Dual-line Timeline Comparison Bar -->
+  <g id="timeline-comparison" transform="translate(330, 90)">
+    <rect x="0" y="0" width="917" height="26" fill="#3C3A45"/>
+    <text x="16" y="18" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">PROGRESS TIMELINE (BASELINE VS. FORECAST)</text>
+
+    <rect x="0" y="26" width="917" height="140" fill="#F8FAFC" stroke="#D5D8DE" stroke-width="1"/>
+
+    <!-- Baseline & Forecast Tracks -->
+    <g id="tracks" transform="translate(16, 45)">
+      <text x="0" y="18" font-family="Calibri, sans-serif" font-size="13" fill="#475569">Baseline Plan:</text>
+      <rect x="130" y="4" width="600" height="18" fill="none" stroke="#3C3A45" stroke-dasharray="4 4" stroke-width="1.5"/>
+
+      <text x="0" y="48" font-family="Calibri, sans-serif" font-size="13" fill="#475569">Forecast / Actual:</text>
+      <rect x="130" y="34" width="560" height="18" fill="#17795E"/>
+
+      <!-- Milestone Diamond -->
+      <polygon points="760,43 768,51 760,59 752,51" fill="#ED7D31"/>
+      <text x="778" y="55" font-family="Calibri, sans-serif" font-size="12" fill="#334155">{{MILESTONE_1}}</text>
+    </g>
+
+    <!-- Legend -->
+    <g id="legend" transform="translate(16, 125)">
+      <rect x="0" y="0" width="20" height="10" fill="none" stroke="#3C3A45" stroke-dasharray="3 3"/>
+      <text x="26" y="10" font-family="Calibri, sans-serif" font-size="12" fill="#64748B">Baseline</text>
+
+      <rect x="100" y="0" width="20" height="10" fill="#17795E"/>
+      <text x="126" y="10" font-family="Calibri, sans-serif" font-size="12" fill="#64748B">Forecast</text>
+
+      <polygon points="210,0 216,5 210,10 204,5" fill="#ED7D31"/>
+      <text x="224" y="10" font-family="Calibri, sans-serif" font-size="12" fill="#64748B">Milestone</text>
+    </g>
+  </g>
+
+  <!-- Lower Section: 2 Columns (Activities & Priorities vs. Milestones & Risks) -->
+  <!-- Left Column: Activities & Priorities Table -->
+  <g id="activities-section" transform="translate(33, 265)">
+    <rect x="0" y="0" width="585" height="26" fill="#3C3A45"/>
+    <text x="12" y="18" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">CURRENT ACTIVITIES / PRIORITIES</text>
+
+    <!-- Table Header -->
+    <g id="activities-header" transform="translate(0, 26)">
+      <rect x="0" y="0" width="40" height="24" fill="#E6E8EC"/>
+      <text x="20" y="17" text-anchor="middle" font-family="Calibri, sans-serif" font-size="12" font-weight="bold" fill="#22222A">#</text>
+
+      <rect x="40" y="0" width="315" height="24" fill="#E6E8EC"/>
+      <text x="50" y="17" font-family="Calibri, sans-serif" font-size="12" font-weight="bold" fill="#22222A">ACTIVITY / PRIORITY</text>
+
+      <rect x="355" y="0" width="90" height="24" fill="#E6E8EC"/>
+      <text x="400" y="17" text-anchor="middle" font-family="Calibri, sans-serif" font-size="12" font-weight="bold" fill="#22222A">OWNER</text>
+
+      <rect x="445" y="0" width="80" height="24" fill="#E6E8EC"/>
+      <text x="485" y="17" text-anchor="middle" font-family="Calibri, sans-serif" font-size="12" font-weight="bold" fill="#22222A">DUE</text>
+
+      <rect x="525" y="0" width="60" height="24" fill="#E6E8EC"/>
+      <text x="555" y="17" text-anchor="middle" font-family="Calibri, sans-serif" font-size="12" font-weight="bold" fill="#22222A">STATUS</text>
+    </g>
+
+    <!-- Rows -->
+    <g id="activities-rows" transform="translate(0, 50)">
+      <!-- Row 1 -->
+      <rect x="0" y="0" width="585" height="34" fill="#F3F4F6" stroke="#FFFFFF" stroke-width="1"/>
+      <text x="20" y="22" text-anchor="middle" font-family="Calibri, sans-serif" font-size="12" fill="#22222A">1</text>
+      <text x="50" y="22" font-family="Calibri, sans-serif" font-size="12" fill="#22222A">{{ACTIVITY_1}}</text>
+      <text x="400" y="22" text-anchor="middle" font-family="Calibri, sans-serif" font-size="12" fill="#22222A">{{OWNER_1}}</text>
+      <text x="485" y="22" text-anchor="middle" font-family="Calibri, sans-serif" font-size="12" fill="#22222A">{{DUE_1}}</text>
+      <text x="555" y="24" text-anchor="middle" font-family="Calibri, sans-serif" font-size="16" fill="#00B050">{{STATUS_1}}</text>
+
+      <!-- Row 2 -->
+      <rect x="0" y="34" width="585" height="34" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="20" y="56" text-anchor="middle" font-family="Calibri, sans-serif" font-size="12" fill="#22222A">2</text>
+      <text x="50" y="56" font-family="Calibri, sans-serif" font-size="12" fill="#22222A">{{ACTIVITY_2}}</text>
+      <text x="400" y="56" text-anchor="middle" font-family="Calibri, sans-serif" font-size="12" fill="#22222A">{{OWNER_2}}</text>
+      <text x="485" y="56" text-anchor="middle" font-family="Calibri, sans-serif" font-size="12" fill="#22222A">{{DUE_2}}</text>
+      <text x="555" y="58" text-anchor="middle" font-family="Calibri, sans-serif" font-size="16" fill="#00B050">{{STATUS_2}}</text>
+
+      <!-- Row 3 -->
+      <rect x="0" y="68" width="585" height="34" fill="#F3F4F6" stroke="#FFFFFF" stroke-width="1"/>
+      <text x="20" y="90" text-anchor="middle" font-family="Calibri, sans-serif" font-size="12" fill="#22222A">3</text>
+      <text x="50" y="90" font-family="Calibri, sans-serif" font-size="12" fill="#22222A">{{ACTIVITY_3}}</text>
+      <text x="400" y="90" text-anchor="middle" font-family="Calibri, sans-serif" font-size="12" fill="#22222A">{{OWNER_3}}</text>
+      <text x="485" y="90" text-anchor="middle" font-family="Calibri, sans-serif" font-size="12" fill="#22222A">{{DUE_3}}</text>
+      <text x="555" y="92" text-anchor="middle" font-family="Calibri, sans-serif" font-size="16" fill="#FFC000">{{STATUS_3}}</text>
+    </g>
+  </g>
+
+  <!-- Right Column: Upcoming Milestones & Risks -->
+  <g id="milestones-risks-section" transform="translate(640, 265)">
+    <!-- Milestones Banner -->
+    <rect x="0" y="0" width="607" height="26" fill="#3C3A45"/>
+    <text x="12" y="18" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">UPCOMING MILESTONES (NEXT 4-6 WEEKS)</text>
+
+    <!-- Milestones Table -->
+    <g id="milestones-table" transform="translate(0, 26)">
+      <rect x="0" y="0" width="280" height="24" fill="#E6E8EC"/>
+      <text x="10" y="17" font-family="Calibri, sans-serif" font-size="12" font-weight="bold" fill="#22222A">MILESTONE</text>
+      <rect x="280" y="0" width="110" height="24" fill="#E6E8EC"/>
+      <text x="335" y="17" text-anchor="middle" font-family="Calibri, sans-serif" font-size="12" font-weight="bold" fill="#22222A">BASELINE</text>
+      <rect x="390" y="0" width="110" height="24" fill="#E6E8EC"/>
+      <text x="445" y="17" text-anchor="middle" font-family="Calibri, sans-serif" font-size="12" font-weight="bold" fill="#22222A">FORECAST</text>
+      <rect x="500" y="0" width="107" height="24" fill="#E6E8EC"/>
+      <text x="553" y="17" text-anchor="middle" font-family="Calibri, sans-serif" font-size="12" font-weight="bold" fill="#22222A">VAR (DAYS)</text>
+
+      <!-- Row -->
+      <rect x="0" y="24" width="607" height="30" fill="#F3F4F6" stroke="#FFFFFF" stroke-width="1"/>
+      <text x="10" y="44" font-family="Calibri, sans-serif" font-size="12" fill="#22222A">{{MILESTONE_1}}</text>
+      <text x="335" y="44" text-anchor="middle" font-family="Calibri, sans-serif" font-size="12" fill="#22222A">{{MS_BASELINE_1}}</text>
+      <text x="445" y="44" text-anchor="middle" font-family="Calibri, sans-serif" font-size="12" fill="#22222A">{{MS_FORECAST_1}}</text>
+      <text x="553" y="44" text-anchor="middle" font-family="Calibri, sans-serif" font-size="12" fill="#00B050">{{MS_VAR_1}}</text>
+    </g>
+
+    <!-- Risks & Opportunities Banner -->
+    <g id="risks-table" transform="translate(0, 90)">
+      <rect x="0" y="0" width="607" height="26" fill="#3C3A45"/>
+      <text x="12" y="18" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">RISKS / OPPORTUNITIES &amp; MITIGATION</text>
+
+      <rect x="0" y="26" width="607" height="48" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="12" y="46" font-family="Calibri, sans-serif" font-size="13" font-weight="bold" fill="#ED7D31">[{{RISK_1_TYPE}}] {{RISK_1_DESC}}</text>
+      <text x="12" y="66" font-family="Calibri, sans-serif" font-size="12" fill="#475569">Mitigation / Next Step: {{RISK_1_MITIGATION}}</text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <rect x="0" y="656" width="1280" height="64" fill="#3B3B44"/>
+  <image href="assets/logo_aesc_white.png" x="12" y="660" width="150" height="54" preserveAspectRatio="xMidYMid meet"/>
+  <text x="180" y="678" font-family="Calibri, sans-serif" font-size="11" fill="#F2F2F2" font-style="italic">
+    <tspan x="180" dy="0">Without AESC’s explicit authorization, any recording of photos, screen captures, videos or other form of data collection for the purpose of reproducing</tspan>
+    <tspan x="180" dy="14">or disseminating information contained in this document is strictly prohibited, and AESC reserves the right to pursue violations of its information security</tspan>
+    <tspan x="180" dy="14">policy to the fullest extent permitted by law.</tspan>
+  </text>
+  <text x="1240" y="700" text-anchor="end" font-family="Calibri, sans-serif" font-size="14" fill="#FFFFFF">{{PAGE_NUM}}</text>
+</svg>

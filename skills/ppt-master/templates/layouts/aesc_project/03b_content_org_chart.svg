@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="1280" height="6" fill="#3B3B44"/>
+  <text x="1162" y="24" font-family="Calibri, sans-serif" font-size="13" fill="#000000">AESC CONFIDENTIAL</text>
+  <text x="33" y="65" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" fill="#000000">{{PAGE_TITLE}}</text>
+  <line x1="20" y1="79.8" x2="1262" y2="79.8" stroke="#3B3B44" stroke-width="1"/>
+
+  <!-- Tier 1: Executive Stakeholders -->
+  <g id="tier-1-section" transform="translate(33, 95)">
+    <rect x="0" y="0" width="1214" height="28" fill="#3C3A45"/>
+    <text x="16" y="19" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">{{TIER_1_TITLE}}</text>
+    <g id="tier-1-cards" transform="translate(0, 36)">
+      <!-- Card 1 -->
+      <rect x="0" y="0" width="285" height="64" rx="4" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="16" y="28" font-family="Calibri, sans-serif" font-size="13" font-weight="bold" fill="#64748B">{{ROLE_1}}</text>
+      <text x="16" y="50" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#1E293B">{{NAME_1}}</text>
+
+      <!-- Card 2 -->
+      <rect x="305" y="0" width="285" height="64" rx="4" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="16" y="28" font-family="Calibri, sans-serif" font-size="13" font-weight="bold" fill="#64748B">{{ROLE_2}}</text>
+      <text x="16" y="50" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#1E293B">{{NAME_2}}</text>
+
+      <!-- Card 3 -->
+      <rect x="610" y="0" width="285" height="64" rx="4" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="16" y="28" font-family="Calibri, sans-serif" font-size="13" font-weight="bold" fill="#64748B">{{ROLE_3}}</text>
+      <text x="16" y="50" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#1E293B">{{NAME_3}}</text>
+
+      <!-- Card 4 -->
+      <rect x="915" y="0" width="299" height="64" rx="4" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="16" y="28" font-family="Calibri, sans-serif" font-size="13" font-weight="bold" fill="#64748B">{{ROLE_4}}</text>
+      <text x="16" y="50" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#1E293B">{{NAME_4}}</text>
+    </g>
+  </g>
+
+  <!-- Tier 2: Project Management & Execution Support -->
+  <g id="tier-2-section" transform="translate(33, 235)">
+    <rect x="0" y="0" width="1214" height="28" fill="#4472C4"/>
+    <text x="16" y="19" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">{{TIER_2_TITLE}}</text>
+    <g id="tier-2-matrix" transform="translate(0, 36)">
+      <!-- Matrix Grid 8 cards -->
+      <rect x="0" y="0" width="285" height="56" rx="4" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="16" y="24" font-family="Calibri, sans-serif" font-size="12" fill="#64748B">US PM / Project Lead</text>
+      <text x="16" y="44" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#1E293B">Lead PM</text>
+
+      <rect x="305" y="0" width="285" height="56" rx="4" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="16" y="24" font-family="Calibri, sans-serif" font-size="12" fill="#64748B">Technical Service (CTS)</text>
+      <text x="16" y="44" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#1E293B">CTS Lead</text>
+
+      <rect x="610" y="0" width="285" height="56" rx="4" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="16" y="24" font-family="Calibri, sans-serif" font-size="12" fill="#64748B">Logistics &amp; Customs</text>
+      <text x="16" y="44" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#1E293B">Logistics Lead</text>
+
+      <rect x="915" y="0" width="299" height="56" rx="4" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="16" y="24" font-family="Calibri, sans-serif" font-size="12" fill="#64748B">Procurement (PUR)</text>
+      <text x="16" y="44" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#1E293B">PUR Lead</text>
+
+      <!-- Row 2 -->
+      <rect x="0" y="66" width="285" height="56" rx="4" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="16" y="24" font-family="Calibri, sans-serif" font-size="12" fill="#64748B">System Integration &amp; R&amp;D</text>
+      <text x="16" y="44" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#1E293B">R&amp;D Lead</text>
+
+      <rect x="305" y="66" width="285" height="56" rx="4" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="16" y="24" font-family="Calibri, sans-serif" font-size="12" fill="#64748B">FAT &amp; Acceptance</text>
+      <text x="16" y="44" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#1E293B">Quality Lead</text>
+
+      <rect x="610" y="66" width="285" height="56" rx="4" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="16" y="24" font-family="Calibri, sans-serif" font-size="12" fill="#64748B">Manufacturing &amp; Plant</text>
+      <text x="16" y="44" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#1E293B">Plant Lead</text>
+
+      <rect x="915" y="66" width="299" height="56" rx="4" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/>
+      <text x="16" y="24" font-family="Calibri, sans-serif" font-size="12" fill="#64748B">Finance &amp; Legal</text>
+      <text x="16" y="44" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#1E293B">Commercial Lead</text>
+    </g>
+  </g>
+
+  <!-- Tier 3: Work Package Owners -->
+  <g id="tier-3-section" transform="translate(33, 435)">
+    <rect x="0" y="0" width="1214" height="28" fill="#5A5D68"/>
+    <text x="16" y="19" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">{{TIER_3_TITLE}}</text>
+    <g id="tier-3-bar" transform="translate(0, 36)">
+      <rect x="0" y="0" width="1214" height="60" rx="4" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="24" y="26" font-family="Calibri, sans-serif" font-size="14" fill="#475569">
+        <tspan x="24" dy="0">WP1 (Supply) • WP2 (PCS &amp; Auxiliary) • WP3 (Ocean Freight)</tspan>
+        <tspan x="24" dy="20">WP3.1 (Retrofit) • WP4 (Drayage) • WP5 (Site Commissioning &amp; Acceptance)</tspan>
+      </text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <rect x="0" y="656" width="1280" height="64" fill="#3B3B44"/>
+  <image href="assets/logo_aesc_white.png" x="12" y="660" width="150" height="54" preserveAspectRatio="xMidYMid meet"/>
+  <text x="180" y="678" font-family="Calibri, sans-serif" font-size="11" fill="#F2F2F2" font-style="italic">
+    <tspan x="180" dy="0">Without AESC’s explicit authorization, any recording of photos, screen captures, videos or other form of data collection for the purpose of reproducing</tspan>
+    <tspan x="180" dy="14">or disseminating information contained in this document is strictly prohibited, and AESC reserves the right to pursue violations of its information security</tspan>
+    <tspan x="180" dy="14">policy to the fullest extent permitted by law.</tspan>
+  </text>
+  <text x="1240" y="700" text-anchor="end" font-family="Calibri, sans-serif" font-size="14" fill="#FFFFFF">{{PAGE_NUM}}</text>
+</svg>

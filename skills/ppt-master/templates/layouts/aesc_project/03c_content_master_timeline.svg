@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="1280" height="6" fill="#3B3B44"/>
+  <text x="1162" y="24" font-family="Calibri, sans-serif" font-size="13" fill="#000000">AESC CONFIDENTIAL</text>
+  <text x="33" y="65" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" fill="#000000">{{PAGE_TITLE}}</text>
+  <line x1="20" y1="79.8" x2="1262" y2="79.8" stroke="#3B3B44" stroke-width="1"/>
+
+  <!-- Timeline Master Chart -->
+  <g id="timeline-chart" transform="translate(33, 95)">
+    <!-- Header info banner -->
+    <rect x="0" y="0" width="1214" height="30" fill="#3C3A45"/>
+    <text x="16" y="20" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">{{TIMELINE_TITLE}}</text>
+
+    <!-- Calendar Scale Header (Years / Quarters / Months) -->
+    <g id="calendar-header" transform="translate(0, 30)">
+      <rect x="0" y="0" width="200" height="26" fill="#44546A"/>
+      <text x="16" y="18" font-family="Calibri, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">Stage / Work Package</text>
+
+      <rect x="200" y="0" width="480" height="26" fill="#5B9BD5" stroke="#FFFFFF" stroke-width="1"/>
+      <text x="440" y="18" text-anchor="middle" font-family="Calibri, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">2026 (Q3 - Q4)</text>
+
+      <rect x="680" y="0" width="534" height="26" fill="#41719C" stroke="#FFFFFF" stroke-width="1"/>
+      <text x="947" y="18" text-anchor="middle" font-family="Calibri, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">2027 (Q1 - Q4)</text>
+    </g>
+
+    <!-- Rows Grid -->
+    <g id="timeline-rows" transform="translate(0, 56)">
+      <!-- Row 1: Engineering & Prep -->
+      <rect x="0" y="0" width="200" height="48" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="16" y="30" font-family="Calibri, sans-serif" font-size="13" font-weight="bold" fill="#1E293B">{{PHASE_1_LABEL}}</text>
+      <rect x="200" y="0" width="1014" height="48" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      <!-- Bar -->
+      <rect x="240" y="12" width="280" height="24" rx="3" fill="#4472C4"/>
+      <text x="380" y="28" text-anchor="middle" font-family="Calibri, sans-serif" font-size="12" fill="#FFFFFF">Engineering &amp; Bidding</text>
+
+      <!-- Row 2: Production & Factory Acceptance -->
+      <rect x="0" y="48" width="200" height="48" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="16" y="78" font-family="Calibri, sans-serif" font-size="13" font-weight="bold" fill="#1E293B">{{PHASE_2_LABEL}}</text>
+      <rect x="200" y="48" width="1014" height="48" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      <!-- Bar -->
+      <rect x="420" y="60" width="340" height="24" rx="3" fill="#17795E"/>
+      <text x="590" y="76" text-anchor="middle" font-family="Calibri, sans-serif" font-size="12" fill="#FFFFFF">Manufacturing &amp; FAT</text>
+
+      <!-- Row 3: Shipment & Logistics -->
+      <rect x="0" y="96" width="200" height="48" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="16" y="126" font-family="Calibri, sans-serif" font-size="13" font-weight="bold" fill="#1E293B">{{PHASE_3_LABEL}}</text>
+      <rect x="200" y="96" width="1014" height="48" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      <!-- Bar -->
+      <rect x="680" y="108" width="260" height="24" rx="3" fill="#5B9BD5"/>
+      <text x="810" y="124" text-anchor="middle" font-family="Calibri, sans-serif" font-size="12" fill="#FFFFFF">Ocean Freight &amp; Drayage</text>
+
+      <!-- Row 4: Site Delivery & Commissioning -->
+      <rect x="0" y="144" width="200" height="48" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="16" y="174" font-family="Calibri, sans-serif" font-size="13" font-weight="bold" fill="#1E293B">{{PHASE_4_LABEL}}</text>
+      <rect x="200" y="144" width="1014" height="48" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      <!-- Bar -->
+      <rect x="880" y="156" width="280" height="24" rx="3" fill="#70AD47"/>
+      <text x="1020" y="172" text-anchor="middle" font-family="Calibri, sans-serif" font-size="12" fill="#FFFFFF">Delivery &amp; Commissioning</text>
+    </g>
+
+    <!-- Milestones Markers Row -->
+    <g id="milestones-row" transform="translate(0, 256)">
+      <rect x="0" y="0" width="1214" height="64" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" rx="4"/>
+      <text x="16" y="26" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#3B3B44">KEY CONTRACT MILESTONES</text>
+
+      <!-- M1 -->
+      <polygon points="260,38 268,46 260,54 252,46" fill="#ED7D31"/>
+      <text x="278" y="49" font-family="Calibri, sans-serif" font-size="12" fill="#334155">{{MILESTONE_1}}</text>
+
+      <!-- M2 -->
+      <polygon points="560,38 568,46 560,54 552,46" fill="#ED7D31"/>
+      <text x="578" y="49" font-family="Calibri, sans-serif" font-size="12" fill="#334155">{{MILESTONE_2}}</text>
+
+      <!-- M3 -->
+      <polygon points="900,38 908,46 900,54 892,46" fill="#ED7D31"/>
+      <text x="918" y="49" font-family="Calibri, sans-serif" font-size="12" fill="#334155">{{MILESTONE_3}}</text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <rect x="0" y="656" width="1280" height="64" fill="#3B3B44"/>
+  <image href="assets/logo_aesc_white.png" x="12" y="660" width="150" height="54" preserveAspectRatio="xMidYMid meet"/>
+  <text x="180" y="678" font-family="Calibri, sans-serif" font-size="11" fill="#F2F2F2" font-style="italic">
+    <tspan x="180" dy="0">Without AESC’s explicit authorization, any recording of photos, screen captures, videos or other form of data collection for the purpose of reproducing</tspan>
+    <tspan x="180" dy="14">or disseminating information contained in this document is strictly prohibited, and AESC reserves the right to pursue violations of its information security</tspan>
+    <tspan x="180" dy="14">policy to the fullest extent permitted by law.</tspan>
+  </text>
+  <text x="1240" y="700" text-anchor="end" font-family="Calibri, sans-serif" font-size="14" fill="#FFFFFF">{{PAGE_NUM}}</text>
+</svg>

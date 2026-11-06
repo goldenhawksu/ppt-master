@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="1280" height="6" fill="#3B3B44"/>
+  <text x="1162" y="24" font-family="Calibri, sans-serif" font-size="13" fill="#000000">AESC CONFIDENTIAL</text>
+  <text x="33" y="65" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" fill="#000000">{{PAGE_TITLE}}</text>
+  <line x1="20" y1="79.8" x2="1262" y2="79.8" stroke="#3B3B44" stroke-width="1"/>
+
+  <!-- 5 KPI Tiles Row -->
+  <g id="kpi-row" transform="translate(33, 92)">
+    <!-- Tile 1 -->
+    <rect x="0" y="0" width="232" height="84" rx="4" fill="#F3F4F6" stroke="#D5D8DE" stroke-width="1"/>
+    <text x="16" y="42" font-family="Calibri, Arial, sans-serif" font-size="30" font-weight="bold" fill="#17795E">{{KPI_1_VAL}}</text>
+    <text x="16" y="68" font-family="Calibri, Arial, sans-serif" font-size="13" fill="#22222A">{{KPI_1_LABEL}}</text>
+
+    <!-- Tile 2 -->
+    <rect x="245" y="0" width="232" height="84" rx="4" fill="#F3F4F6" stroke="#D5D8DE" stroke-width="1"/>
+    <text x="261" y="42" font-family="Calibri, Arial, sans-serif" font-size="30" font-weight="bold" fill="#17795E">{{KPI_2_VAL}}</text>
+    <text x="261" y="68" font-family="Calibri, Arial, sans-serif" font-size="13" fill="#22222A">{{KPI_2_LABEL}}</text>
+
+    <!-- Tile 3 -->
+    <rect x="490" y="0" width="232" height="84" rx="4" fill="#F3F4F6" stroke="#D5D8DE" stroke-width="1"/>
+    <text x="506" y="42" font-family="Calibri, Arial, sans-serif" font-size="30" font-weight="bold" fill="#17795E">{{KPI_3_VAL}}</text>
+    <text x="506" y="68" font-family="Calibri, Arial, sans-serif" font-size="13" fill="#22222A">{{KPI_3_LABEL}}</text>
+
+    <!-- Tile 4 -->
+    <rect x="735" y="0" width="232" height="84" rx="4" fill="#F3F4F6" stroke="#D5D8DE" stroke-width="1"/>
+    <text x="751" y="42" font-family="Calibri, Arial, sans-serif" font-size="30" font-weight="bold" fill="#17795E">{{KPI_4_VAL}}</text>
+    <text x="751" y="68" font-family="Calibri, Arial, sans-serif" font-size="13" fill="#22222A">{{KPI_4_LABEL}}</text>
+
+    <!-- Tile 5 -->
+    <rect x="980" y="0" width="234" height="84" rx="4" fill="#F3F4F6" stroke="#D5D8DE" stroke-width="1"/>
+    <text x="996" y="42" font-family="Calibri, Arial, sans-serif" font-size="30" font-weight="bold" fill="#17795E">{{KPI_5_VAL}}</text>
+    <text x="996" y="68" font-family="Calibri, Arial, sans-serif" font-size="13" fill="#22222A">{{KPI_5_LABEL}}</text>
+  </g>
+
+  <!-- Middle Section: Project Facts & Timeline -->
+  <g id="overview-content" transform="translate(33, 190)">
+    <!-- Facts Banner -->
+    <rect x="0" y="0" width="760" height="28" fill="#3C3A45"/>
+    <text x="16" y="19" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">PROJECT FACTS</text>
+
+    <!-- Facts Table -->
+    <g id="facts-table" transform="translate(0, 28)">
+      <rect x="0" y="0" width="200" height="32" fill="#E6E8EC" stroke="#FFFFFF" stroke-width="1"/>
+      <text x="16" y="21" font-family="Calibri, sans-serif" font-size="13" font-weight="bold" fill="#22222A">{{FACT_1_KEY}}</text>
+      <rect x="200" y="0" width="560" height="32" fill="#F3F4F6" stroke="#FFFFFF" stroke-width="1"/>
+      <text x="216" y="21" font-family="Calibri, sans-serif" font-size="13" fill="#22222A">{{FACT_1_VAL}}</text>
+
+      <rect x="0" y="32" width="200" height="32" fill="#E6E8EC" stroke="#FFFFFF" stroke-width="1"/>
+      <text x="16" y="53" font-family="Calibri, sans-serif" font-size="13" font-weight="bold" fill="#22222A">{{FACT_2_KEY}}</text>
+      <rect x="200" y="32" width="560" height="32" fill="#F3F4F6" stroke="#FFFFFF" stroke-width="1"/>
+      <text x="216" y="53" font-family="Calibri, sans-serif" font-size="13" fill="#22222A">{{FACT_2_VAL}}</text>
+
+      <rect x="0" y="64" width="200" height="32" fill="#E6E8EC" stroke="#FFFFFF" stroke-width="1"/>
+      <text x="16" y="85" font-family="Calibri, sans-serif" font-size="13" font-weight="bold" fill="#22222A">{{FACT_3_KEY}}</text>
+      <rect x="200" y="64" width="560" height="32" fill="#F3F4F6" stroke="#FFFFFF" stroke-width="1"/>
+      <text x="216" y="85" font-family="Calibri, sans-serif" font-size="13" fill="#22222A">{{FACT_3_VAL}}</text>
+
+      <rect x="0" y="96" width="200" height="32" fill="#E6E8EC" stroke="#FFFFFF" stroke-width="1"/>
+      <text x="16" y="117" font-family="Calibri, sans-serif" font-size="13" font-weight="bold" fill="#22222A">{{FACT_4_KEY}}</text>
+      <rect x="200" y="96" width="560" height="32" fill="#F3F4F6" stroke="#FFFFFF" stroke-width="1"/>
+      <text x="216" y="117" font-family="Calibri, sans-serif" font-size="13" fill="#22222A">{{FACT_4_VAL}}</text>
+    </g>
+
+    <!-- Side Panel / Site Route Map Placeholder -->
+    <g id="logistics-panel" transform="translate(780, 0)">
+      <rect x="0" y="0" width="434" height="28" fill="#3C3A45"/>
+      <text x="16" y="19" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">SITE &amp; LOGISTICS ROUTE</text>
+      <rect x="0" y="28" width="434" height="210" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="217" y="140" text-anchor="middle" font-family="Calibri, sans-serif" font-size="14" fill="#94A3B8">[ Delivery Route / Site Map ]</text>
+    </g>
+
+    <!-- Timeline & Milestone Summary Bar -->
+    <g id="schedule-bar" transform="translate(0, 170)">
+      <rect x="0" y="0" width="760" height="68" fill="#F3F4F6" stroke="#D5D8DE" stroke-width="1" rx="4"/>
+      <text x="16" y="28" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#1E293B">OVERALL DELIVERY SCHEDULE</text>
+      <text x="16" y="52" font-family="Calibri, sans-serif" font-size="13" fill="#64748B">{{MILESTONE_SUMMARY}}</text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <rect x="0" y="656" width="1280" height="64" fill="#3B3B44"/>
+  <image href="assets/logo_aesc_white.png" x="12" y="660" width="150" height="54" preserveAspectRatio="xMidYMid meet"/>
+  <text x="180" y="678" font-family="Calibri, sans-serif" font-size="11" fill="#F2F2F2" font-style="italic">
+    <tspan x="180" dy="0">Without AESC’s explicit authorization, any recording of photos, screen captures, videos or other form of data collection for the purpose of reproducing</tspan>
+    <tspan x="180" dy="14">or disseminating information contained in this document is strictly prohibited, and AESC reserves the right to pursue violations of its information security</tspan>
+    <tspan x="180" dy="14">policy to the fullest extent permitted by law.</tspan>
+  </text>
+  <text x="1240" y="700" text-anchor="end" font-family="Calibri, sans-serif" font-size="14" fill="#FFFFFF">{{PAGE_NUM}}</text>
+</svg>

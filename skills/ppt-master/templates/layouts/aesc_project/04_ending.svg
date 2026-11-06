@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1280 720" width="1280" height="720">
+  <rect width="1280" height="720" fill="#FFFFFF"/>
+  <image href="assets/ending_bg.jpeg" x="0" y="0" width="1280" height="720" preserveAspectRatio="none"/>
+  <rect x="0" y="0" width="1280" height="720" fill="#3B3B44" fill-opacity="0.4"/>
+  <rect x="0" y="0" width="1280" height="6" fill="#3B3B44"/>
+  <text x="1162" y="24" font-family="Calibri, sans-serif" font-size="13" fill="#FFFFFF">AESC CONFIDENTIAL</text>
+
+  <g id="ending-content" transform="translate(100, 260)">
+    <text x="0" y="44" font-family="Helvetica, Arial, sans-serif" font-size="44" font-weight="bold" fill="#FFFFFF">{{THANK_YOU}}</text>
+    <line x1="0" y1="64" x2="320" y2="64" stroke="#4472C4" stroke-width="3"/>
+    <text x="0" y="105" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="bold" fill="#E2E8F0">{{BRAND_LABEL}}</text>
+    <text x="0" y="145" font-family="Calibri, Arial, sans-serif" font-size="16" fill="#CBD5E1">{{CONTACT_INFO}} | {{DATE}}</text>
+  </g>
+</svg>
